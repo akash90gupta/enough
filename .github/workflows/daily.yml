@@ -1,0 +1,77 @@
+name: Daily edition
+
+on:
+  schedule:
+    - cron: '0 12 * * *'   # 5am Pacific in summer, 4am in winter
+  workflow_dispatch:
+    inputs:
+      rewrite:
+        description: Rewrite today's edition even if it already exists
+        type: boolean
+        default: false
+  push:
+    branches: [main]
+
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+
+concurrency:
+  group: daily-edition
+  cancel-in-progress: false
+
+jobs:
+  edition:
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deploy.outputs.page_url }}
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+
+      - run: npm ci
+
+      - name: Decide whether to write
+        id: plan
+        run: |
+          DATE=$(TZ=America/Los_Angeles date +%F)
+          echo "date=$DATE" >> "$GITHUB_OUTPUT"
+          if [ "${{ github.event_name }}" = "push" ]; then echo "write=false" >> "$GITHUB_OUTPUT";
+          elif [ -f "data/editions/$DATE.json" ] && [ "${{ inputs.rewrite }}" != "true" ]; then echo "write=false" >> "$GITHUB_OUTPUT";
+          else echo "write=true" >> "$GITHUB_OUTPUT"; fi
+
+      - name: Read the news
+        if: steps.plan.outputs.write == 'true'
+        run: npm run read
+
+      - name: Write the edition
+        if: steps.plan.outputs.write == 'true'
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+        run: |
+          if [ -z "$ANTHROPIC_API_KEY" ]; then echo "::error::Add the ANTHROPIC_API_KEY repository secret to write editions."; exit 1; fi
+          npm run write
+
+      - name: Save to the public record
+        if: steps.plan.outputs.write == 'true'
+        run: |
+          git config user.name "Enough"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data
+          git commit -m "Edition for ${{ steps.plan.outputs.date }}" || echo "Nothing new to save"
+          git push
+
+      - run: npm run build
+
+      - uses: actions/configure-pages@v5
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: site
+      - id: deploy
+        uses: actions/deploy-pages@v4

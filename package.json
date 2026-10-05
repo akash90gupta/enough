@@ -1,0 +1,20 @@
+{
+  "name": "enough",
+  "version": "1.0.0",
+  "private": true,
+  "description": "AI news, finished. What changed at Anthropic, Google, Meta, OpenAI and xAI, one calm page a day.",
+  "type": "module",
+  "engines": { "node": ">=20" },
+  "scripts": {
+    "read": "node src/read.mjs",
+    "write": "node src/write.mjs",
+    "build": "node src/build.mjs",
+    "daily": "node src/read.mjs && node src/write.mjs && node src/build.mjs",
+    "dev": "node src/build.mjs && npx --yes serve site -l 4321"
+  },
+  "dependencies": {
+    "@anthropic-ai/sdk": "^0.131.0",
+    "fast-xml-parser": "^5.11.2",
+    "zod": "^4.6.5"
+  }
+}
