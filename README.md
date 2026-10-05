@@ -96,7 +96,10 @@ Small details that matter:
 - **One page, five cards.** Each company gets a card in its own colors (Anthropic clay, Google's four colors, Meta blue, OpenAI green, xAI black). On a laptop, all five sit side by side. On a phone, they become a row you swipe through, with the next card peeking in so you know there's more.
 - **Today is always in reach.** A bar pinned to the top shows today's date, a chip per company with its count of changes, and a **✓ Done** button. The chip for the card you're looking at lights up, and tapping a chip jumps to that card.
 - **Done means done.** Tapping Done tells Enough you've read today's edition. It's remembered in your browser until tomorrow's edition arrives, and the page answers "You're caught up. See you tomorrow morning."
-- **"Earlier this week"** at the bottom of each card lists that company's items from the previous six days, so you can follow one company without reading every edition.
+- **Every day has a date, a day and a week.** "Monday, October 5, 2026 · Week 41" at the top, and "Mon, Oct 5 · W41" in the pinned bar.
+- **Finished days roll up.** Below today, the past two weeks are grouped by week ("Week 40 · Sep 28 to Oct 4"), one line per day with a colored dot per company. Tap a day to open its digest: each company's headlines, linked to their sources. The archive keeps every day in the same format.
+- **Today rolls up too, once you're done.** After you tap Done, today collapses to a single line ("You finished today's edition") with a button to bring the cards back.
+- **Built for phones first.** A compact pinned bar, swipeable cards with position dots, and tap targets of at least 40 pixels.
 - **Honest when late.** If today's edition hasn't arrived yet, the page says so instead of passing off yesterday's as today's.
 - **Welcome back.** If you've been away, it lists the days you missed (stored only in your own browser).
 - **Light and dark**, keyboard navigable (arrow keys move between cards), and an RSS feed at [`/feed.xml`](https://akash90gupta.github.io/enough/feed.xml).

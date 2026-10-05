@@ -43,9 +43,15 @@
 
   for (const [id, tab] of tabs) {
     tab.addEventListener('click', (e) => {
+      document.querySelector('.edition.is-rolled .unroll')?.click();
       const card = document.getElementById(id);
       if (!card) return;
       e.preventDefault();
+      // If the cards are out of view (say, while reading past days), bring them back first.
+      const box = track.getBoundingClientRect(), bar = document.querySelector('.today-bar');
+      if (box.top < (bar?.offsetHeight ?? 0) || box.top > innerHeight * 0.6) {
+        scrollTo({ top: scrollY + box.top - (bar?.offsetHeight ?? 0) - 12, behavior: 'smooth' });
+      }
       go(card);
       history.replaceState(null, '', `#${id}`);
     });
@@ -58,10 +64,14 @@
     return best;
   };
 
+  const board = track.closest('.board');
+  const pips = [...document.querySelectorAll('.pips i')];
   const update = () => {
     const overflow = track.scrollWidth > track.clientWidth + 4;
     if (arrows) arrows.hidden = !overflow;
+    board?.classList.toggle('scrolls', overflow);
     const i = current();
+    pips.forEach((p, k) => p.classList.toggle('on', k === i));
     for (const [id, tab] of tabs) tab.classList.toggle('active', overflow && id === cards[i].id);
     if (overflow) {
       // Keep the active tab visible in its own row, without moving the page.
@@ -105,6 +115,15 @@
   const title = document.querySelector('.done-title');
   const next = document.querySelector('.done .next');
 
+  const rolled = document.querySelector('.rolled');
+  // A finished day rolls up into one line; the cards are one tap away.
+  const roll = (on) => {
+    el.classList.toggle('is-rolled', on);
+    if (rolled) rolled.hidden = !on;
+    dispatchEvent(new Event('resize'));
+  };
+  document.querySelector('.unroll')?.addEventListener('click', () => roll(false));
+
   const render = (done) => {
     document.body.classList.toggle('is-done', done);
     for (const b of buttons) {
@@ -118,12 +137,15 @@
   let done = false;
   try { done = localStorage.getItem('enough:done') === date; } catch {}
   render(done);
+  roll(done);
 
   for (const b of buttons) {
     b.addEventListener('click', () => {
       done = !done;
       try { done ? localStorage.setItem('enough:done', date) : localStorage.removeItem('enough:done'); } catch {}
       render(done);
+      roll(done);
+      if (done && rolled) rolled.scrollIntoView({ behavior: 'smooth', block: 'center' });
       b.classList.remove('pop'); void b.offsetWidth; b.classList.add('pop');
     });
   }

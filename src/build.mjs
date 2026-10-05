@@ -13,8 +13,24 @@ const esc = (s = '') => String(s).replace(/[&<>"']/g, (c) => ({ '&': '&amp;', '<
 const dateObj = (d) => new Date(`${d}T12:00:00Z`);
 const longDate = (d) => dateObj(d).toLocaleDateString('en-US', { weekday: 'long', month: 'long', day: 'numeric', timeZone: 'UTC' });
 const shortDate = (d) => dateObj(d).toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric', timeZone: 'UTC' });
-const dayShort = (d) => dateObj(d).toLocaleDateString('en-US', { weekday: 'short', timeZone: 'UTC' });
 const weekday = (d) => dateObj(d).toLocaleDateString('en-US', { weekday: 'long', timeZone: 'UTC' });
+// Weeks run Monday to Sunday and use ISO numbering, so "Week 41" means the same thing everywhere.
+const isoWeek = (d) => {
+  const t = dateObj(d);
+  t.setUTCDate(t.getUTCDate() + 3 - ((t.getUTCDay() + 6) % 7));
+  const jan4 = new Date(Date.UTC(t.getUTCFullYear(), 0, 4));
+  return { year: t.getUTCFullYear(), week: 1 + Math.round(((t - jan4) / 86400000 - 3 + ((jan4.getUTCDay() + 6) % 7)) / 7) };
+};
+const shift = (d, n) => { const t = dateObj(d); t.setUTCDate(t.getUTCDate() + n); return t.toISOString().slice(0, 10); };
+const weekStart = (d) => shift(d, -((dateObj(d).getUTCDay() + 6) % 7));
+const md = (d) => dateObj(d).toLocaleDateString('en-US', { month: 'short', day: 'numeric', timeZone: 'UTC' });
+const weekRange = (d) => {
+  const a = weekStart(d), b = shift(a, 6);
+  const sameMonth = a.slice(0, 7) === b.slice(0, 7);
+  return `${md(a)}–${sameMonth ? dateObj(b).getUTCDate() : md(b)}, ${b.slice(0, 4)}`;
+};
+const fullDate = (d) => dateObj(d).toLocaleDateString('en-US', { weekday: 'long', month: 'long', day: 'numeric', year: 'numeric', timeZone: 'UTC' });
+const barDate = (d) => dateObj(d).toLocaleDateString('en-US', { weekday: 'short', month: 'short', day: 'numeric', timeZone: 'UTC' });
 const clock = (iso) => new Date(iso).toLocaleTimeString('en-US', { hour: 'numeric', minute: '2-digit', timeZone: TIME_ZONE });
 const stamp = (iso) => new Date(iso).toLocaleString('en-US', { month: 'short', day: 'numeric', hour: 'numeric', minute: '2-digit', timeZone: TIME_ZONE }) + ' PT';
 const ext = 'target="_blank" rel="noopener"';
@@ -94,8 +110,7 @@ function item(s, co) {
 </article>`;
 }
 
-function company(co, week, isToday) {
-  const earlier = week.filter((w) => w.items.length);
+function company(co) {
   return `<section class="company card${co.items.length ? '' : ' is-quiet'}" id="${co.id}" data-co="${co.id}" aria-labelledby="h-${co.id}" aria-roledescription="card">
   <header class="company-head">
     <h2 id="h-${co.id}"><i class="dot" aria-hidden="true"></i>${esc(co.name)}</h2>
@@ -103,8 +118,6 @@ function company(co, week, isToday) {
   </header>
   ${(() => { const c = COMPANIES.find((x) => x.id === co.id); return c ? `<p class="company-links"><a href="${esc(c.site.url)}" ${ext}>${esc(c.site.label)} <span aria-hidden="true">↗</span></a><a href="https://x.com/${esc(c.x[0])}" ${ext}>@${esc(c.x[0])} <span aria-hidden="true">↗</span></a></p>` : ''; })()}
   ${co.items.length ? co.items.map((s) => item(s, co)).join('') : `<p class="quiet">${esc(co.quiet_line)}</p>`}
-  ${''}
-  ${isToday && earlier.length ? `<details class="week"><summary>Earlier this week</summary><ul>${earlier.map((w) => w.items.map((h) => `<li><a href="${BASE}/${w.date}/#${co.id}"><time datetime="${w.date}">${esc(dayShort(w.date))}</time> ${esc(h.headline)}</a></li>`).join('')).join('')}</ul></details>` : ''}
 </section>`;
 }
 
@@ -124,7 +137,7 @@ function leftOut(e) {
 </section>`;
 }
 
-function edition(e, { isToday, prev, next, week }) {
+function edition(e, { isToday, prev, next, past = [] }) {
   const all = e.companies.flatMap((c) => c.items);
   const quiet = e.companies.filter((c) => !c.items.length).map((c) => c.name);
   const meta = `${plural(e.stats.reading_minutes, 'minute')} · ${plural(all.length, 'change')} at ${e.companies.length - quiet.length} of 5 companies, from ${e.stats.items_read} items across ${e.stats.outlets_read} outlets`;
@@ -133,23 +146,28 @@ function edition(e, { isToday, prev, next, week }) {
   return `<div class="edition" data-date="${e.date}" data-today="${isToday ? 1 : 0}">
 <div class="prose intro">
 <div id="welcome" class="notice" hidden></div>
-<p class="dateline"><time datetime="${e.date}">${esc(longDate(e.date))}</time></p>
+<p class="dateline"><time datetime="${e.date}">${esc(fullDate(e.date))}</time><span class="wk">Week ${isoWeek(e.date).week}</span></p>
 <h1 class="the-day">${esc(e.the_day)}</h1>
 <p class="meta">${esc(meta)}</p>
 ${e.stats.feeds_failed ? `<p class="notice">${plural(e.stats.feeds_failed, 'source')} couldn't be reached this morning, so this edition was written without them.</p>` : ''}
 </div>
 <div class="today-bar">
-  <div class="bar-date">${isToday ? '<b>Today</b>' : '<b>Edition</b>'} <time datetime="${e.date}">${esc(shortDate(e.date))}</time></div>
+  <div class="bar-date">${isToday ? '<b>Today</b>' : ''}<time datetime="${e.date}">${esc(barDate(e.date))}</time><span class="wk">W${isoWeek(e.date).week}</span></div>
   <nav class="jump" aria-label="Jump to a company">${tabs}</nav>
   <div class="bar-actions">
     <div class="arrows" hidden><button type="button" class="arrow" data-dir="-1" aria-label="Previous company">←</button><button type="button" class="arrow" data-dir="1" aria-label="Next company">→</button></div>
     ${isToday ? doneButton('in-bar') : `<a class="today-link" href="${BASE}/">Today →</a>`}
   </div>
 </div>
+${isToday ? `<div class="rolled" hidden>
+  <p><span class="check-dot" aria-hidden="true"></span><span>You finished today's edition. ${plural(all.length, 'change')} across ${e.companies.length - quiet.length} companies.</span></p>
+  <button type="button" class="unroll">Show today's cards</button>
+</div>` : ''}
 <div class="board" aria-label="The five companies">
   <div class="track" tabindex="0" aria-label="Swipe or scroll sideways to see each company">
-${e.companies.map((c) => company(c, week?.[c.id] ?? [], isToday)).join('\n')}
+${e.companies.map((c) => company(c)).join('\n')}
   </div>
+  <div class="pips" aria-hidden="true">${e.companies.map((c) => `<i data-co="${c.id}"></i>`).join('')}</div>
 </div>
 <div class="prose outro">
 <section class="done" aria-label="End of edition">
@@ -159,6 +177,12 @@ ${e.companies.map((c) => company(c, week?.[c.id] ?? [], isToday)).join('\n')}
   ${isToday ? `${doneButton('big')}<p class="next" aria-live="polite">The next edition arrives tomorrow morning.</p>` : ''}
 </section>
 ${leftOut(e)}
+${past.length ? `<section class="past" aria-labelledby="past-h">
+  <h2 id="past-h">Earlier editions</h2>
+  <p class="past-intro">Missed a day? Each one is rolled up below. Tap to open it.</p>
+  ${weeks(past)}
+  <p class="past-more"><a href="${BASE}/archive/">All past days →</a></p>
+</section>` : ''}
 <p class="provenance">Written by ${esc(modelName(e.usage?.model ?? MODEL))} at ${esc(clock(e.written_at))} Pacific, using only the items it read that morning. Claude is made by Anthropic, one of the companies covered here, so every company gets the same rules, and every item links to its sources. <a href="${BASE}/how/">How Enough decides</a>.</p>
 <nav class="pager">
   ${prev ? `<a href="${BASE}/${prev}/">← ${esc(shortDate(prev))}</a>` : '<span></span>'}
@@ -168,11 +192,45 @@ ${leftOut(e)}
 </div>`;
 }
 
+// A finished day, rolled up: one line closed, the whole digest open.
+function rollup(e) {
+  const active = e.companies.filter((c) => c.items.length);
+  const quiet = e.companies.filter((c) => !c.items.length).map((c) => c.name);
+  return `<details class="day">
+  <summary>
+    <span class="day-date"><b>${esc(weekday(e.date))}</b><time datetime="${e.date}">${esc(md(e.date))}</time></span>
+    <span class="day-text">${esc(e.the_day)}</span>
+    <span class="day-dots">${e.companies.map((c) => `<span data-co="${c.id}" class="${c.items.length ? '' : 'q'}" title="${esc(c.name)}: ${plural(c.items.length, 'change')}"><i class="dot"></i>${c.items.length || ''}</span>`).join('')}</span>
+  </summary>
+  <div class="day-body">
+    ${active.map((c) => `<div class="day-co" data-co="${c.id}">
+      <h4><i class="dot" aria-hidden="true"></i>${esc(c.name)}</h4>
+      <ul>${c.items.map((s) => `<li><span class="status status-${s.status}">${STATUS[s.status].label}</span> <a href="${esc(s.sources[0].link)}" ${ext}>${esc(s.headline)}</a><span class="day-point">${esc((s.points ?? [s.what_changed])[0])}</span></li>`).join('')}</ul>
+    </div>`).join('')}
+    ${quiet.length ? `<p class="day-quiet">Quiet: ${esc(quiet.join(', '))}</p>` : ''}
+    <a class="day-open" href="${BASE}/${e.date}/">Open the full ${esc(weekday(e.date))} edition →</a>
+  </div>
+</details>`;
+}
+
+// Group editions (newest first) into Monday-to-Sunday weeks.
+function weeks(list) {
+  const groups = [];
+  for (const e of [...list].sort((a, b) => b.date.localeCompare(a.date))) {
+    const k = weekStart(e.date);
+    if (groups.at(-1)?.k !== k) groups.push({ k, items: [] });
+    groups.at(-1).items.push(e);
+  }
+  return groups.map((g) => `<section class="week-group">
+  <h3>Week ${isoWeek(g.k).week}<span>${esc(weekRange(g.k))}</span></h3>
+  ${g.items.map(rollup).join('')}
+</section>`).join('');
+}
+
 function archive(editions) {
-  const rows = [...editions].reverse().map((e) => `<li><a href="${BASE}/${e.date}/"><time datetime="${e.date}">${esc(shortDate(e.date))}</time><span>${esc(e.the_day)}</span><em>${e.companies.filter((c) => c.items.length).map((c) => `${c.name} ${c.items.length}`).join(' · ') || 'A quiet day'}</em></a></li>`).join('');
   return `<h1 class="page-title">Past days</h1>
-<p class="lede">Every edition Enough has published. Each one is a single page that ends.</p>
-<ul class="archive">${rows || '<li>The first edition arrives tomorrow morning.</li>'}</ul>`;
+<p class="lede">Every edition Enough has published, grouped by week. Tap a day to open its digest.</p>
+<div class="past">${editions.length ? weeks(editions) : '<p>The first edition arrives tomorrow morning.</p>'}</div>`;
 }
 
 async function how() {
@@ -239,21 +297,20 @@ await mkdir(OUT, { recursive: true });
 await cp('public', OUT, { recursive: true });
 
 const desc = 'AI news, finished. One calm page a day that tells you what actually changed at Anthropic, Google, Meta, OpenAI and xAI, shows its sources, and ends.';
-// For each company, the six editions before the latest one: "Earlier this week".
-const weekBefore = (i) => Object.fromEntries(COMPANIES.map((c) => [c.id,
-  editions.slice(Math.max(0, i - 6), i).reverse().map((e) => ({ date: e.date, items: e.companies.find((x) => x.id === c.id)?.items ?? [] }))]));
+// The home page rolls up the two weeks before today; the archive has everything.
+const PAST_ON_HOME = 14;
 
 for (const [i, e] of editions.entries()) {
   const prev = editions[i - 1]?.date, next = editions[i + 1]?.date;
   const latest = i === editions.length - 1;
   const title = `Enough · ${longDate(e.date)}`;
   await write(e.date, page({ title, description: e.the_day, path: `${e.date}/`, wide: true, body: edition(e, { isToday: false, prev, next }) }));
-  if (latest) await write('', page({ title: 'Enough · AI news, finished', description: desc, path: '', wide: true, body: edition(e, { isToday: true, prev, next: null, week: weekBefore(i) }) }));
+  if (latest) await write('', page({ title: 'Enough · AI news, finished', description: desc, path: '', wide: true, body: edition(e, { isToday: true, prev, next: null, past: editions.slice(Math.max(0, i - PAST_ON_HOME), i) }) }));
 }
 if (!editions.length) {
   await write('', page({ title: 'Enough · AI news, finished', description: desc, body: `<h1 class="the-day">The first edition arrives tomorrow morning.</h1><p class="meta">One calm page a day that ends. <a href="${BASE}/how/">How it works</a>.</p>` }));
 }
-await write('archive', page({ title: 'Enough · Past days', description: 'Every edition of Enough.', path: 'archive/', body: archive(editions) }));
+await write('archive', page({ title: 'Enough · Past days', description: 'Every edition of Enough, grouped by week.', path: 'archive/', wide: true, body: archive(editions) }));
 await write('how', page({ title: 'Enough · How it works', description: 'How Enough reads, decides, checks and publishes what changed at five AI companies, every morning.', path: 'how/', body: await how() }));
 await writeFile(`${OUT}/feed.xml`, feed(editions));
 await writeFile(`${OUT}/editions.json`, JSON.stringify(editions.map((e) => e.date)));
