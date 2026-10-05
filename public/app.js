@@ -29,3 +29,111 @@
     say(`Welcome back. You missed ${missed.length === 1 ? 'one day' : `${missed.length} days`}: ${links}. Each takes a few minutes, or start here and skip them. Anything big will show up today as an update.`);
   }).catch(() => {});
 })();
+
+// The five cards: tabs jump to a card, arrows step through, and the tab for the card in view lights up.
+(() => {
+  const track = document.querySelector('.track');
+  if (!track) return;
+  const cards = [...track.querySelectorAll('.card')];
+  const tabs = new Map([...document.querySelectorAll('.jump a')].map((a) => [a.dataset.card, a]));
+  const arrows = document.querySelector('.arrows');
+  const [prev, next] = arrows ? arrows.querySelectorAll('.arrow') : [];
+
+  const go = (card) => track.scrollTo({ left: card.offsetLeft - track.offsetLeft - parseFloat(getComputedStyle(track).paddingLeft), behavior: 'smooth' });
+
+  for (const [id, tab] of tabs) {
+    tab.addEventListener('click', (e) => {
+      const card = document.getElementById(id);
+      if (!card) return;
+      e.preventDefault();
+      go(card);
+      history.replaceState(null, '', `#${id}`);
+    });
+  }
+
+  const current = () => {
+    const x = track.scrollLeft;
+    let best = 0;
+    cards.forEach((c, i) => { if (Math.abs(c.offsetLeft - track.offsetLeft - x) < Math.abs(cards[best].offsetLeft - track.offsetLeft - x)) best = i; });
+    return best;
+  };
+
+  const update = () => {
+    const overflow = track.scrollWidth > track.clientWidth + 4;
+    if (arrows) arrows.hidden = !overflow;
+    const i = current();
+    for (const [id, tab] of tabs) tab.classList.toggle('active', overflow && id === cards[i].id);
+    if (overflow) {
+      // Keep the active tab visible in its own row, without moving the page.
+      const tab = tabs.get(cards[i].id), row = tab?.parentElement;
+      if (row && (tab.offsetLeft < row.scrollLeft || tab.offsetLeft + tab.offsetWidth > row.scrollLeft + row.clientWidth)) {
+        row.scrollTo({ left: tab.offsetLeft - row.offsetLeft - 8, behavior: 'smooth' });
+      }
+    }
+    if (prev) prev.disabled = track.scrollLeft <= 4;
+    if (next) next.disabled = track.scrollLeft + track.clientWidth >= track.scrollWidth - 4;
+  };
+
+  prev?.addEventListener('click', () => go(cards[Math.max(0, current() - 1)]));
+  next?.addEventListener('click', () => go(cards[Math.min(cards.length - 1, current() + 1)]));
+  track.addEventListener('keydown', (e) => {
+    if (e.key === 'ArrowRight') { e.preventDefault(); go(cards[Math.min(cards.length - 1, current() + 1)]); }
+    if (e.key === 'ArrowLeft') { e.preventDefault(); go(cards[Math.max(0, current() - 1)]); }
+  });
+
+  let t;
+  track.addEventListener('scroll', () => { clearTimeout(t); t = setTimeout(update, 60); }, { passive: true });
+  addEventListener('resize', update);
+  update();
+
+  // Arriving with #openai (from "Earlier this week" or a shared link) opens on that card.
+  const start = location.hash && document.getElementById(location.hash.slice(1));
+  if (start && cards.includes(start)) {
+    track.style.scrollBehavior = 'auto';
+    go(start);
+    track.style.scrollBehavior = '';
+    start.closest('.board').scrollIntoView({ block: 'start' });
+  }
+})();
+
+// Done: one tap tells Enough you've read today's edition. It's remembered until tomorrow's arrives.
+(() => {
+  const el = document.querySelector('.edition[data-today="1"]');
+  const buttons = [...document.querySelectorAll('.done-btn')];
+  if (!el || !buttons.length) return;
+  const date = el.dataset.date;
+  const title = document.querySelector('.done-title');
+  const next = document.querySelector('.done .next');
+
+  const render = (done) => {
+    document.body.classList.toggle('is-done', done);
+    for (const b of buttons) {
+      b.setAttribute('aria-pressed', String(done));
+      b.querySelector('.label').textContent = done ? 'Done for today' : 'Done';
+    }
+    if (title) title.textContent = done ? "You're caught up." : "That's everything.";
+    if (next) next.textContent = done ? 'See you tomorrow morning.' : 'The next edition arrives tomorrow morning.';
+  };
+
+  let done = false;
+  try { done = localStorage.getItem('enough:done') === date; } catch {}
+  render(done);
+
+  for (const b of buttons) {
+    b.addEventListener('click', () => {
+      done = !done;
+      try { done ? localStorage.setItem('enough:done', date) : localStorage.removeItem('enough:done'); } catch {}
+      render(done);
+      b.classList.remove('pop'); void b.offsetWidth; b.classList.add('pop');
+    });
+  }
+})();
+
+// A hairline under the pinned bar once it's actually pinned.
+(() => {
+  const bar = document.querySelector('.today-bar');
+  if (!bar) return;
+  const onScroll = () => bar.classList.toggle('stuck', bar.getBoundingClientRect().top <= 0.5 && scrollY > 0);
+  addEventListener('scroll', onScroll, { passive: true });
+  onScroll();
+})();

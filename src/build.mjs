@@ -24,7 +24,7 @@ const outletList = (outlets) => {
   return `${outlets.slice(0, 3).join(', ')} and ${outlets.length - 3} more`;
 };
 
-function page({ title, description, body, path = '', canonical }) {
+function page({ title, description, body, path = '', canonical, wide = false }) {
   const url = `${SITE}/${path}`;
   return `<!doctype html>
 <html lang="en">
@@ -47,7 +47,7 @@ function page({ title, description, body, path = '', canonical }) {
 <link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="${BASE}/style.css">
 </head>
-<body>
+<body${wide ? ' class="wide"' : ''}>
 <a class="skip" href="#main">Skip to the news</a>
 <header class="masthead">
   <a class="wordmark" href="${BASE}/">Enough<span>.</span></a>
@@ -87,9 +87,9 @@ function item(s, co) {
 
 function company(co, week, isToday) {
   const earlier = week.filter((w) => w.items.length);
-  return `<section class="company${co.items.length ? '' : ' is-quiet'}" id="${co.id}" aria-labelledby="h-${co.id}">
+  return `<section class="company card${co.items.length ? '' : ' is-quiet'}" id="${co.id}" data-co="${co.id}" aria-labelledby="h-${co.id}" aria-roledescription="card">
   <header class="company-head">
-    <h2 id="h-${co.id}">${esc(co.name)}</h2>
+    <h2 id="h-${co.id}"><i class="dot" aria-hidden="true"></i>${esc(co.name)}</h2>
     <span class="company-count">${co.items.length ? plural(co.items.length, 'change') : 'Quiet'}</span>
   </header>
   ${co.items.length ? co.items.map((s) => item(s, co)).join('') : `<p class="quiet">${esc(co.quiet_line)}</p>`}
@@ -118,20 +118,35 @@ function edition(e, { isToday, prev, next, week }) {
   const all = e.companies.flatMap((c) => c.items);
   const quiet = e.companies.filter((c) => !c.items.length).map((c) => c.name);
   const meta = `${plural(e.stats.reading_minutes, 'minute')} · ${plural(all.length, 'change')} at ${e.companies.length - quiet.length} of 5 companies, from ${e.stats.items_read} items across ${e.stats.outlets_read} outlets`;
-  const jump = e.companies.map((c) => `<a href="#${c.id}" class="${c.items.length ? '' : 'q'}">${esc(c.name)}<b>${c.items.length || ''}</b></a>`).join('');
+  const tabs = e.companies.map((c) => `<a href="#${c.id}" data-card="${c.id}" data-co="${c.id}" class="${c.items.length ? '' : 'q'}"><i class="dot" aria-hidden="true"></i>${esc(c.name)}<b>${c.items.length || ''}</b></a>`).join('');
+  const doneButton = (cls) => `<button type="button" class="done-btn ${cls}" aria-pressed="false"><span class="check" aria-hidden="true"></span><span class="label">Done</span></button>`;
   return `<div class="edition" data-date="${e.date}" data-today="${isToday ? 1 : 0}">
+<div class="prose intro">
 <div id="welcome" class="notice" hidden></div>
 <p class="dateline"><time datetime="${e.date}">${esc(longDate(e.date))}</time></p>
 <h1 class="the-day">${esc(e.the_day)}</h1>
 <p class="meta">${esc(meta)}</p>
 ${e.stats.feeds_failed ? `<p class="notice">${plural(e.stats.feeds_failed, 'source')} couldn't be reached this morning, so this edition was written without them.</p>` : ''}
-<nav class="jump" aria-label="Companies">${jump}</nav>
+</div>
+<div class="today-bar">
+  <div class="bar-date">${isToday ? '<b>Today</b>' : '<b>Edition</b>'} <time datetime="${e.date}">${esc(shortDate(e.date))}</time></div>
+  <nav class="jump" aria-label="Jump to a company">${tabs}</nav>
+  <div class="bar-actions">
+    <div class="arrows" hidden><button type="button" class="arrow" data-dir="-1" aria-label="Previous company">←</button><button type="button" class="arrow" data-dir="1" aria-label="Next company">→</button></div>
+    ${isToday ? doneButton('in-bar') : `<a class="today-link" href="${BASE}/">Today →</a>`}
+  </div>
+</div>
+<div class="board" aria-label="The five companies">
+  <div class="track" tabindex="0" aria-label="Swipe or scroll sideways to see each company">
 ${e.companies.map((c) => company(c, week?.[c.id] ?? [], isToday)).join('\n')}
+  </div>
+</div>
+<div class="prose outro">
 <section class="done" aria-label="End of edition">
-  <div class="done-mark" aria-hidden="true"></div>
-  <h2>You're caught up.</h2>
+  ${isToday ? '' : '<div class="done-mark" aria-hidden="true"></div>'}
+  <h2 class="done-title">${isToday ? 'That\'s everything.' : 'You\'re caught up.'}</h2>
   <p>${all.length ? `That's everything that changed at the five labs${isToday ? ' since yesterday' : ''}.` : 'Nothing changed enough to tell you about.'} ${isToday ? `Go enjoy your ${esc(weekday(e.date))}.` : ''}</p>
-  ${isToday ? '<p class="next">The next edition arrives tomorrow morning.</p>' : ''}
+  ${isToday ? `${doneButton('big')}<p class="next" aria-live="polite">The next edition arrives tomorrow morning.</p>` : ''}
 </section>
 ${leftOut(e)}
 <p class="provenance">Written by ${esc(modelName(e.usage?.model ?? MODEL))} at ${esc(clock(e.written_at))} Pacific, using only the items it read that morning. Claude is made by Anthropic, one of the companies covered here, so every company gets the same rules, and every item links to its sources. <a href="${BASE}/how/">How Enough decides</a>.</p>
@@ -139,6 +154,7 @@ ${leftOut(e)}
   ${prev ? `<a href="${BASE}/${prev}/">← ${esc(shortDate(prev))}</a>` : '<span></span>'}
   ${next ? `<a href="${BASE}/${next}/">${esc(shortDate(next))} →</a>` : '<span></span>'}
 </nav>
+</div>
 </div>`;
 }
 
@@ -219,8 +235,8 @@ for (const [i, e] of editions.entries()) {
   const prev = editions[i - 1]?.date, next = editions[i + 1]?.date;
   const latest = i === editions.length - 1;
   const title = `Enough · ${longDate(e.date)}`;
-  await write(e.date, page({ title, description: e.the_day, path: `${e.date}/`, body: edition(e, { isToday: false, prev, next }) }));
-  if (latest) await write('', page({ title: 'Enough · AI news, finished', description: desc, path: '', body: edition(e, { isToday: true, prev, next: null, week: weekBefore(i) }) }));
+  await write(e.date, page({ title, description: e.the_day, path: `${e.date}/`, wide: true, body: edition(e, { isToday: false, prev, next }) }));
+  if (latest) await write('', page({ title: 'Enough · AI news, finished', description: desc, path: '', wide: true, body: edition(e, { isToday: true, prev, next: null, week: weekBefore(i) }) }));
 }
 if (!editions.length) {
   await write('', page({ title: 'Enough · AI news, finished', description: desc, body: `<h1 class="the-day">The first edition arrives tomorrow morning.</h1><p class="meta">One calm page a day that ends. <a href="${BASE}/how/">How it works</a>.</p>` }));
