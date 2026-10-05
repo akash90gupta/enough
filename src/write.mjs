@@ -6,25 +6,28 @@ import Anthropic from '@anthropic-ai/sdk';
 import { z } from 'zod';
 import { readFile, writeFile, readdir, mkdir } from 'node:fs/promises';
 import { COMPANIES, editionDate } from './sources.mjs';
+import { resolveLinks } from './links.mjs';
 
 export const MODEL = 'claude-opus-5-5';
-const MAX_PER_COMPANY = 3;
+const MAX_PER_COMPANY = 5;
+const FRESH_HOURS = 26; // an item needs at least one source from the last day, or it's stale
 
 export const KINDS = ['Launch', 'Research', 'Policy', 'Business', 'Legal', 'People', 'Safety'];
 export const STATUSES = ['official', 'reported', 'unconfirmed', 'disputed'];
 export const REASONS = [
   'Hype and speculation', 'Opinion and analysis', 'Single-source rumors', 'Repeats and syndication',
-  'Stock and valuation chatter', 'Not really about the company', 'Other',
+  'Stock and valuation chatter', 'Not really about the company', 'Older news', 'Other',
 ];
 const IDS = COMPANIES.map((c) => c.id);
 
 const ITEM = {
   type: 'object',
   additionalProperties: false,
-  required: ['headline', 'what_changed', 'for_you', 'kind', 'status', 'continuing', 'sources'],
+  required: ['headline', 'points', 'for_you', 'kind', 'status', 'continuing', 'x_keywords', 'sources'],
   properties: {
     headline: { type: 'string' },
-    what_changed: { type: 'string' },
+    points: { type: 'array', items: { type: 'string' } },
+    x_keywords: { type: 'string' },
     for_you: { type: 'string' },
     kind: { type: 'string', enum: KINDS },
     status: { type: 'string', enum: STATUSES },
@@ -74,7 +77,8 @@ const Draft = z.object({
     company: z.enum(IDS),
     items: z.array(z.object({
       headline: z.string().min(1),
-      what_changed: z.string().min(1),
+      points: z.array(z.string().min(1)).min(1),
+      x_keywords: z.string(),
       for_you: z.string(),
       kind: z.enum(KINDS),
       status: z.enum(STATUSES),
@@ -97,18 +101,21 @@ async function previousEdition(date) {
 
 function buildPrompt(read, prev) {
   const name = Object.fromEntries(COMPANIES.map((c) => [c.id, c.name]));
+  const now = Date.parse(read.read_at);
+  const age = (iso) => { const h = Math.max(0, Math.round((now - Date.parse(iso)) / 3600_000)); return h < 1 ? 'under 1h ago' : `${h}h ago`; };
   const lines = read.items.map((it) => [
     it.id,
+    age(it.published),
     it.official ? `OFFICIAL ${name[it.official]} post` : 'press',
     `about: ${it.about.map((a) => name[a]).join(', ')}`,
     it.source,
     it.title + (it.summary ? ` | ${it.summary}` : ''),
   ].join(' | '));
   const yesterday = prev
-    ? prev.companies.flatMap((c) => c.items.map((s) => `- ${c.name}: ${s.headline}. ${s.what_changed}`)).join('\n') || '(nothing changed yesterday)'
+    ? prev.companies.flatMap((c) => c.items.map((s) => `- ${c.name}: ${s.headline}. ${(s.points ?? [s.what_changed]).join(' ')}`)).join('\n') || '(nothing changed yesterday)'
     : '(no previous edition)';
   return `Yesterday's edition (${prev?.date ?? 'none'}):\n${yesterday}\n\n` +
-    `Today's items, ${read.items.length} in all, format "id | official or press | companies | outlet | title | summary":\n${lines.join('\n')}`;
+    `Today's items, ${read.items.length} in all, format "id | age | official or press | companies | outlet | title | summary":\n${lines.join('\n')}`;
 }
 
 export async function writeEdition(date, read, prev) {
@@ -140,7 +147,11 @@ export async function writeEdition(date, read, prev) {
   if (!textBlock) throw new Error('No edition text returned.');
   const draft = Draft.parse(JSON.parse(textBlock.text));
 
-  return { ...verify(draft, read, date, prev), usage: { model: msg.model, input_tokens: msg.usage.input_tokens, output_tokens: msg.usage.output_tokens } };
+  const edition = verify(draft, read, date, prev);
+  // Point every cited source at the real article or the company's own post.
+  const links = await resolveLinks(edition.companies.flatMap((c) => c.items.flatMap((i) => i.sources)));
+  edition.checks.push(`Resolved ${links.resolved} of ${links.attempted} Google News links to their original sites.`);
+  return { ...edition, usage: { model: msg.model, input_tokens: msg.usage.input_tokens, output_tokens: msg.usage.output_tokens } };
 }
 
 // Turn the model's draft into a published edition, keeping only what checks out.
@@ -149,6 +160,9 @@ export function verify(draft, read, date, prev) {
   const used = new Set();
   const notes = [];
   const drafted = new Map(draft.companies.map((c) => [c.company, c]));
+  const freshAfter = Date.parse(read.read_at) - FRESH_HOURS * 3600_000;
+  // Sources already used yesterday, matched by outlet and title (links can differ between runs).
+  const seenYesterday = new Set((prev?.companies ?? []).flatMap((c) => c.items.flatMap((i) => i.sources.map((x) => `${x.source}|${x.title}`.toLowerCase()))));
 
   const companies = COMPANIES.map((co) => {
     const d = drafted.get(co.id) ?? { items: [], quiet_line: '' };
@@ -157,6 +171,10 @@ export function verify(draft, read, date, prev) {
       const ids = [...new Set(s.sources)].filter((id) => byId.has(id) && !used.has(id));
       if (ids.length < s.sources.length) notes.push(`${co.name}: removed ${s.sources.length - ids.length} unknown or reused citation(s) from "${s.headline}".`);
       if (!ids.length) { notes.push(`${co.name}: dropped "${s.headline}", no valid sources.`); continue; }
+      const cited = ids.map((id) => byId.get(id));
+      const newest = Math.max(...cited.map((x) => Date.parse(x.published)));
+      if (newest < freshAfter) { notes.push(`${co.name}: dropped "${s.headline}", stale (newest source over ${FRESH_HOURS}h old).`); continue; }
+      if (cited.every((x) => seenYesterday.has(`${x.source}|${x.title}`.toLowerCase()))) { notes.push(`${co.name}: dropped "${s.headline}", every source was already in yesterday's edition.`); continue; }
       if (items.length >= MAX_PER_COMPANY) { notes.push(`${co.name}: trimmed "${s.headline}", over ${MAX_PER_COMPANY} items.`); continue; }
       ids.forEach((id) => used.add(id));
       const sources = ids.map((id) => byId.get(id)).sort((a, b) => (b.official === co.id) - (a.official === co.id));
@@ -168,13 +186,15 @@ export function verify(draft, read, date, prev) {
       if (status === 'reported' && outlets.length < 2) { status = 'unconfirmed'; notes.push(`${co.name}: "${s.headline}" has one outlet, marked unconfirmed.`); }
       items.push({
         headline: noDashes(s.headline),
-        what_changed: noDashes(s.what_changed),
+        points: s.points.slice(0, 3).map(noDashes),
+        reported_at: new Date(newest).toISOString(),
+        x_keywords: s.x_keywords.replace(/[^\p{L}\p{N} .\-]/gu, ' ').replace(/\s+/g, ' ').trim().slice(0, 60),
         for_you: noDashes(s.for_you),
         kind: s.kind,
         status,
         continuing: s.continuing,
         outlets,
-        sources: sources.map(({ source, title, link, official }) => ({ source, title, link, official: official === co.id })),
+        sources: sources.map(({ source, title, link, official, published }) => ({ source, title, link, published, official: official === co.id })),
       });
     }
     return {
@@ -207,7 +227,7 @@ export function verify(draft, read, date, prev) {
     .sort((a, b) => b.items.length - a.items.length);
 
   const all = companies.flatMap((c) => c.items);
-  const words = [draft.the_day, ...all.flatMap((s) => [s.headline, s.what_changed, s.for_you])].join(' ').split(/\s+/).length;
+  const words = [draft.the_day, ...all.flatMap((s) => [s.headline, ...s.points, s.for_you])].join(' ').split(/\s+/).length;
 
   return {
     date,

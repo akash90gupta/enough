@@ -314,3 +314,18 @@ body.wide .the-day { font-size: clamp(28px, 2.6vw, 36px); line-height: 1.22; mar
 body.wide .dateline { margin-top: 32px; }
 .card .receipts summary { display: flex; align-items: flex-start; line-height: 1.45; padding: 4px 0; }
 .card .receipts summary::before { margin-top: 5px; }
+
+/* Digestible items: linked headline, short points, clear next steps */
+.story h3 a { text-decoration: none; }
+.story h3 a:hover { text-decoration: underline; text-decoration-color: color-mix(in srgb, var(--brand, var(--ink)) 60%, transparent); text-decoration-thickness: 2px; }
+.ago { font-family: var(--sans); font-size: 12px; color: var(--ink-3); margin-left: auto; white-space: nowrap; }
+.story-meta { width: 100%; }
+.points { margin: 0 0 10px; padding-left: 18px; }
+.points li { font-size: 16px; line-height: 1.48; margin-bottom: 5px; }
+.points li::marker { color: var(--brand, var(--ink-3)); }
+.links { display: flex; flex-wrap: wrap; gap: 6px 14px; font-family: var(--sans); font-size: 13px; font-weight: 500; margin: 2px 0 4px; }
+.links a { text-decoration: none; color: var(--ink); border-bottom: 1.5px solid color-mix(in srgb, var(--brand, var(--ink)) 55%, transparent); padding-bottom: 1px; }
+.links a:hover { border-bottom-color: var(--brand, var(--ink)); }
+.company-links { display: flex; flex-wrap: wrap; gap: 4px 12px; font-family: var(--sans); font-size: 12px; margin: 8px 0 0; }
+.company-links a { color: var(--ink-3); text-decoration: none; }
+.company-links a:hover { color: var(--ink); }

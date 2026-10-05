@@ -40,7 +40,7 @@ Three ideas shaped the product.
 | **It matters beyond insiders** | Executive gossip, stock moves, a CEO's remark in an interview |
 | **It can be sourced** | One outlet's anonymous scoop, unless it's big enough to label "Unconfirmed" |
 
-Each company gets zero to three items. A quiet company gets one calm line ("Nothing new from xAI today.") instead of filler.
+Each company gets zero to five items, most important first. Each item is a plain headline, two or three short bullet points, and an optional "For you" line. A quiet company gets one calm line ("Nothing new from xAI today.") instead of filler.
 
 **2. The model proposes, the code verifies.** Claude writes a structured draft. Before anything is published, plain code checks it:
 
@@ -48,18 +48,22 @@ Each company gets zero to three items. A quiet company gets one calm line ("Noth
 - **"Official" requires the company's own post** among the sources. Otherwise it's downgraded.
 - **"Reported" requires two or more outlets.** One outlet means "Unconfirmed".
 - Outlet counts are computed from citations, never taken from the model, and the company itself doesn't count as an outside outlet.
+- **Nothing stale.** Only the last 26 hours are read. An item whose newest source is older than that is dropped, and so is an item built only from sources already used in yesterday's edition.
 - Everything that was read ends up somewhere. If the editor forgets to sort an item, it still appears under "left out", so "we read 353 items" is always literally true.
 
 **3. Trust comes from receipts, not claims.**
 
-- Every item has a status badge (Official, Reported, Unconfirmed, Disputed) and a fold listing every source, with the company's own post first.
+- Every headline links straight to its best source: the company's own post when there is one. Google News redirect links are resolved to the real publisher address.
+- Each item links to the company's own posts on X about that topic, and each card links to the company's newsroom and X account.
+- Every item has a status badge (Official, Reported, Unconfirmed, Disputed) and a fold listing every source.
 - At the bottom, "See the items we left out, and why" opens everything that was skipped, grouped by reason ("Hype and speculation", "Repeats and syndication", "Stock and valuation chatter"...), with a one-line explanation specific to that day.
 - The full editor brief is on the [How it works](https://akash90gupta.github.io/enough/how/) page, and every day's inputs and output are committed to [`data/`](data/).
 
 ## Trade-offs
 
 - **The editor is made by one of the companies it covers.** Enough is written by Claude, and Anthropic is one of the five. I chose to say this openly rather than hide it. The brief tells the model to be stricter, not softer, with Anthropic. Status labels are enforced in code. The "left out" drawer makes it easy to check whether any company got a pass.
-- **Official feeds where they exist, coverage where they don't.** OpenAI, Google and Meta publish feeds. Anthropic's news page is read directly. x.ai blocks automated readers, so the xAI section relies on reporting only, and the page says so.
+- **Official feeds where they exist, search where they don't.** OpenAI, Google and Meta publish feeds. Anthropic's news page is read directly. x.ai blocks automated readers, so its own pages are found through Google News, and any item from a company's own domain counts as official.
+- **X links are searches, not embeds.** Reading X requires a paid API, so Enough links to a live search of the company's own posts on each topic instead. One tap, no tracking, no API key.
 - **Headlines, not full articles.** The editor reads titles and short summaries, never full articles. That keeps Enough fast, cheap and respectful of publishers, and every fact traces to text anyone can see. The cost is less nuance. The brief forbids filling gaps from the model's memory, which keeps it honest but sometimes leaves an item thinner than I'd like.
 - **One call, not an agent.** A single request reads everything and writes the edition. An agent could open articles and dig deeper, but it would be slower, costlier and much harder to verify. For a daily page, predictability wins.
 - **A static site, not an app.** GitHub Actions runs once a day and GitHub Pages serves the result. No server, no database, no login. It costs well under a dollar a day in API calls and nothing to host.
@@ -79,9 +83,10 @@ Next, if people use it:
 ```
 05:00 PT   GitHub Actions wakes up
   read     src/read.mjs    official feeds + Anthropic's news page + Google News coverage per company,
-                           last 30 hours, deduped                                 → data/reads/DATE.json
+                           last 26 hours, deduped                                 → data/reads/DATE.json
   write    src/write.mjs   Claude Opus 5.5 reads everything + yesterday's edition and returns
-                           structured JSON; code verifies citations and statuses  → data/editions/DATE.json
+                           structured JSON; code verifies citations, statuses and freshness,
+                           then resolves source links                            → data/editions/DATE.json
   build    src/build.mjs   static HTML: today, one page per day, archive, how-it-works, RSS
   publish  commit data/ to main, deploy site/ to GitHub Pages
 ```

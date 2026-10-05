@@ -137,3 +137,14 @@
   addEventListener('scroll', onScroll, { passive: true });
   onScroll();
 })();
+
+// "3h ago" reads faster than a timestamp. The exact time stays in the tooltip.
+(() => {
+  const now = Date.now();
+  for (const t of document.querySelectorAll('time.ago')) {
+    const mins = Math.round((now - Date.parse(t.getAttribute('datetime'))) / 60000);
+    if (Number.isNaN(mins) || mins < 0) continue;
+    t.title = t.textContent;
+    t.textContent = mins < 60 ? `${Math.max(1, mins)}m ago` : mins < 48 * 60 ? `${Math.round(mins / 60)}h ago` : t.textContent;
+  }
+})();

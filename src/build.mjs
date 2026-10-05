@@ -1,6 +1,6 @@
 // Step 3 of 3: turn editions into a static site. No framework, no tracking.
 import { readFile, writeFile, readdir, mkdir, rm, cp } from 'node:fs/promises';
-import { COMPANIES, TIME_ZONE } from './sources.mjs';
+import { COMPANIES, TIME_ZONE, xSearch } from './sources.mjs';
 import { MODEL } from './write.mjs';
 
 const SITE = process.env.SITE_URL ?? 'https://akash90gupta.github.io/enough';
@@ -16,6 +16,8 @@ const shortDate = (d) => dateObj(d).toLocaleDateString('en-US', { month: 'short'
 const dayShort = (d) => dateObj(d).toLocaleDateString('en-US', { weekday: 'short', timeZone: 'UTC' });
 const weekday = (d) => dateObj(d).toLocaleDateString('en-US', { weekday: 'long', timeZone: 'UTC' });
 const clock = (iso) => new Date(iso).toLocaleTimeString('en-US', { hour: 'numeric', minute: '2-digit', timeZone: TIME_ZONE });
+const stamp = (iso) => new Date(iso).toLocaleString('en-US', { month: 'short', day: 'numeric', hour: 'numeric', minute: '2-digit', timeZone: TIME_ZONE }) + ' PT';
+const ext = 'target="_blank" rel="noopener"';
 const plural = (n, one, many = `${one}s`) => `${n} ${n === 1 ? one : many}`;
 const modelName = (id) => ({ 'claude-opus-5-5': 'Claude Opus 5.5' }[id] ?? id);
 
@@ -72,16 +74,23 @@ const STATUS = {
   disputed: { label: 'Disputed', note: () => 'Sources disagree' },
 };
 
-const sourceList = (sources) => `<ul>${sources.map((x) => `<li><span class="outlet">${esc(x.source)}${x.official ? ' · official post' : ''}</span> <a href="${esc(x.link)}" rel="noopener">${esc(x.title)}</a></li>`).join('')}</ul>`;
+const sourceList = (sources) => `<ul>${sources.map((x) => `<li><span class="outlet">${esc(x.source)}${x.official ? ' · official post' : ''}</span> <a href="${esc(x.link)}" ${ext}>${esc(x.title)}</a></li>`).join('')}</ul>`;
 
 function item(s, co) {
+  const company = COMPANIES.find((c) => c.id === co.id);
+  const primary = s.sources[0];
+  const points = s.points ?? [s.what_changed];
   const who = [...new Set(s.sources.some((x) => x.official) ? [co.name, ...s.outlets] : s.outlets)];
   return `<article class="story">
-  <div class="story-meta"><span class="status status-${s.status}" title="${esc(STATUS[s.status].note(co.name))}">${STATUS[s.status].label}</span><span class="tag">${esc(s.kind)}</span>${s.continuing ? '<span class="tag">Update</span>' : ''}</div>
-  <h3>${esc(s.headline)}</h3>
-  <p class="changed">${esc(s.what_changed)}</p>
+  <div class="story-meta"><span class="status status-${s.status}" title="${esc(STATUS[s.status].note(co.name))}">${STATUS[s.status].label}</span><span class="tag">${esc(s.kind)}</span>${s.continuing ? '<span class="tag">Update</span>' : ''}${s.reported_at ? `<time class="ago" datetime="${s.reported_at}">${esc(stamp(s.reported_at))}</time>` : ''}</div>
+  <h3><a href="${esc(primary.link)}" ${ext}>${esc(s.headline)}</a></h3>
+  <ul class="points">${points.map((p) => `<li>${esc(p)}</li>`).join('')}</ul>
   ${s.for_you ? `<p class="matters"><span>For you</span> ${esc(s.for_you)}</p>` : ''}
-  <details class="receipts"><summary>${s.sources.some((x) => x.official) ? 'From ' : 'Reported by '}${esc(outletList(who))}</summary>${sourceList(s.sources)}</details>
+  <div class="links">
+    <a href="${esc(primary.link)}" ${ext}>${primary.official ? `${esc(co.name)}'s post` : esc(primary.source)} <span aria-hidden="true">↗</span></a>
+    ${company ? `<a href="${esc(xSearch(company, s.x_keywords ?? ''))}" ${ext}>@${esc(company.x[0])} on X <span aria-hidden="true">↗</span></a>` : ''}
+  </div>
+  <details class="receipts"><summary>${plural(s.sources.length, 'source')}: ${esc(outletList(who))}</summary>${sourceList(s.sources)}</details>
 </article>`;
 }
 
@@ -92,8 +101,9 @@ function company(co, week, isToday) {
     <h2 id="h-${co.id}"><i class="dot" aria-hidden="true"></i>${esc(co.name)}</h2>
     <span class="company-count">${co.items.length ? plural(co.items.length, 'change') : 'Quiet'}</span>
   </header>
+  ${(() => { const c = COMPANIES.find((x) => x.id === co.id); return c ? `<p class="company-links"><a href="${esc(c.site.url)}" ${ext}>${esc(c.site.label)} <span aria-hidden="true">↗</span></a><a href="https://x.com/${esc(c.x[0])}" ${ext}>@${esc(c.x[0])} <span aria-hidden="true">↗</span></a></p>` : ''; })()}
   ${co.items.length ? co.items.map((s) => item(s, co)).join('') : `<p class="quiet">${esc(co.quiet_line)}</p>`}
-  ${co.coverage_only ? `<p class="coverage-note">${esc(co.name)} doesn't offer a feed Enough can read, so this section relies on reporting only.</p>` : ''}
+  ${''}
   ${isToday && earlier.length ? `<details class="week"><summary>Earlier this week</summary><ul>${earlier.map((w) => w.items.map((h) => `<li><a href="${BASE}/${w.date}/#${co.id}"><time datetime="${w.date}">${esc(dayShort(w.date))}</time> ${esc(h.headline)}</a></li>`).join('')).join('')}</ul></details>` : ''}
 </section>`;
 }
@@ -108,7 +118,7 @@ function leftOut(e) {
     ${e.left_out.map((g) => `<details class="lo-group">
       <summary><span class="lo-reason">${esc(g.reason)}</span><span class="lo-count">${g.items.length}</span></summary>
       <p class="lo-why">${esc(g.explanation)}</p>
-      <ul>${g.items.map((x) => `<li><span class="outlet">${esc(x.source)}</span> <a href="${esc(x.link)}" rel="noopener">${esc(x.title)}</a></li>`).join('')}</ul>
+      <ul>${g.items.map((x) => `<li><span class="outlet">${esc(x.source)}</span> <a href="${esc(x.link)}" ${ext}>${esc(x.title)}</a></li>`).join('')}</ul>
     </details>`).join('')}
   </details>
 </section>`;
@@ -172,7 +182,7 @@ async function how() {
 
 <h2>Every morning</h2>
 <ol class="steps">
-  <li><strong>Read.</strong> At 5am Pacific, a script collects each company's own announcements (OpenAI's news feed, Google's AI, Gemini and DeepMind blogs, Meta's newsroom, Anthropic's news page) and press coverage of all five from the last day. Usually that's 300 to 400 items from more than 200 outlets.</li>
+  <li><strong>Read.</strong> At 5am Pacific, a script collects each company's own announcements (OpenAI's news feed, Google's AI, Gemini and DeepMind blogs, Meta's newsroom, Anthropic's news page) and press coverage of all five from the last day. Usually that's 300 to 400 items from more than 200 outlets. Anything older than a day is ignored.</li>
   <li><strong>Decide.</strong> ${esc(modelName(MODEL))} reads all of them and keeps only what changed: something shipped, was announced, was priced, was ruled on or became official. Most companies, most days, have nothing or one thing.</li>
   <li><strong>Check.</strong> Code, not the AI, verifies every item. Each one must cite real items from that morning's read. "Official" requires the company's own post. "Reported" requires at least two outlets, or it becomes "Unconfirmed". Every item that didn't make it is shown under "left out", with the reason.</li>
   <li><strong>Publish.</strong> The page rebuilds itself, and the edition is saved permanently in the <a href="${REPO}/tree/main/data">public record</a>, along with everything it was written from.</li>
@@ -191,7 +201,9 @@ async function how() {
 
 <h2>The promises</h2>
 <ul class="promises">
-  <li><strong>It ends.</strong> At most three items per company. Quiet companies get one calm line. No infinite scroll.</li>
+  <li><strong>It ends.</strong> At most five items per company, usually one or two. Quiet companies get one calm line. No infinite scroll.</li>
+  <li><strong>Only today.</strong> Every item needs a source from the last day. Code drops anything stale or already covered yesterday, and each item shows how long ago it was reported.</li>
+  <li><strong>Straight to the source.</strong> Every headline links to the company's own post when there is one, or the best outlet otherwise. Each item also links to the company's own posts on X about it.</li>
   <li><strong>Nothing is hidden.</strong> You can see every item we read and why each one was left out.</li>
   <li><strong>No invented facts.</strong> The AI may only use what its sources said, and company claims stay labeled as company claims.</li>
   <li><strong>No hype.</strong> No "game-changer", no "AGI is here", no breathless headlines.</li>
@@ -199,7 +211,7 @@ async function how() {
 </ul>
 
 <h2>What it can get wrong</h2>
-<p>Enough is only as good as what it reads. xAI offers no feed Enough can read, so its section relies on reporting alone. An AI can misjudge what matters or compress too far. That's why every item shows its receipts. If something looks off, the original is one tap away, and you can <a href="${REPO}/issues">tell us</a>.</p>
+<p>Enough is only as good as what it reads. xAI's site blocks automated readers, so its own posts are found through Google News, which can lag. Enough can't read X directly, so the X links open a live search of each company's posts rather than a specific post. An AI can misjudge what matters or compress too far. That's why every item shows its receipts. If something looks off, the original is one tap away, and you can <a href="${REPO}/issues">tell us</a>.</p>
 
 <h2>The editor's instructions</h2>
 <p>This is the exact brief the AI receives every morning. Nothing else shapes its choices.</p>
@@ -208,7 +220,7 @@ async function how() {
 
 function feed(editions) {
   const items = [...editions].reverse().slice(0, 30).map((e) => {
-    const html = `<p><strong>${esc(e.the_day)}</strong></p>` + e.companies.map((c) => `<h2>${esc(c.name)}</h2>` + (c.items.length ? c.items.map((s) => `<h3>${esc(s.headline)}</h3><p><small>${esc(STATUS[s.status].label)} · ${esc(s.kind)}</small></p><p>${esc(s.what_changed)}</p>${s.for_you ? `<p><em>For you:</em> ${esc(s.for_you)}</p>` : ''}`).join('') : `<p>${esc(c.quiet_line)}</p>`)).join('') + `<p>You're caught up.</p>`;
+    const html = `<p><strong>${esc(e.the_day)}</strong></p>` + e.companies.map((c) => `<h2>${esc(c.name)}</h2>` + (c.items.length ? c.items.map((s) => `<h3>${esc(s.headline)}</h3><p><small>${esc(STATUS[s.status].label)} · ${esc(s.kind)}</small></p><ul>${(s.points ?? [s.what_changed]).map((p) => `<li>${esc(p)}</li>`).join('')}</ul><p><a href="${esc(s.sources[0].link)}">Source: ${esc(s.sources[0].source)}</a></p>${s.for_you ? `<p><em>For you:</em> ${esc(s.for_you)}</p>` : ''}`).join('') : `<p>${esc(c.quiet_line)}</p>`)).join('') + `<p>You're caught up.</p>`;
     return `<item><title>${esc(longDate(e.date))}: ${esc(e.the_day)}</title><link>${SITE}/${e.date}/</link><guid isPermaLink="true">${SITE}/${e.date}/</guid><pubDate>${new Date(e.written_at).toUTCString()}</pubDate><description>${esc(html)}</description></item>`;
   }).join('');
   return `<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"><channel><title>Enough</title><link>${SITE}/</link><description>AI news, finished. What changed at Anthropic, Google, Meta, OpenAI and xAI, one calm page a day.</description><language>en-us</language>${items}</channel></rss>`;

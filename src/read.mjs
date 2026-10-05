@@ -2,10 +2,11 @@
 // The saved file is public, so anyone can check the editor's choices against its inputs.
 import { XMLParser } from 'fast-xml-parser';
 import { writeFile, mkdir } from 'node:fs/promises';
-import { COMPANIES, googleNews, editionDate } from './sources.mjs';
+import { COMPANIES, googleNews, isOfficialUrl, editionDate } from './sources.mjs';
 
-const NEWS_WINDOW_HOURS = 30;     // a day plus overlap, so overnight stories aren't lost between runs
-const OFFICIAL_WINDOW_HOURS = 48; // company blogs often publish with date-only timestamps
+// Nothing stale: a day plus two hours of overlap, so overnight stories aren't lost between runs.
+const NEWS_WINDOW_HOURS = 26;
+const OFFICIAL_WINDOW_HOURS = 36; // some company pages publish date-only timestamps, read as noon Pacific
 const MAX_SUMMARY = 280;
 const UA = 'Mozilla/5.0 (compatible; EnoughBot/1.0; +https://github.com/akash90gupta/enough)';
 
@@ -59,6 +60,7 @@ async function readRss(url) {
     summary: clip(clean(it.description ?? it.summary ?? it['content:encoded'] ?? ''), MAX_SUMMARY),
     published: text(it.pubDate ?? it['dc:date'] ?? it.published ?? it.updated),
     outlet: it.source ? clean(it.source) : null,
+    outletUrl: it.source?.['@url'] ?? null,
   }));
 }
 
@@ -82,22 +84,29 @@ export async function readAll(now = new Date()) {
   const health = [];
 
   const take = (raw, { outlet, company, official, windowHours }) => {
+    const co = COMPANIES.find((c) => c.id === company);
     const cutoff = now.getTime() - windowHours * 3600_000;
     let kept = 0;
     for (const it of raw) {
       const t = Date.parse(it.published);
       if (!it.title || !it.link || Number.isNaN(t) || t < cutoff || t > now.getTime() + 3600_000) continue;
       const source = it.outlet ?? outlet;
+      // A company's own site counts as official wherever we found it, including via Google News.
+      const isOfficial = official || isOfficialUrl(co, it.outletUrl ?? '') || isOfficialUrl(co, it.link);
       // Google News titles end in " - Outlet"; the outlet is already recorded separately.
       const title = it.outlet ? it.title.replace(new RegExp(`\\s+-\\s+${it.outlet.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')}$`), '') : it.title;
       // Same story twice: same link, or same outlet and title (Google News re-links official posts).
       const key = it.link.toLowerCase();
       const twin = `${source}|${title}`.toLowerCase();
       const prev = byLink.get(key) ?? byTitle.get(twin);
-      if (prev) { if (!prev.about.includes(company)) prev.about.push(company); continue; }
+      if (prev) {
+        if (!prev.about.includes(company)) prev.about.push(company);
+        if (isOfficial && !prev.official) prev.official = company;
+        continue;
+      }
       const entry = {
         source, title, link: it.link, summary: it.outlet ? '' : it.summary,
-        published: new Date(t).toISOString(), about: [company], official: official ? company : null,
+        published: new Date(t).toISOString(), about: [company], official: isOfficial ? company : null,
       };
       byLink.set(key, entry);
       byTitle.set(twin, entry);
@@ -108,8 +117,9 @@ export async function readAll(now = new Date()) {
 
   const jobs = COMPANIES.flatMap((c) => [
     ...c.official.map((f) => async () => {
-      const raw = f.kind === 'anthropic-html' ? await readAnthropic(f.url) : await readRss(f.url);
-      return { label: `${c.name} official`, url: f.url, kept: take(raw, { outlet: f.outlet, company: c.id, official: true, windowHours: OFFICIAL_WINDOW_HOURS }) };
+      const url = f.kind === 'google-news' ? googleNews(f.query, '2d') : f.url;
+      const raw = f.kind === 'anthropic-html' ? await readAnthropic(url) : await readRss(url);
+      return { label: `${c.name} official`, url, kept: take(raw, { outlet: f.outlet, company: c.id, official: true, windowHours: OFFICIAL_WINDOW_HOURS }) };
     }),
     async () => {
       const url = googleNews(c.query);
@@ -119,7 +129,7 @@ export async function readAll(now = new Date()) {
   // Official feeds first, so a company's own post wins the dedupe over a press copy of it.
   for (const job of jobs) {
     try { health.push({ ok: true, ...(await job()) }); }
-    catch (err) { health.push({ ok: false, error: String(err.message ?? err), label: 'feed' }); }
+    catch (err) { health.push({ ok: false, error: String(err.message ?? err), label: job.label ?? 'feed' }); }
   }
 
   const items = [...byLink.values()];
