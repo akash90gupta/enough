@@ -117,7 +117,9 @@ function buildPrompt(read, prev) {
     : '(no previous edition)';
   const days = (iso) => Math.max(1, Math.round((now - Date.parse(iso)) / 86400_000));
   const earlier = (read.background ?? []).map((b) => `- ${name[b.company]}, ${days(b.published)}d ago: ${b.title}`).join('\n') || '(none)';
+  const rumors = (prev?.left_out ?? []).find((g) => g.reason === 'Single-source rumors')?.items.map((x) => `- ${x.source}: ${x.title}`).join('\n') || '(none)';
   return `Yesterday's edition (${prev?.date ?? 'none'}):\n${yesterday}\n\n` +
+    `Set aside yesterday as single-source rumors (include one today only if a genuinely new fact or a second independent source appears):\n${rumors}\n\n` +
     `Already announced by the companies in the past 10 days (background only: these are not new today and cannot be cited; ` +
     `fresh coverage of any of them is older news unless it reports a genuinely new development):\n${earlier}\n\n` +
     `Today's items, ${read.items.length} in all, format "id | age | official or press | companies | outlet | title | summary":\n${lines.join('\n')}`;
