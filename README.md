@@ -70,7 +70,7 @@ Each company gets zero to five items, most important first. Each item is a plain
 - **X links are searches, not embeds.** Reading X requires a paid API, so Enough.ai links to a live search of the company's own posts on each topic instead. One tap, no tracking, no API key.
 - **Headlines, not full articles.** The editor reads titles and short summaries, never full articles. That keeps Enough.ai fast, cheap and respectful of publishers, and every fact traces to text anyone can see. The cost is less nuance. The brief forbids filling gaps from the model's memory, which keeps it honest but sometimes leaves an item thinner than I'd like.
 - **One call, not an agent.** A single request reads everything and writes the edition. An agent could open articles and dig deeper, but it would be slower, costlier and much harder to verify. For a daily page, predictability wins.
-- **A static site, not an app.** GitHub Actions runs once a day and GitHub Pages serves the result. No server, no database, no login. It costs well under a dollar a day in API calls and nothing to host.
+- **A static site, not an app.** GitHub Actions runs once a day and GitHub Pages serves the result. No server, no database, no login. It runs on a Claude subscription through Claude Code, so it costs nothing beyond that, and nothing to host. With a pay-per-use API key instead, a day's edition (about 25,000 tokens in and 27,000 out) costs well under a dollar.
 
 ## Decision / Direction
 
@@ -112,12 +112,19 @@ Small details that matter:
 
 ```bash
 npm install
-export ANTHROPIC_API_KEY=...   # only needed for the write step
-npm run daily                  # read, write and build today's edition
-npx serve site
+npm run read                          # collect today's items
+ENOUGH_WRITER=claude-code npm run write   # write with your logged-in Claude Code (Pro/Max)
+# or: ANTHROPIC_API_KEY=... npm run write  # write with a pay-per-use API key
+npm run build && npx serve site
 ```
 
-To run your own copy: fork it, add `ANTHROPIC_API_KEY` as a repository secret, turn on GitHub Pages with "GitHub Actions" as the source, and set `SITE_URL` for your fork. To follow different companies, edit [`src/sources.mjs`](src/sources.mjs).
+To run your own copy:
+
+1. Fork it and turn on GitHub Pages with "GitHub Actions" as the source.
+2. Give the daily job a way to reach Claude, as a repository secret. Either:
+   - **Free with a Claude Pro or Max plan:** run `claude setup-token` and save the token as `CLAUDE_CODE_OAUTH_TOKEN`, or
+   - **Pay per use:** create a key at console.anthropic.com and save it as `ANTHROPIC_API_KEY`.
+3. Set `SITE_URL` for your fork. To follow different companies, edit [`src/sources.mjs`](src/sources.mjs).
 
 ## What I learned building it
 

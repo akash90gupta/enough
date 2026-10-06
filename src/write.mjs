@@ -5,6 +5,7 @@
 import Anthropic from '@anthropic-ai/sdk';
 import { z } from 'zod';
 import { readFile, writeFile, readdir, mkdir } from 'node:fs/promises';
+import { spawn } from 'node:child_process';
 import { COMPANIES, editionDate } from './sources.mjs';
 import { resolveLinks } from './links.mjs';
 
@@ -114,21 +115,25 @@ function buildPrompt(read, prev) {
   const yesterday = prev
     ? prev.companies.flatMap((c) => c.items.map((s) => `- ${c.name}: ${s.headline}. ${(s.points ?? [s.what_changed]).join(' ')}`)).join('\n') || '(nothing changed yesterday)'
     : '(no previous edition)';
+  const days = (iso) => Math.max(1, Math.round((now - Date.parse(iso)) / 86400_000));
+  const earlier = (read.background ?? []).map((b) => `- ${name[b.company]}, ${days(b.published)}d ago: ${b.title}`).join('\n') || '(none)';
   return `Yesterday's edition (${prev?.date ?? 'none'}):\n${yesterday}\n\n` +
+    `Already announced by the companies in the past 10 days (background only: these are not new today and cannot be cited; ` +
+    `fresh coverage of any of them is older news unless it reports a genuinely new development):\n${earlier}\n\n` +
     `Today's items, ${read.items.length} in all, format "id | age | official or press | companies | outlet | title | summary":\n${lines.join('\n')}`;
 }
 
-export async function writeEdition(date, read, prev) {
+// Two ways to reach Claude, same editor and same checks:
+// an API key (pay per use), or a Claude Pro/Max subscription through Claude Code (no extra cost).
+async function viaApi(system, user) {
   const client = new Anthropic();
-  const system = await readFile('prompts/editor.md', 'utf8');
-
   const request = {
     model: MODEL,
     max_tokens: 64000,
     thinking: { type: 'adaptive' },
     output_config: { effort: 'high', format: { type: 'json_schema', schema: SCHEMA } },
     system,
-    messages: [{ role: 'user', content: buildPrompt(read, prev) }],
+    messages: [{ role: 'user', content: user }],
   };
   // News includes violence and conflict, so a safety classifier can occasionally decline.
   // Server-side fallback reroutes those to another model instead of skipping a day.
@@ -140,18 +145,56 @@ export async function writeEdition(date, read, prev) {
     console.warn('Fallback option unavailable, writing without it.');
     msg = await client.messages.stream(request).finalMessage();
   }
-
   if (msg.stop_reason === 'refusal') throw new Error(`Model declined: ${JSON.stringify(msg.stop_details)}`);
   if (msg.stop_reason === 'max_tokens') throw new Error('Edition was cut off before it finished.');
   const textBlock = msg.content.find((b) => b.type === 'text');
   if (!textBlock) throw new Error('No edition text returned.');
-  const draft = Draft.parse(JSON.parse(textBlock.text));
+  return { raw: JSON.parse(textBlock.text), usage: { model: msg.model, via: 'api', input_tokens: msg.usage.input_tokens, output_tokens: msg.usage.output_tokens } };
+}
 
+// Claude Code in print mode: no tools, no settings, no memory, just the brief, the items and the schema.
+function viaClaudeCode(system, user) {
+  const args = [
+    '-p', '--model', MODEL, '--effort', 'high',
+    '--tools', '', '--setting-sources', '', '--strict-mcp-config', '--disable-slash-commands', '--no-session-persistence',
+    '--system-prompt', system,
+    '--output-format', 'json', '--json-schema', JSON.stringify(SCHEMA),
+  ];
+  return new Promise((resolve, reject) => {
+    // An empty API key variable would make Claude Code look for API billing; leave it out entirely.
+    const env = { ...process.env };
+    if (!env.ANTHROPIC_API_KEY) delete env.ANTHROPIC_API_KEY;
+    const child = spawn('claude', args, { stdio: ['pipe', 'pipe', 'inherit'], env });
+    let out = '';
+    child.stdout.on('data', (d) => { out += d; });
+    child.on('error', reject);
+    child.on('close', (code) => {
+      try {
+        const r = JSON.parse(out);
+        if (code !== 0 || r.is_error) throw new Error(`Claude Code failed (${r.subtype ?? code}): ${String(r.result ?? '').slice(0, 300)}`);
+        const raw = r.structured_output ?? JSON.parse(r.result);
+        const [model, use] = Object.entries(r.modelUsage ?? {})[0] ?? [MODEL, {}];
+        resolve({ raw, usage: { model, via: 'claude-code', input_tokens: (use.inputTokens ?? 0) + (use.cacheReadInputTokens ?? 0) + (use.cacheCreationInputTokens ?? 0), output_tokens: use.outputTokens ?? 0 } });
+      } catch (err) { reject(code !== 0 && !out ? new Error(`Claude Code exited with ${code}`) : err); }
+    });
+    child.stdin.end(user);
+  });
+}
+
+export async function writeEdition(date, read, prev) {
+  const system = await readFile('prompts/editor.md', 'utf8');
+  const user = buildPrompt(read, prev);
+  let result;
+  if (process.env.ANTHROPIC_API_KEY) result = await viaApi(system, user);
+  else if (process.env.CLAUDE_CODE_OAUTH_TOKEN || process.env.ENOUGH_WRITER === 'claude-code') result = await viaClaudeCode(system, user);
+  else throw new Error('Set ANTHROPIC_API_KEY or CLAUDE_CODE_OAUTH_TOKEN to write an edition.');
+
+  const draft = Draft.parse(result.raw);
   const edition = verify(draft, read, date, prev);
   // Point every cited source at the real article or the company's own post.
   const links = await resolveLinks(edition.companies.flatMap((c) => c.items.flatMap((i) => i.sources)));
   edition.checks.push(`Resolved ${links.resolved} of ${links.attempted} Google News links to their original sites.`);
-  return { ...edition, usage: { model: msg.model, input_tokens: msg.usage.input_tokens, output_tokens: msg.usage.output_tokens } };
+  return { ...edition, usage: result.usage };
 }
 
 // Turn the model's draft into a published edition, keeping only what checks out.
@@ -188,7 +231,8 @@ export function verify(draft, read, date, prev) {
         headline: noDashes(s.headline),
         points: s.points.slice(0, 3).map(noDashes),
         reported_at: new Date(newest).toISOString(),
-        x_keywords: s.x_keywords.replace(/[^\p{L}\p{N} .\-]/gu, ' ').replace(/\s+/g, ' ').trim().slice(0, 60),
+        // X search ANDs every word, so more than three words usually finds nothing.
+        x_keywords: s.x_keywords.replace(/[^\p{L}\p{N} .\-]/gu, ' ').trim().split(/\s+/).slice(0, 3).join(' '),
         for_you: noDashes(s.for_you),
         kind: s.kind,
         status,

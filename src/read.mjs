@@ -7,6 +7,9 @@ import { COMPANIES, googleNews, isOfficialUrl, editionDate } from './sources.mjs
 // Nothing stale: a day plus two hours of overlap, so overnight stories aren't lost between runs.
 const NEWS_WINDOW_HOURS = 26;
 const OFFICIAL_WINDOW_HOURS = 36; // some company pages publish date-only timestamps, read as noon Pacific
+// Older official posts are kept as background, so a fresh article about last week's launch
+// isn't mistaken for news. The editor sees them but can't cite them.
+const BACKGROUND_DAYS = 10;
 const MAX_SUMMARY = 280;
 const UA = 'Mozilla/5.0 (compatible; EnoughBot/1.0; +https://github.com/akash90gupta/enough.ai)';
 
@@ -81,6 +84,7 @@ async function readAnthropic(url) {
 export async function readAll(now = new Date()) {
   const byLink = new Map();
   const byTitle = new Map();
+  const background = [];
   const health = [];
 
   const take = (raw, { outlet, company, official, windowHours }) => {
@@ -89,7 +93,11 @@ export async function readAll(now = new Date()) {
     let kept = 0;
     for (const it of raw) {
       const t = Date.parse(it.published);
-      if (!it.title || !it.link || Number.isNaN(t) || t < cutoff || t > now.getTime() + 3600_000) continue;
+      if (!it.title || !it.link || Number.isNaN(t) || t > now.getTime() + 3600_000) continue;
+      if (t < cutoff) {
+        if (official && t >= now.getTime() - BACKGROUND_DAYS * 86400_000) background.push({ company, title: it.title, published: new Date(t).toISOString(), link: it.link });
+        continue;
+      }
       const source = it.outlet ?? outlet;
       // A company's own site counts as official wherever we found it, including via Google News.
       const isOfficial = official || isOfficialUrl(co, it.outletUrl ?? '') || isOfficialUrl(co, it.link);
@@ -117,7 +125,7 @@ export async function readAll(now = new Date()) {
 
   const jobs = COMPANIES.flatMap((c) => [
     ...c.official.map((f) => async () => {
-      const url = f.kind === 'google-news' ? googleNews(f.query, '2d') : f.url;
+      const url = f.kind === 'google-news' ? googleNews(f.query, `${BACKGROUND_DAYS}d`) : f.url;
       const raw = f.kind === 'anthropic-html' ? await readAnthropic(url) : await readRss(url);
       return { label: `${c.name} official`, url, kept: take(raw, { outlet: f.outlet, company: c.id, official: true, windowHours: OFFICIAL_WINDOW_HOURS }) };
     }),
@@ -136,7 +144,10 @@ export async function readAll(now = new Date()) {
   // Official posts first, then by company and time, with short ids the editor can cite.
   items.sort((a, b) => (b.official ? 1 : 0) - (a.official ? 1 : 0) || a.about[0].localeCompare(b.about[0]) || b.published.localeCompare(a.published));
   items.forEach((it, i) => { it.id = `h${i + 1}`; });
-  return { read_at: now.toISOString(), items, health };
+  background.sort((a, b) => b.published.localeCompare(a.published));
+  const seenBg = new Set();
+  const bg = background.filter((b) => { const k = `${b.company}|${b.title}`.toLowerCase(); return !seenBg.has(k) && seenBg.add(k); });
+  return { read_at: now.toISOString(), items, background: bg, health };
 }
 
 if (import.meta.url === `file://${process.argv[1]}`) {
@@ -144,7 +155,7 @@ if (import.meta.url === `file://${process.argv[1]}`) {
   const out = await readAll();
   await mkdir('data/reads', { recursive: true });
   await writeFile(`data/reads/${date}.json`, JSON.stringify(out, null, 1));
-  console.log(`Read ${out.items.length} items (${out.items.filter((i) => i.official).length} official) from ${new Set(out.items.map((i) => i.source)).size} outlets for ${date}.`);
+  console.log(`Read ${out.items.length} items (${out.items.filter((i) => i.official).length} official, ${out.background.length} background) from ${new Set(out.items.map((i) => i.source)).size} outlets for ${date}.`);
   for (const h of out.health) console.log(`  ${h.ok ? 'ok  ' : 'FAIL'} ${h.label ?? ''} ${h.ok ? h.kept : h.error}`);
   if (out.items.length < 40) { console.error('Too few items to write an honest edition. Stopping.'); process.exit(1); }
 }

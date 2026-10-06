@@ -22,19 +22,42 @@ async function resolveOne(url) {
   return found && !isGoogleNews(found) ? found : null;
 }
 
+const wait = (ms) => new Promise((r) => setTimeout(r, ms));
+
 // Resolve every Google News link in place on the given sources. Returns how many were resolved.
-export async function resolveLinks(sources, concurrency = 4) {
+
+export async function resolveLinks(sources, concurrency = 2) {
   const todo = sources.filter((s) => isGoogleNews(s.link));
-  let done = 0;
+  let done = 0, misses = 0;
   const queue = [...todo];
   await Promise.all(Array.from({ length: concurrency }, async () => {
     while (queue.length) {
+      // If Google starts refusing, stop asking: the redirect links still work.
+      if (misses >= 6 && done === 0) return;
       const s = queue.shift();
-      try {
-        const real = await resolveOne(s.link);
-        if (real) { s.link = real; done++; }
-      } catch { /* keep the Google News link; it still reaches the article */ }
+      for (const delay of [0, 1500, 4000]) {
+        if (delay) await wait(delay);
+        try {
+          const real = await resolveOne(s.link);
+          if (real) { s.link = real; done++; misses = 0; break; }
+        } catch { /* retry, then keep the Google News link */ }
+        if (delay === 4000) misses++;
+      }
+      await wait(250);
     }
   }));
   return { resolved: done, attempted: todo.length };
+}
+
+// Maintenance: `node src/links.mjs [date]` re-resolves leftover Google News links in an edition
+// (the latest by default). The daily job runs it every time, so a rate-limited morning heals itself.
+if (import.meta.url === `file://${process.argv[1]}`) {
+  const { readFile, writeFile, readdir } = await import('node:fs/promises');
+  const date = process.argv[2] ?? (await readdir('data/editions')).filter((f) => f.endsWith('.json')).sort().at(-1)?.replace('.json', '');
+  if (!date) process.exit(0);
+  const file = `data/editions/${date}.json`;
+  const edition = JSON.parse(await readFile(file, 'utf8'));
+  const r = await resolveLinks(edition.companies.flatMap((c) => c.items.flatMap((i) => i.sources)));
+  if (r.resolved) await writeFile(file, JSON.stringify(edition, null, 1));
+  console.log(`Resolved ${r.resolved} of ${r.attempted} leftover links in ${file}.`);
 }
