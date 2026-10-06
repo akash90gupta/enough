@@ -8,7 +8,7 @@ import { COMPANIES, googleNews, isOfficialUrl, editionDate } from './sources.mjs
 const NEWS_WINDOW_HOURS = 26;
 const OFFICIAL_WINDOW_HOURS = 36; // some company pages publish date-only timestamps, read as noon Pacific
 const MAX_SUMMARY = 280;
-const UA = 'Mozilla/5.0 (compatible; EnoughBot/1.0; +https://github.com/akash90gupta/enough)';
+const UA = 'Mozilla/5.0 (compatible; EnoughBot/1.0; +https://github.com/akash90gupta/enough.ai)';
 
 const parser = new XMLParser({ ignoreAttributes: false, attributeNamePrefix: '@', textNodeName: '#text' });
 

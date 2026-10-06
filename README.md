@@ -1,8 +1,12 @@
-# Enough.
+# Enough.ai
+
+[![Enough.ai: what changed today at Anthropic, Google, Meta, OpenAI and xAI, as five color-coded cards on desktop and phone](docs/banner.png)](https://akash90gupta.github.io/enough.ai/)
+
+[![Daily edition](https://github.com/akash90gupta/enough.ai/actions/workflows/daily.yml/badge.svg)](https://github.com/akash90gupta/enough.ai/actions/workflows/daily.yml)
 
 **AI news, finished.** One calm page every morning that tells you what actually changed at Anthropic, Google, Meta, OpenAI and xAI, shows where every fact came from, and then ends.
 
-**▶ Read today's edition: [akash90gupta.github.io/enough](https://akash90gupta.github.io/enough/)**
+**▶ Read today's edition: [akash90gupta.github.io/enough.ai](https://akash90gupta.github.io/enough.ai/)**
 
 > Written each morning by Claude from 300 to 400 items: the companies' own announcements plus coverage from 200+ outlets. No ads, no accounts, no tracking. It updates itself every day, and every edition is kept in this repo.
 
@@ -57,20 +61,20 @@ Each company gets zero to five items, most important first. Each item is a plain
 - Each item links to the company's own posts on X about that topic, and each card links to the company's newsroom and X account.
 - Every item has a status badge (Official, Reported, Unconfirmed, Disputed) and a fold listing every source.
 - At the bottom, "See the items we left out, and why" opens everything that was skipped, grouped by reason ("Hype and speculation", "Repeats and syndication", "Stock and valuation chatter"...), with a one-line explanation specific to that day.
-- The full editor brief is on the [How it works](https://akash90gupta.github.io/enough/how/) page, and every day's inputs and output are committed to [`data/`](data/).
+- The full editor brief is on the [How it works](https://akash90gupta.github.io/enough.ai/how/) page, and every day's inputs and output are committed to [`data/`](data/).
 
 ## Trade-offs
 
-- **The editor is made by one of the companies it covers.** Enough is written by Claude, and Anthropic is one of the five. I chose to say this openly rather than hide it. The brief tells the model to be stricter, not softer, with Anthropic. Status labels are enforced in code. The "left out" drawer makes it easy to check whether any company got a pass.
+- **The editor is made by one of the companies it covers.** Enough.ai is written by Claude, and Anthropic is one of the five. I chose to say this openly rather than hide it. The brief tells the model to be stricter, not softer, with Anthropic. Status labels are enforced in code. The "left out" drawer makes it easy to check whether any company got a pass.
 - **Official feeds where they exist, search where they don't.** OpenAI, Google and Meta publish feeds. Anthropic's news page is read directly. x.ai blocks automated readers, so its own pages are found through Google News, and any item from a company's own domain counts as official.
-- **X links are searches, not embeds.** Reading X requires a paid API, so Enough links to a live search of the company's own posts on each topic instead. One tap, no tracking, no API key.
-- **Headlines, not full articles.** The editor reads titles and short summaries, never full articles. That keeps Enough fast, cheap and respectful of publishers, and every fact traces to text anyone can see. The cost is less nuance. The brief forbids filling gaps from the model's memory, which keeps it honest but sometimes leaves an item thinner than I'd like.
+- **X links are searches, not embeds.** Reading X requires a paid API, so Enough.ai links to a live search of the company's own posts on each topic instead. One tap, no tracking, no API key.
+- **Headlines, not full articles.** The editor reads titles and short summaries, never full articles. That keeps Enough.ai fast, cheap and respectful of publishers, and every fact traces to text anyone can see. The cost is less nuance. The brief forbids filling gaps from the model's memory, which keeps it honest but sometimes leaves an item thinner than I'd like.
 - **One call, not an agent.** A single request reads everything and writes the edition. An agent could open articles and dig deeper, but it would be slower, costlier and much harder to verify. For a daily page, predictability wins.
 - **A static site, not an app.** GitHub Actions runs once a day and GitHub Pages serves the result. No server, no database, no login. It costs well under a dollar a day in API calls and nothing to host.
 
 ## Decision / Direction
 
-I chose to make **restraint the feature**. Most AI news products compete to show you more. Enough competes to show you less and prove it didn't hide anything. That's also the shape I think AI should take in consumer products: let the model make the judgment call, constrain it with explicit rules, verify it with code, and give the user the receipts.
+I chose to make **restraint the feature**. Most AI news products compete to show you more. Enough.ai competes to show you less and prove it didn't hide anything. That's also the shape I think AI should take in consumer products: let the model make the judgment call, constrain it with explicit rules, verify it with code, and give the user the receipts.
 
 Next, if people use it:
 
@@ -95,14 +99,14 @@ Small details that matter:
 
 - **One page, five cards.** Each company gets a card in its own colors (Anthropic clay, Google's four colors, Meta blue, OpenAI green, xAI black). On a laptop, all five sit side by side. On a phone, they become a row you swipe through, with the next card peeking in so you know there's more.
 - **Today is always in reach.** A bar pinned to the top shows today's date, a chip per company with its count of changes, and a **✓ Done** button. The chip for the card you're looking at lights up, and tapping a chip jumps to that card.
-- **Done means done.** Tapping Done tells Enough you've read today's edition. It's remembered in your browser until tomorrow's edition arrives, and the page answers "You're caught up. See you tomorrow morning."
+- **Done means done.** Tapping Done tells Enough.ai you've read today's edition. It's remembered in your browser until tomorrow's edition arrives, and the page answers "You're caught up. See you tomorrow morning."
 - **Every day has a date, a day and a week.** "Monday, October 5, 2026 · Week 41" at the top, and "Mon, Oct 5 · W41" in the pinned bar.
 - **Finished days roll up.** Below today, the past two weeks are grouped by week ("Week 40 · Sep 28 to Oct 4"), one line per day with a colored dot per company. Tap a day to open its digest: each company's headlines, linked to their sources. The archive keeps every day in the same format.
 - **Today rolls up too, once you're done.** After you tap Done, today collapses to a single line ("You finished today's edition") with a button to bring the cards back.
 - **Built for phones first.** A compact pinned bar, swipeable cards with position dots, and tap targets of at least 40 pixels.
 - **Honest when late.** If today's edition hasn't arrived yet, the page says so instead of passing off yesterday's as today's.
 - **Welcome back.** If you've been away, it lists the days you missed (stored only in your own browser).
-- **Light and dark**, keyboard navigable (arrow keys move between cards), and an RSS feed at [`/feed.xml`](https://akash90gupta.github.io/enough/feed.xml).
+- **Light and dark**, keyboard navigable (arrow keys move between cards), and an RSS feed at [`/feed.xml`](https://akash90gupta.github.io/enough.ai/feed.xml).
 
 ### Run it yourself
 

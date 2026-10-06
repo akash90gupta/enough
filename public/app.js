@@ -43,7 +43,7 @@
 
   for (const [id, tab] of tabs) {
     tab.addEventListener('click', (e) => {
-      document.querySelector('.edition.is-rolled .unroll')?.click();
+      if (document.querySelector('.edition.is-rolled')) document.querySelector('.unroll')?.click();
       const card = document.getElementById(id);
       if (!card) return;
       e.preventDefault();
@@ -106,7 +106,7 @@
   }
 })();
 
-// Done: one tap tells Enough you've read today's edition. It's remembered until tomorrow's arrives.
+// Done: one tap tells Enough.ai you've read today's edition. It's remembered until tomorrow's arrives.
 (() => {
   const el = document.querySelector('.edition[data-today="1"]');
   const buttons = [...document.querySelectorAll('.done-btn')];
@@ -117,12 +117,25 @@
 
   const rolled = document.querySelector('.rolled');
   // A finished day rolls up into one line; the cards are one tap away.
-  const roll = (on) => {
-    el.classList.toggle('is-rolled', on);
-    if (rolled) rolled.hidden = !on;
-    dispatchEvent(new Event('resize'));
+  const board = el.querySelector('.board');
+  const calm = matchMedia('(prefers-reduced-motion: reduce)').matches;
+  const roll = (on, animate = false) => {
+    const apply = () => {
+      el.classList.toggle('is-rolled', on);
+      if (rolled) rolled.hidden = !on;
+      dispatchEvent(new Event('resize'));
+      if (animate && !on && board && !calm) board.animate([{ opacity: 0, transform: 'translateY(-6px)' }, { opacity: 1, transform: 'none' }], { duration: 260, easing: 'cubic-bezier(.2,.7,.2,1)' });
+    };
+    // Fold the cards away softly before rolling up, rather than snapping them out.
+    if (animate && on && board && !calm) {
+      // A timer backs up the animation, which browsers pause in background tabs.
+      let once = false;
+      const finish = () => { if (!once) { once = true; apply(); } };
+      board.animate([{ opacity: 1, transform: 'none' }, { opacity: 0, transform: 'translateY(-8px) scale(.99)' }], { duration: 220, easing: 'ease-in' }).finished.then(finish, finish);
+      setTimeout(finish, 260);
+    } else apply();
   };
-  document.querySelector('.unroll')?.addEventListener('click', () => roll(false));
+  document.querySelector('.unroll')?.addEventListener('click', () => roll(false, true));
 
   const render = (done) => {
     document.body.classList.toggle('is-done', done);
@@ -144,8 +157,9 @@
       done = !done;
       try { done ? localStorage.setItem('enough:done', date) : localStorage.removeItem('enough:done'); } catch {}
       render(done);
-      roll(done);
-      if (done && rolled) rolled.scrollIntoView({ behavior: 'smooth', block: 'center' });
+      roll(done, true);
+      if (done) navigator.vibrate?.(12);
+      if (done && rolled) setTimeout(() => rolled.scrollIntoView({ behavior: calm ? 'auto' : 'smooth', block: 'center' }), 240);
       b.classList.remove('pop'); void b.offsetWidth; b.classList.add('pop');
     });
   }

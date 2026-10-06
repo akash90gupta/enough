@@ -3,8 +3,8 @@ import { readFile, writeFile, readdir, mkdir, rm, cp } from 'node:fs/promises';
 import { COMPANIES, TIME_ZONE, xSearch } from './sources.mjs';
 import { MODEL } from './write.mjs';
 
-const SITE = process.env.SITE_URL ?? 'https://akash90gupta.github.io/enough';
-const REPO = 'https://github.com/akash90gupta/enough';
+const SITE = process.env.SITE_URL ?? 'https://akash90gupta.github.io/enough.ai';
+const REPO = 'https://github.com/akash90gupta/enough.ai';
 const DATA = process.env.EDITIONS_DIR ?? 'data/editions';
 const OUT = 'site';
 const BASE = process.env.BASE_PATH ?? new URL(SITE).pathname.replace(/\/$/, '');
@@ -56,10 +56,15 @@ function page({ title, description, body, path = '', canonical, wide = false }) 
 <meta property="og:description" content="${esc(description)}">
 <meta property="og:type" content="article">
 <meta property="og:url" content="${esc(url)}">
+<meta property="og:image" content="${SITE}/og.png">
+<meta property="og:image:width" content="1280">
+<meta property="og:image:height" content="640">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="${SITE}/og.png">
 <meta name="theme-color" content="#f6f2ea" media="(prefers-color-scheme: light)">
 <meta name="theme-color" content="#16150f" media="(prefers-color-scheme: dark)">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%232f4a3a'/%3E%3Ccircle cx='32' cy='32' r='9' fill='%23f6f2ea'/%3E%3C/svg%3E">
-<link rel="alternate" type="application/rss+xml" title="Enough" href="${SITE}/feed.xml">
+<link rel="alternate" type="application/rss+xml" title="Enough.ai" href="${SITE}/feed.xml">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
@@ -68,14 +73,14 @@ function page({ title, description, body, path = '', canonical, wide = false }) 
 <body${wide ? ' class="wide"' : ''}>
 <a class="skip" href="#main">Skip to the news</a>
 <header class="masthead">
-  <a class="wordmark" href="${BASE}/">Enough<span>.</span></a>
+  <a class="wordmark" href="${BASE}/" aria-label="Enough.ai, today">Enough<span>.ai</span></a>
   <nav><a href="${BASE}/archive/">Past days</a><a href="${BASE}/how/">How it works</a></nav>
 </header>
 <main id="main">
 ${body}
 </main>
 <footer class="colophon">
-  <p>Enough follows Anthropic, Google, Meta, OpenAI and xAI every morning so you don't have to. It is written by Claude, an AI made by Anthropic, held to the same rules for all five companies, checked by code, and has no ads, accounts or tracking.</p>
+  <p>Enough.ai follows Anthropic, Google, Meta, OpenAI and xAI every morning so you don't have to. It is written by Claude, an AI made by Anthropic, held to the same rules for all five companies, checked by code, and has no ads, accounts or tracking.</p>
   <p><a href="${BASE}/how/">How it works</a> · <a href="${BASE}/archive/">Past days</a> · <a href="${BASE}/feed.xml">RSS</a> · <a href="${REPO}">Source</a></p>
 </footer>
 <script src="${BASE}/app.js" defer></script>
@@ -110,8 +115,8 @@ function item(s, co) {
 </article>`;
 }
 
-function company(co) {
-  return `<section class="company card${co.items.length ? '' : ' is-quiet'}" id="${co.id}" data-co="${co.id}" aria-labelledby="h-${co.id}" aria-roledescription="card">
+function company(co, i = 0) {
+  return `<section class="company card${co.items.length ? '' : ' is-quiet'}" id="${co.id}" data-co="${co.id}" aria-labelledby="h-${co.id}" aria-roledescription="card" style="--i:${i}">
   <header class="company-head">
     <h2 id="h-${co.id}"><i class="dot" aria-hidden="true"></i>${esc(co.name)}</h2>
     <span class="company-count">${co.items.length ? plural(co.items.length, 'change') : 'Quiet'}</span>
@@ -127,7 +132,7 @@ function leftOut(e) {
   return `<section class="left-out" aria-labelledby="lo-h">
   <details>
     <summary id="lo-h">See the ${skipped} items we left out, and why</summary>
-    <p class="lo-intro">Nothing is hidden. Here is everything Enough read today that didn't make the page, grouped by the reason it was left out. Most AI news is this.</p>
+    <p class="lo-intro">Nothing is hidden. Here is everything Enough.ai read today that didn't make the page, grouped by the reason it was left out. Most AI news is this.</p>
     ${e.left_out.map((g) => `<details class="lo-group">
       <summary><span class="lo-reason">${esc(g.reason)}</span><span class="lo-count">${g.items.length}</span></summary>
       <p class="lo-why">${esc(g.explanation)}</p>
@@ -165,7 +170,7 @@ ${isToday ? `<div class="rolled" hidden>
 </div>` : ''}
 <div class="board" aria-label="The five companies">
   <div class="track" tabindex="0" aria-label="Swipe or scroll sideways to see each company">
-${e.companies.map((c) => company(c)).join('\n')}
+${e.companies.map((c, i) => company(c, i)).join('\n')}
   </div>
   <div class="pips" aria-hidden="true">${e.companies.map((c) => `<i data-co="${c.id}"></i>`).join('')}</div>
 </div>
@@ -183,7 +188,7 @@ ${past.length ? `<section class="past" aria-labelledby="past-h">
   ${weeks(past)}
   <p class="past-more"><a href="${BASE}/archive/">All past days →</a></p>
 </section>` : ''}
-<p class="provenance">Written by ${esc(modelName(e.usage?.model ?? MODEL))} at ${esc(clock(e.written_at))} Pacific, using only the items it read that morning. Claude is made by Anthropic, one of the companies covered here, so every company gets the same rules, and every item links to its sources. <a href="${BASE}/how/">How Enough decides</a>.</p>
+<p class="provenance">Written by ${esc(modelName(e.usage?.model ?? MODEL))} at ${esc(clock(e.written_at))} Pacific, using only the items it read that morning. Claude is made by Anthropic, one of the companies covered here, so every company gets the same rules, and every item links to its sources. <a href="${BASE}/how/">How Enough.ai decides</a>.</p>
 <nav class="pager">
   ${prev ? `<a href="${BASE}/${prev}/">← ${esc(shortDate(prev))}</a>` : '<span></span>'}
   ${next ? `<a href="${BASE}/${next}/">${esc(shortDate(next))} →</a>` : '<span></span>'}
@@ -229,14 +234,14 @@ function weeks(list) {
 
 function archive(editions) {
   return `<h1 class="page-title">Past days</h1>
-<p class="lede">Every edition Enough has published, grouped by week. Tap a day to open its digest.</p>
+<p class="lede">Every edition Enough.ai has published, grouped by week. Tap a day to open its digest.</p>
 <div class="past">${editions.length ? weeks(editions) : '<p>The first edition arrives tomorrow morning.</p>'}</div>`;
 }
 
 async function how() {
   const prompt = await readFile('prompts/editor.md', 'utf8');
-  return `<h1 class="page-title">How Enough works</h1>
-<p class="lede">AI news never stops: leaks, teases, benchmark wars, hot takes. Enough is one page a day that tells you what actually changed at the five companies shaping AI, then lets you go.</p>
+  return `<h1 class="page-title">How Enough.ai works</h1>
+<p class="lede">AI news never stops: leaks, teases, benchmark wars, hot takes. Enough.ai is one page a day that tells you what actually changed at the five companies shaping AI, then lets you go.</p>
 
 <h2>Every morning</h2>
 <ol class="steps">
@@ -255,7 +260,7 @@ async function how() {
 </ul>
 
 <h2>A conflict of interest, stated plainly</h2>
-<p>Enough is written by Claude, which is made by Anthropic, one of the five companies it covers. That's a real conflict, so here is how it's handled. The editor's brief tells it to hold every company to the same bar, and to be stricter, not softer, about Anthropic. Status labels are enforced by code, not by the model's judgment. And everything it read, including every item it left out, is one tap away, so you can check whether any company got a pass.</p>
+<p>Enough.ai is written by Claude, which is made by Anthropic, one of the five companies it covers. That's a real conflict, so here is how it's handled. The editor's brief tells it to hold every company to the same bar, and to be stricter, not softer, about Anthropic. Status labels are enforced by code, not by the model's judgment. And everything it read, including every item it left out, is one tap away, so you can check whether any company got a pass.</p>
 
 <h2>The promises</h2>
 <ul class="promises">
@@ -265,11 +270,11 @@ async function how() {
   <li><strong>Nothing is hidden.</strong> You can see every item we read and why each one was left out.</li>
   <li><strong>No invented facts.</strong> The AI may only use what its sources said, and company claims stay labeled as company claims.</li>
   <li><strong>No hype.</strong> No "game-changer", no "AGI is here", no breathless headlines.</li>
-  <li><strong>Nothing to sell.</strong> No ads, no accounts, no cookies, no tracking. The only thing stored is the date of your last visit, in your own browser, so Enough can show you what you missed.</li>
+  <li><strong>Nothing to sell.</strong> No ads, no accounts, no cookies, no tracking. The only thing stored is the date of your last visit, in your own browser, so Enough.ai can show you what you missed.</li>
 </ul>
 
 <h2>What it can get wrong</h2>
-<p>Enough is only as good as what it reads. xAI's site blocks automated readers, so its own posts are found through Google News, which can lag. Enough can't read X directly, so the X links open a live search of each company's posts rather than a specific post. An AI can misjudge what matters or compress too far. That's why every item shows its receipts. If something looks off, the original is one tap away, and you can <a href="${REPO}/issues">tell us</a>.</p>
+<p>Enough.ai is only as good as what it reads. xAI's site blocks automated readers, so its own posts are found through Google News, which can lag. Enough.ai can't read X directly, so the X links open a live search of each company's posts rather than a specific post. An AI can misjudge what matters or compress too far. That's why every item shows its receipts. If something looks off, the original is one tap away, and you can <a href="${REPO}/issues">tell us</a>.</p>
 
 <h2>The editor's instructions</h2>
 <p>This is the exact brief the AI receives every morning. Nothing else shapes its choices.</p>
@@ -281,7 +286,7 @@ function feed(editions) {
     const html = `<p><strong>${esc(e.the_day)}</strong></p>` + e.companies.map((c) => `<h2>${esc(c.name)}</h2>` + (c.items.length ? c.items.map((s) => `<h3>${esc(s.headline)}</h3><p><small>${esc(STATUS[s.status].label)} · ${esc(s.kind)}</small></p><ul>${(s.points ?? [s.what_changed]).map((p) => `<li>${esc(p)}</li>`).join('')}</ul><p><a href="${esc(s.sources[0].link)}">Source: ${esc(s.sources[0].source)}</a></p>${s.for_you ? `<p><em>For you:</em> ${esc(s.for_you)}</p>` : ''}`).join('') : `<p>${esc(c.quiet_line)}</p>`)).join('') + `<p>You're caught up.</p>`;
     return `<item><title>${esc(longDate(e.date))}: ${esc(e.the_day)}</title><link>${SITE}/${e.date}/</link><guid isPermaLink="true">${SITE}/${e.date}/</guid><pubDate>${new Date(e.written_at).toUTCString()}</pubDate><description>${esc(html)}</description></item>`;
   }).join('');
-  return `<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"><channel><title>Enough</title><link>${SITE}/</link><description>AI news, finished. What changed at Anthropic, Google, Meta, OpenAI and xAI, one calm page a day.</description><language>en-us</language>${items}</channel></rss>`;
+  return `<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"><channel><title>Enough.ai</title><link>${SITE}/</link><description>AI news, finished. What changed at Anthropic, Google, Meta, OpenAI and xAI, one calm page a day.</description><language>en-us</language>${items}</channel></rss>`;
 }
 
 async function write(path, html) {
@@ -303,15 +308,15 @@ const PAST_ON_HOME = 14;
 for (const [i, e] of editions.entries()) {
   const prev = editions[i - 1]?.date, next = editions[i + 1]?.date;
   const latest = i === editions.length - 1;
-  const title = `Enough · ${longDate(e.date)}`;
+  const title = `Enough.ai · ${longDate(e.date)}`;
   await write(e.date, page({ title, description: e.the_day, path: `${e.date}/`, wide: true, body: edition(e, { isToday: false, prev, next }) }));
-  if (latest) await write('', page({ title: 'Enough · AI news, finished', description: desc, path: '', wide: true, body: edition(e, { isToday: true, prev, next: null, past: editions.slice(Math.max(0, i - PAST_ON_HOME), i) }) }));
+  if (latest) await write('', page({ title: 'Enough.ai · AI news, finished', description: desc, path: '', wide: true, body: edition(e, { isToday: true, prev, next: null, past: editions.slice(Math.max(0, i - PAST_ON_HOME), i) }) }));
 }
 if (!editions.length) {
-  await write('', page({ title: 'Enough · AI news, finished', description: desc, body: `<h1 class="the-day">The first edition arrives tomorrow morning.</h1><p class="meta">One calm page a day that ends. <a href="${BASE}/how/">How it works</a>.</p>` }));
+  await write('', page({ title: 'Enough.ai · AI news, finished', description: desc, body: `<h1 class="the-day">The first edition arrives tomorrow morning.</h1><p class="meta">One calm page a day that ends. <a href="${BASE}/how/">How it works</a>.</p>` }));
 }
-await write('archive', page({ title: 'Enough · Past days', description: 'Every edition of Enough, grouped by week.', path: 'archive/', wide: true, body: archive(editions) }));
-await write('how', page({ title: 'Enough · How it works', description: 'How Enough reads, decides, checks and publishes what changed at five AI companies, every morning.', path: 'how/', body: await how() }));
+await write('archive', page({ title: 'Enough.ai · Past days', description: 'Every edition of Enough.ai, grouped by week.', path: 'archive/', wide: true, body: archive(editions) }));
+await write('how', page({ title: 'Enough.ai · How it works', description: 'How Enough.ai reads, decides, checks and publishes what changed at five AI companies, every morning.', path: 'how/', body: await how() }));
 await writeFile(`${OUT}/feed.xml`, feed(editions));
 await writeFile(`${OUT}/editions.json`, JSON.stringify(editions.map((e) => e.date)));
 await writeFile(`${OUT}/.nojekyll`, '');
