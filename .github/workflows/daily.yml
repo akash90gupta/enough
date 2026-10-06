@@ -2,7 +2,7 @@ name: Daily edition
 
 on:
   schedule:
-    - cron: '0 12 * * *'   # 5am Pacific in summer, 4am in winter
+    - cron: '23 12 * * *'  # about 5:20am Pacific in summer; off the top of the hour, when GitHub drops scheduled runs
   workflow_dispatch:
     inputs:
       rewrite:

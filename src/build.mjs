@@ -245,7 +245,7 @@ async function how() {
 
 <h2>Every morning</h2>
 <ol class="steps">
-  <li><strong>Read.</strong> At 5am Pacific, a script collects each company's own announcements (OpenAI's news feed, Google's AI, Gemini and DeepMind blogs, Meta's newsroom, Anthropic's news page) and press coverage of all five from the last day. Usually that's 300 to 400 items from more than 200 outlets. Anything older than a day is ignored.</li>
+  <li><strong>Read.</strong> Early each morning (about 5:20am Pacific), a script collects each company's own announcements (OpenAI's news feed, Google's AI, Gemini and DeepMind blogs, Meta's newsroom, Anthropic's news page) and press coverage of all five from the last day. Usually that's 300 to 400 items from more than 200 outlets. Anything older than a day is ignored.</li>
   <li><strong>Decide.</strong> ${esc(modelName(MODEL))} reads all of them and keeps only what changed: something shipped, was announced, was priced, was ruled on or became official. Most companies, most days, have nothing or one thing.</li>
   <li><strong>Check.</strong> Code, not the AI, verifies every item. Each one must cite real items from that morning's read. "Official" requires the company's own post. "Reported" requires at least two outlets, or it becomes "Unconfirmed". Every item that didn't make it is shown under "left out", with the reason.</li>
   <li><strong>Publish.</strong> The page rebuilds itself, and the edition is saved permanently in the <a href="${REPO}/tree/main/data">public record</a>, along with everything it was written from.</li>
