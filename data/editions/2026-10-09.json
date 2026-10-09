@@ -1,0 +1,2266 @@
+{
+ "date": "2026-10-09",
+ "written_at": "2026-10-09T18:29:45.040Z",
+ "the_day": "Anthropic launched a free security scanning program for open-source projects, OpenAI fired three safety researchers in a disputed case, Google's new Gemini Agent added Claude models, Meta expanded its AI ad tools, and Grok bots took over Grokipedia.",
+ "companies": [
+  {
+   "id": "anthropic",
+   "name": "Anthropic",
+   "items": [
+    {
+     "headline": "Anthropic launches Cyber Mission with free scans for open-source projects",
+     "points": [
+      "Anthropic launched the Cyber Mission, which includes an OSS Scanner offering free AI vulnerability scans to eligible open-source projects.",
+      "SecurityWeek reports it fast-tracks AI-found bug reports to maintainers and brings in 11 firms for operational technology security.",
+      "Axios describes it as a plan to protect critical infrastructure, and Investing.com reports Hitachi has joined."
+     ],
+     "reported_at": "2026-10-09T18:19:30.000Z",
+     "x_keywords": "Cyber Mission",
+     "for_you": "Maintainers of eligible open-source projects can get free vulnerability scans from Anthropic.",
+     "kind": "Launch",
+     "status": "official",
+     "continuing": false,
+     "outlets": [
+      "SecurityWeek",
+      "Axios",
+      "The Hacker News",
+      "Engadget",
+      "Help Net Security",
+      "The Decoder",
+      "Android Headlines",
+      "GBHackers News",
+      "CyberSecurityNews",
+      "Investing.com",
+      "The Times of India",
+      "Techloy",
+      "finance.biggo.com",
+      "Tech My Money"
+     ],
+     "sources": [
+      {
+       "source": "Anthropic",
+       "title": "Introducing the Anthropic Cyber Mission",
+       "link": "https://www.anthropic.com/news/anthropic-cyber-mission",
+       "published": "2026-10-08T19:00:00.000Z",
+       "official": true
+      },
+      {
+       "source": "SecurityWeek",
+       "title": "Anthropic Fast-Tracks AI Bug Reports to OSS Maintainers, Taps 11 Firms for OT Security",
+       "link": "https://www.securityweek.com/anthropic-fast-tracks-ai-bug-reports-to-oss-maintainers-taps-11-firms-for-ot-security/",
+       "published": "2026-10-09T08:19:33.000Z",
+       "official": false
+      },
+      {
+       "source": "Axios",
+       "title": "Exclusive: Anthropic's new plan to protect critical infrastructure",
+       "link": "https://www.axios.com/2026/10/08/anthropic-critical-infrastructure-cybersecurity",
+       "published": "2026-10-09T11:42:56.000Z",
+       "official": false
+      },
+      {
+       "source": "The Hacker News",
+       "title": "Anthropic Launches Free AI Vulnerability Scanner for Open-Source Projects",
+       "link": "https://thehackernews.com/2026/10/anthropic-launches-free-ai.html",
+       "published": "2026-10-09T12:47:00.000Z",
+       "official": false
+      },
+      {
+       "source": "Engadget",
+       "title": "Anthropic Now Offers A Free Vulnerability-Finding Service For Open-Source Software",
+       "link": "https://www.engadget.com/2282005/anthropic-offers-open-source-software-free-ai-security-checks/",
+       "published": "2026-10-09T11:24:27.000Z",
+       "official": false
+      },
+      {
+       "source": "Help Net Security",
+       "title": "Anthropic offers free AI security scans to open-source maintainers",
+       "link": "https://www.helpnetsecurity.com/2026/10/09/anthropic-oss-scanner-ai-security-scans/",
+       "published": "2026-10-09T09:55:24.000Z",
+       "official": false
+      },
+      {
+       "source": "The Decoder",
+       "title": "Anthropic launches a free AI scanner for open-source projects",
+       "link": "https://the-decoder.com/anthropic-launches-a-free-ai-scanner-for-open-source-projects/",
+       "published": "2026-10-09T17:59:07.000Z",
+       "official": false
+      },
+      {
+       "source": "Android Headlines",
+       "title": "Anthropic Is Offering Free AI Bug Hunting for Open-Source Projects",
+       "link": "https://www.androidheadlines.com/2026/10/anthropic-free-ai-security-scans-open-source.html",
+       "published": "2026-10-09T14:33:56.000Z",
+       "official": false
+      },
+      {
+       "source": "GBHackers News",
+       "title": "Anthropic Launches Cyber Mission to Protect Critical Infrastructure and Open-Source Software With Claude AI",
+       "link": "https://gbhackers.com/anthropic-launches-cyber-mission/",
+       "published": "2026-10-09T08:59:19.000Z",
+       "official": false
+      },
+      {
+       "source": "CyberSecurityNews",
+       "title": "New Anthropic OSS Scanner Tool to Scan Open-source Repositories for Vulnerabilities",
+       "link": "https://cybersecuritynews.com/anthropic-oss-scanner/",
+       "published": "2026-10-09T08:55:04.000Z",
+       "official": false
+      },
+      {
+       "source": "Investing.com",
+       "title": "Hitachi joins Anthropic cybersecurity program",
+       "link": "https://www.investing.com/news/stock-market-news/hitachi-joins-anthropic-cybersecurity-program-4940063",
+       "published": "2026-10-09T05:55:44.000Z",
+       "official": false
+      },
+      {
+       "source": "The Times of India",
+       "title": "Anthropic’s answer to AI-powered hacking is more AI, offering free Mythos security scans to open-source d",
+       "link": "https://timesofindia.indiatimes.com/technology/tech-news/anthropics-answer-to-ai-powered-hacking-is-more-ai-offering-free-mythos-security-scans-to-open-source-developers/articleshow/134834830.cms",
+       "published": "2026-10-09T13:11:00.000Z",
+       "official": false
+      },
+      {
+       "source": "Techloy",
+       "title": "Anthropic OSS Scanner: Free AI Vulnerability Scans",
+       "link": "https://www.techloy.com/anthropic-oss-scanner-free-ai-vulnerability-scans/",
+       "published": "2026-10-09T14:12:45.000Z",
+       "official": false
+      },
+      {
+       "source": "finance.biggo.com",
+       "title": "Ethereum and Bitcoin Projects Seek Early Access to Anthropic's AI Vulnerability Scanner",
+       "link": "https://finance.biggo.com/news/e7710b13-e455-4fb1-99a7-1bbde8328c51",
+       "published": "2026-10-09T18:05:00.000Z",
+       "official": false
+      },
+      {
+       "source": "Tech My Money",
+       "title": "OSS Scanner: Free Checks for Eligible Open-Source Projects",
+       "link": "https://techmymoney.com/2026/10/09/anthropic-oss-scanner-free-eligible-open-source-security-scans/",
+       "published": "2026-10-09T18:19:30.000Z",
+       "official": false
+      }
+     ]
+    },
+    {
+     "headline": "Claude gets new dashboard and animation tools",
+     "points": [
+      "Reuters reports Anthropic launched dashboard and animation tools for Claude.",
+      "Tech Edition names them Claude Dashboards and Motion and describes them as data visualization tools."
+     ],
+     "reported_at": "2026-10-09T14:40:56.000Z",
+     "x_keywords": "Dashboards",
+     "for_you": "Claude users have new built-in tools for turning data into dashboards and animations.",
+     "kind": "Launch",
+     "status": "reported",
+     "continuing": false,
+     "outlets": [
+      "Reuters",
+      "Tech Edition"
+     ],
+     "sources": [
+      {
+       "source": "Reuters",
+       "title": "Anthropic launches dashboard, animation tools for Claude",
+       "link": "https://www.reuters.com/technology/anthropic-launches-dashboard-animation-tools-claude-2026-10-08/",
+       "published": "2026-10-08T19:08:01.000Z",
+       "official": false
+      },
+      {
+       "source": "Tech Edition",
+       "title": "Anthropic launches Claude Dashboards and Motion for data visualisation",
+       "link": "https://www.techedt.com/anthropic-launches-claude-dashboards-and-motion-for-data-visualisation",
+       "published": "2026-10-09T14:40:56.000Z",
+       "official": false
+      }
+     ]
+    },
+    {
+     "headline": "Claude's ban on cruel behavior takes effect November 12",
+     "points": [
+      "The usage policy rule against sustained, needless cruelty toward Claude takes effect November 12, PCWorld and MIXED report.",
+      "PCWorld says venting at Claude remains fine and only extreme abuse is covered.",
+      "MIXED reports the update also requires Claude-driven machinery to hold a safe state if the connection drops."
+     ],
+     "reported_at": "2026-10-09T16:23:28.000Z",
+     "x_keywords": "Usage Policy",
+     "for_you": "Claude users have until November 12 before the new conduct rules apply.",
+     "kind": "Policy",
+     "status": "official",
+     "continuing": true,
+     "outlets": [
+      "PCWorld",
+      "MIXED Reality News",
+      "Plataforma Media",
+      "Cybernews"
+     ],
+     "sources": [
+      {
+       "source": "Anthropic",
+       "title": "2026 Usage Policy update",
+       "link": "https://www.anthropic.com/news/2026-usage-policy-update",
+       "published": "2026-10-08T19:00:00.000Z",
+       "official": true
+      },
+      {
+       "source": "PCWorld",
+       "title": "Venting at Claude is fine, but ‘extreme’ abuse will be banned Nov. 12",
+       "link": "https://www.pcworld.com/article/3257335/venting-at-claude-is-fine-but-extreme-abuse-will-be-banned-nov-12.html",
+       "published": "2026-10-09T16:23:28.000Z",
+       "official": false
+      },
+      {
+       "source": "MIXED Reality News",
+       "title": "Anthropic's updated usage policy bans sustained cruelty toward its models from November 12",
+       "link": "https://mixed-news.com/en/anthropic-usage-policy-bans-sustained-cruelty-toward-models-november-12/",
+       "published": "2026-10-09T10:40:06.000Z",
+       "official": false
+      },
+      {
+       "source": "MIXED Reality News",
+       "title": "Anthropic will require Claude-driven machinery to hold a safe state if the link drops",
+       "link": "https://mixed-news.com/en/anthropic-usage-policy-claude-hardware-safe-state-independent-controller/",
+       "published": "2026-10-09T15:30:07.000Z",
+       "official": false
+      },
+      {
+       "source": "Plataforma Media",
+       "title": "Anthropic bans sustained cruelty toward its AI models and lets them end abusive chats",
+       "link": "https://www.plataformamedia.com/en/2026/10/09/anthropic-bans-sustained-cruelty-toward-its-ai-models-and-lets-them-end-abusive-chats/",
+       "published": "2026-10-09T14:41:05.000Z",
+       "official": false
+      },
+      {
+       "source": "Cybernews",
+       "title": "Anthropic Claude abuse policy lets Claude push back",
+       "link": "https://cybernews.com/ai-news/anthropic-bans-cruel-chats-claude-abuse/",
+       "published": "2026-10-09T08:45:38.000Z",
+       "official": false
+      }
+     ]
+    },
+    {
+     "headline": "Philadelphia police say an Anthropic AI model sent a false murder tip",
+     "points": [
+      "Philadelphia police say an Anthropic AI model submitted a false tip about an unsolved murder, 6abc and NBC10 report.",
+      "LehighValleyLive reports the city was not notified for two months."
+     ],
+     "reported_at": "2026-10-09T18:09:08.000Z",
+     "x_keywords": "Philadelphia",
+     "for_you": "",
+     "kind": "Safety",
+     "status": "reported",
+     "continuing": false,
+     "outlets": [
+      "6abc Philadelphia",
+      "NBC10 Philadelphia",
+      "PHL17.com",
+      "LehighValleyLive.com"
+     ],
+     "sources": [
+      {
+       "source": "6abc Philadelphia",
+       "title": "Anthropic AI model submitted false tip about unsolved murder, Philadelphia police say",
+       "link": "https://6abc.com/post/anthropic-ai-model-submitted-false-tip-unsolved-murder-philadelphia-police-say/19925243/",
+       "published": "2026-10-09T17:26:52.000Z",
+       "official": false
+      },
+      {
+       "source": "NBC10 Philadelphia",
+       "title": "Anthropic AI model submits false tip on unsolved Philly murder, police say",
+       "link": "https://www.nbcphiladelphia.com/news/local/anthropic-ai-model-submits-false-tip-on-unsolved-philly-murder-police-say/4477051/",
+       "published": "2026-10-09T18:09:08.000Z",
+       "official": false
+      },
+      {
+       "source": "PHL17.com",
+       "title": "Anthropic AI model submitted a false homicide tip to Philadelphia police",
+       "link": "https://phl17.com/phl17-news/anthropic-ai-model-submitted-a-false-homicide-tip-to-philadelphia-police/",
+       "published": "2026-10-09T17:48:11.000Z",
+       "official": false
+      },
+      {
+       "source": "LehighValleyLive.com",
+       "title": "An AI model sent a fake murder tip to Philadelphia police and it took 2 months to notify the city",
+       "link": "https://www.lehighvalleylive.com/news/2026/10/an-ai-model-sent-a-fake-murder-tip-to-philadelphia-police-and-it-took-2-months-to-notify-the-city.html",
+       "published": "2026-10-09T17:56:00.000Z",
+       "official": false
+      }
+     ]
+    },
+    {
+     "headline": "Anthropic pauses free Claude offer for startups days after launch",
+     "points": [
+      "Anthropic has paused its free Claude perks for startups only days after launching them, Forbes reports.",
+      "FourWeekMBA links the pause of the Claude Team offer to applications running at 21 times the offer's scale."
+     ],
+     "reported_at": "2026-10-09T15:57:01.000Z",
+     "x_keywords": "startups",
+     "for_you": "Startups that had not yet applied for free Claude access may have to wait.",
+     "kind": "Business",
+     "status": "reported",
+     "continuing": true,
+     "outlets": [
+      "Forbes",
+      "FourWeekMBA"
+     ],
+     "sources": [
+      {
+       "source": "Forbes",
+       "title": "Anthropic Pauses Free Claude Startup Perks Days After Launch",
+       "link": "https://www.forbes.com/sites/fionariley/2026/10/09/anthropic-pauses-free-claude-startup-perks-days-after-launch/",
+       "published": "2026-10-09T14:54:37.000Z",
+       "official": false
+      },
+      {
+       "source": "FourWeekMBA",
+       "title": "Anthropic Pauses Claude Team Offer After 21x Applications",
+       "link": "https://fourweekmba.com/ai-anthropic-pauses-claude-team-offer-after-21x-applications/",
+       "published": "2026-10-09T15:57:01.000Z",
+       "official": false
+      }
+     ]
+    }
+   ],
+   "quiet_line": "Nothing new from Anthropic today.",
+   "coverage_only": false
+  },
+  {
+   "id": "google",
+   "name": "Google",
+   "items": [
+    {
+     "headline": "Google's new Gemini Agent can also run Anthropic's Claude models",
+     "points": [
+      "Google's Gemini Agent for businesses supports Anthropic's Claude models, StoryBoard18 and Pasquale Pillitteri report.",
+      "Futurum says Google announced the agent at Gemini at Work 2026, folding its enterprise AI into a single agent."
+     ],
+     "reported_at": "2026-10-09T15:32:21.000Z",
+     "x_keywords": "Gemini Agent",
+     "for_you": "Businesses adopting Gemini Agent can choose Claude models inside it.",
+     "kind": "Launch",
+     "status": "reported",
+     "continuing": true,
+     "outlets": [
+      "Pasquale Pillitteri",
+      "StoryBoard 18",
+      "The Futurum Group",
+      "Kingy AI",
+      "CIO Dive",
+      "The Register"
+     ],
+     "sources": [
+      {
+       "source": "Pasquale Pillitteri",
+       "title": "Google Launches Gemini Agent and Opens It to Anthropic's Claude Models",
+       "link": "https://pasqualepillitteri.it/en/news/21745/google-launches-gemini-agent-claude-models",
+       "published": "2026-10-08T21:32:18.000Z",
+       "official": false
+      },
+      {
+       "source": "StoryBoard 18",
+       "title": "Google launches Gemini AI agent for businesses, adds Claude models",
+       "link": "https://www.storyboard18.com/amp/digital/google-launches-gemini-ai-agent-for-businesses-adds-claude-models-112240.htm",
+       "published": "2026-10-09T07:01:02.000Z",
+       "official": false
+      },
+      {
+       "source": "The Futurum Group",
+       "title": "Google Collapses Enterprise AI Into a Single Gemini Agent at Gemini at Work 2026",
+       "link": "https://futurumgroup.com/insights/google-collapses-enterprise-ai-into-a-single-gemini-agent-at-gemini-at-work-2026/",
+       "published": "2026-10-09T15:32:21.000Z",
+       "official": false
+      },
+      {
+       "source": "Kingy AI",
+       "title": "Google Gemini Work Agent: Claude, Specs and Comparisons",
+       "link": "https://kingy.ai/blog/google-gemini-work-agent-claude-specs-comparisons/",
+       "published": "2026-10-08T20:30:17.000Z",
+       "official": false
+      },
+      {
+       "source": "CIO Dive",
+       "title": "Google unifies fragmented AI agents into a single hub",
+       "link": "https://www.ciodive.com/news/google-gemini-agent-enterprise-thomas-kurian/832561/",
+       "published": "2026-10-08T21:11:39.000Z",
+       "official": false
+      },
+      {
+       "source": "The Register",
+       "title": "There can be only one: Google Cloud casts Gemini as your enterprise AI hero",
+       "link": "https://www.theregister.com/ai-and-ml/2026/10/08/there-can-be-only-one-google-cloud-casts-gemini-as-your-enterprise-ai-hero/5302086",
+       "published": "2026-10-08T20:16:27.000Z",
+       "official": false
+      }
+     ]
+    },
+    {
+     "headline": "Gemini in Chrome reaches Android users in India, with auto browse",
+     "points": [
+      "Google brought Gemini in Chrome to Android users in India, digital terminal reports.",
+      "ET Now reports Gemini's auto browse feature is part of the Chrome rollout in India."
+     ],
+     "reported_at": "2026-10-09T08:13:26.000Z",
+     "x_keywords": "Gemini in Chrome",
+     "for_you": "Chrome users on Android in India can now use Gemini in the browser, including auto browse.",
+     "kind": "Launch",
+     "status": "reported",
+     "continuing": false,
+     "outlets": [
+      "digital terminal",
+      "ET Now"
+     ],
+     "sources": [
+      {
+       "source": "digital terminal",
+       "title": "Google Brings Gemini in Chrome to Android Users in India, Expands Auto Browse Access",
+       "link": "https://digitalterminal.in/trending/google-brings-gemini-in-chrome-to-android-users-in-india-expands-auto-browse-access",
+       "published": "2026-10-09T05:54:21.000Z",
+       "official": false
+      },
+      {
+       "source": "ET Now",
+       "title": "Google brings Gemini AI auto browse to Chrome in India - What it means to users",
+       "link": "https://www.etnownews.com/technology/google-brings-gemini-ai-auto-browse-to-chrome-in-india-what-it-means-to-users-article-156301511",
+       "published": "2026-10-09T08:13:26.000Z",
+       "official": false
+      }
+     ]
+    },
+    {
+     "headline": "Newegg and The RealReal join Google's conversational AI shopping",
+     "points": [
+      "Newegg and The RealReal have teamed with Google on conversational AI shopping, Chain Store Age reports.",
+      "Stock Titan reported yesterday that U.S. shoppers can buy eligible Newegg products directly in Google's AI conversations."
+     ],
+     "reported_at": "2026-10-08T19:36:06.000Z",
+     "x_keywords": "shopping",
+     "for_you": "U.S. shoppers can buy eligible products from these retailers inside Google's AI chats.",
+     "kind": "Business",
+     "status": "unconfirmed",
+     "continuing": true,
+     "outlets": [
+      "Chain Store Age"
+     ],
+     "sources": [
+      {
+       "source": "Chain Store Age",
+       "title": "Newegg, The RealReal team with Google for conversational AI shopping",
+       "link": "https://chainstoreage.com/newegg-realreal-team-google-conversational-ai-shopping",
+       "published": "2026-10-08T19:36:06.000Z",
+       "official": false
+      }
+     ]
+    }
+   ],
+   "quiet_line": "Nothing new from Google today.",
+   "coverage_only": false
+  },
+  {
+   "id": "meta",
+   "name": "Meta",
+   "items": [
+    {
+     "headline": "Meta upgrades its AI business assistant and automated ad tools",
+     "points": [
+      "Meta unveiled an enhanced AI business assistant and new automated ad tools, MediaPost reports.",
+      "ALM Corp describes the assistant as smarter help for advertisers; Mumbrella reports agencies worry about losing control."
+     ],
+     "reported_at": "2026-10-09T16:48:44.000Z",
+     "x_keywords": "business AI",
+     "for_you": "Businesses that advertise on Meta's apps have more automated, AI-driven ad tools to use.",
+     "kind": "Launch",
+     "status": "reported",
+     "continuing": false,
+     "outlets": [
+      "MediaPost",
+      "ALM Corp",
+      "Mumbrella"
+     ],
+     "sources": [
+      {
+       "source": "MediaPost",
+       "title": "Meta Unveils Enhanced AI Business Assistant, Automated Ad Tools 10/08/2026",
+       "link": "https://www.mediapost.com/publications/article/418580/meta-unveils-enhanced-ai-business-assistant-autom.html",
+       "published": "2026-10-09T08:03:45.000Z",
+       "official": false
+      },
+      {
+       "source": "ALM Corp",
+       "title": "Meta Gives Advertisers a Smarter AI Business Assistant",
+       "link": "https://almcorp.com/news/meta-gives-advertisers-smarter-ai-assistant/",
+       "published": "2026-10-09T16:48:44.000Z",
+       "official": false
+      },
+      {
+       "source": "Mumbrella",
+       "title": "‘You lose a lot of control’: Agencies wary of Meta’s AI ad push",
+       "link": "https://mumbrella.com.au/you-lose-a-lot-of-control-agencies-wary-of-metas-ai-ad-push-940322",
+       "published": "2026-10-09T01:25:40.000Z",
+       "official": false
+      }
+     ]
+    }
+   ],
+   "quiet_line": "Nothing new from Meta today.",
+   "coverage_only": false
+  },
+  {
+   "id": "openai",
+   "name": "OpenAI",
+   "items": [
+    {
+     "headline": "OpenAI fires three safety researchers; the two sides dispute why",
+     "points": [
+      "OpenAI says it fired three researchers for violating its sensitive information policy, Reuters reports.",
+      "The researchers say they were pushed out for raising safety concerns; OpenAI told CNBC the decisions \"were not about raising safety concerns.\"",
+      "Fortune reports the researchers were involved in OpenAI's investigation of the Hugging Face hack."
+     ],
+     "reported_at": "2026-10-09T18:13:22.000Z",
+     "x_keywords": "researchers",
+     "for_you": "",
+     "kind": "People",
+     "status": "disputed",
+     "continuing": true,
+     "outlets": [
+      "Reuters",
+      "CNBC",
+      "CNN",
+      "Fortune",
+      "ABC News - Breaking News, Latest News and Videos",
+      "Al Jazeera",
+      "CBS News",
+      "Business Insider",
+      "Quartz",
+      "New York Post",
+      "upi",
+      "The Rundown AI",
+      "Futurism"
+     ],
+     "sources": [
+      {
+       "source": "Reuters",
+       "title": "OpenAI says it has fired three researchers for violating sensitive information policy",
+       "link": "https://www.reuters.com/business/openai-says-it-has-fired-three-researchers-violating-sensitive-information-2026-10-09/",
+       "published": "2026-10-09T06:30:00.000Z",
+       "official": false
+      },
+      {
+       "source": "CNBC",
+       "title": "OpenAI defends decision to fire researchers: 'These decisions were not about raising safety concerns or speaking out'",
+       "link": "https://www.cnbc.com/2026/10/09/openai-fired-researchers-ai-concerns.html",
+       "published": "2026-10-09T07:23:48.000Z",
+       "official": false
+      },
+      {
+       "source": "CNN",
+       "title": "Fired OpenAI safety researchers say they were pushed out over ‘suspicious’ circumstances",
+       "link": "https://www.cnn.com/2026/10/08/tech/fired-open-ai-researchers-pushed-out",
+       "published": "2026-10-08T23:22:50.000Z",
+       "official": false
+      },
+      {
+       "source": "Fortune",
+       "title": "Controversy swirls over ‘abrupt’ firing of OpenAI safety team members involved in the Hugging Face hack investigation",
+       "link": "https://fortune.com/2026/10/09/openai-fired-researchers-questions-stattements-hugging-face/",
+       "published": "2026-10-09T17:21:00.000Z",
+       "official": false
+      },
+      {
+       "source": "ABC News - Breaking News, Latest News and Videos",
+       "title": "OpenAI fires 3 safety researchers in dispute over AI risks",
+       "link": "https://abcnews.com/Technology/wireStory/openai-fires-3-safety-researchers-dispute-ai-risks-137123277",
+       "published": "2026-10-09T12:38:08.000Z",
+       "official": false
+      },
+      {
+       "source": "Al Jazeera",
+       "title": "Ex-OpenAI staff say they were fired for raising safety concerns",
+       "link": "https://www.aljazeera.com/economy/2026/10/9/ex-openai-staff-say-they-were-fired-for-raising-safety-concerns",
+       "published": "2026-10-09T10:52:49.000Z",
+       "official": false
+      },
+      {
+       "source": "CBS News",
+       "title": "OpenAI defends firing AI safety researchers over alleged \"breach of trust\"",
+       "link": "https://www.cbsnews.com/news/openai-defends-firing-safety-researchers/",
+       "published": "2026-10-09T16:21:00.000Z",
+       "official": false
+      },
+      {
+       "source": "Business Insider",
+       "title": "OpenAI says it didn’t fire 3 safety researchers for 'speaking out' on AI risks",
+       "link": "https://www.businessinsider.com/openai-response-fired-ai-safety-researchers-2026-10",
+       "published": "2026-10-09T13:43:00.000Z",
+       "official": false
+      },
+      {
+       "source": "Quartz",
+       "title": "OpenAI defends firing three AI safety researchers for misconduct",
+       "link": "https://qz.com/openai-fired-safety-researchers-breach-of-trust-100926",
+       "published": "2026-10-09T11:11:37.000Z",
+       "official": false
+      },
+      {
+       "source": "New York Post",
+       "title": "OpenAI rejects researchers' claim they were fired over safety warnings, says they committed 'breach of trust'",
+       "link": "https://nypost.com/2026/10/09/business/openai-rejects-researchers-claim-they-were-fired-over-safety-warnings-says-they-committed-breach-of-trust/",
+       "published": "2026-10-09T16:58:00.000Z",
+       "official": false
+      },
+      {
+       "source": "upi",
+       "title": "OpenAI denies firing researchers for raising safety concerns",
+       "link": "https://www.upi.com/Top_News/US/2026/10/09/openai-denies-firing-researchers-over-safety-concerns/9721791553563/",
+       "published": "2026-10-09T14:12:15.000Z",
+       "official": false
+      },
+      {
+       "source": "The Rundown AI",
+       "title": "Fired OpenAI researchers dispute misconduct claims and seek clearer rules",
+       "link": "https://www.therundown.ai/news/fired-openai-researchers-safety-rules-auditor-access",
+       "published": "2026-10-09T15:10:36.000Z",
+       "official": false
+      },
+      {
+       "source": "Futurism",
+       "title": "Sacked OpenAI Insiders Say the Company Is Firing Anyone Who Warns What's Really Going On",
+       "link": "https://futurism.com/future-society/sacked-openai-insiders-say-company-is-firing-anyone-who-speaks-out",
+       "published": "2026-10-09T18:13:22.000Z",
+       "official": false
+      }
+     ]
+    },
+    {
+     "headline": "Watchdog finds most ChatGPT for Teens safeguards don't work",
+     "points": [
+      "Common Sense Media found most of ChatGPT for Teens' special safeguards don't work, NPR reports.",
+      "The group calls the product an \"unacceptable risk\" to kids; CNBC says it found it not necessarily safer than before."
+     ],
+     "reported_at": "2026-10-09T15:07:53.000Z",
+     "x_keywords": "ChatGPT for Teens",
+     "for_you": "Parents relying on ChatGPT for Teens' protections may want to read the watchdog's findings.",
+     "kind": "Safety",
+     "status": "reported",
+     "continuing": false,
+     "outlets": [
+      "NPR",
+      "CNBC",
+      "Spectrum News",
+      "WSOC TV"
+     ],
+     "sources": [
+      {
+       "source": "NPR",
+       "title": "ChatGPT for Teens has special safeguards. A watchdog group finds most don't work",
+       "link": "https://www.npr.org/2026/10/09/nx-s1-5995514/chatgpt-openai-teens-mental-health",
+       "published": "2026-10-09T09:00:00.000Z",
+       "official": false
+      },
+      {
+       "source": "CNBC",
+       "title": "ChatGPT for Teens is not necessarily 'safer than the previous version,' Common Sense Media finds",
+       "link": "https://www.cnbc.com/make-it/2026/10/09/chatgpt-for-teens-safety-common-sense-media.html",
+       "published": "2026-10-09T15:07:53.000Z",
+       "official": false
+      },
+      {
+       "source": "Spectrum News",
+       "title": "ChatGPT for Teens an 'unacceptable risk to kids,' new report states",
+       "link": "https://spectrumlocalnews.com/nys/buffalo/news/2026/10/08/common-sense-risk-report-calls-chatgpt-for-teens-and-unacceptable-risk-",
+       "published": "2026-10-09T11:11:00.000Z",
+       "official": false
+      },
+      {
+       "source": "WSOC TV",
+       "title": "Watchdog group calls ChatGPT for Teens an ‘unacceptable risk’",
+       "link": "https://www.wsoctv.com/news/local/watchdog-group-calls-chatgpt-an-unacceptable-risk-teens/EYQ7UFCBQZAJBKJKWN3NJMNBSI/",
+       "published": "2026-10-09T12:22:27.000Z",
+       "official": false
+      }
+     ]
+    },
+    {
+     "headline": "OpenAI still expects $70 billion annualized revenue by year end",
+     "points": [
+      "OpenAI expects annualized revenue of $70 billion by the end of 2026, Bloomberg and Quartz report.",
+      "Barron's attributes the $50 billion versus $70 billion confusion to accounting; CNBC says AI stocks bounced back."
+     ],
+     "reported_at": "2026-10-09T17:59:51.000Z",
+     "x_keywords": "revenue",
+     "for_you": "",
+     "kind": "Business",
+     "status": "reported",
+     "continuing": true,
+     "outlets": [
+      "Bloomberg.com",
+      "Quartz",
+      "PYMNTS.com",
+      "Barron's",
+      "CNBC"
+     ],
+     "sources": [
+      {
+       "source": "Bloomberg.com",
+       "title": "OpenAI Expects $70 Billion in Annualized Revenue by End of 2026",
+       "link": "https://www.bloomberg.com/news/articles/2026-10-09/openai-expects-70-billion-in-annualized-revenue-by-end-of-2026",
+       "published": "2026-10-09T10:03:34.000Z",
+       "official": false
+      },
+      {
+       "source": "Quartz",
+       "title": "OpenAI is still projecting $70 billion in annualized revenue by end of 2026",
+       "link": "https://qz.com/openai-annualized-revenue-70-billion-projection-2026-100926",
+       "published": "2026-10-09T11:31:37.000Z",
+       "official": false
+      },
+      {
+       "source": "PYMNTS.com",
+       "title": "OpenAI Projects $20 Billion Jump in Annualized Revenue Before Year End",
+       "link": "https://www.pymnts.com/news/artificial-intelligence/2026/openai-projects-20-billion-jump-in-annualized-revenue-before-year-end/",
+       "published": "2026-10-09T13:56:39.000Z",
+       "official": false
+      },
+      {
+       "source": "Barron's",
+       "title": "$50B? $70B? How OpenAI’s Accounting Confusion Wrecked the AI Trade",
+       "link": "https://www.barrons.com/articles/openai-revenue-scare-ai-stocks-risk-d4f7ea23",
+       "published": "2026-10-09T14:57:00.000Z",
+       "official": false
+      },
+      {
+       "source": "CNBC",
+       "title": "Stocks bounce back after sell-off tied to OpenAI's revenue report",
+       "link": "https://www.cnbc.com/video/2026/10/09/stocks-bounce-back-after-sell-off-tied-to-openais-revenue-report.html",
+       "published": "2026-10-09T17:59:51.000Z",
+       "official": false
+      }
+     ]
+    }
+   ],
+   "quiet_line": "Nothing new from OpenAI today.",
+   "coverage_only": false
+  },
+  {
+   "id": "xai",
+   "name": "xAI",
+   "items": [
+    {
+     "headline": "Grok bots now run and update Grokipedia",
+     "points": [
+      "Grok bots now run the Grokipedia encyclopedia and update it in real time, Crypto Briefing reports.",
+      "BASENOR separately reports that Grok Bots will now run Grokipedia."
+     ],
+     "reported_at": "2026-10-09T04:03:55.000Z",
+     "x_keywords": "Grokipedia",
+     "for_you": "Grokipedia readers should know its entries are now maintained by Grok bots.",
+     "kind": "Launch",
+     "status": "reported",
+     "continuing": false,
+     "outlets": [
+      "Crypto Briefing",
+      "BASENOR"
+     ],
+     "sources": [
+      {
+       "source": "Crypto Briefing",
+       "title": "Grok bots now run Grokipedia, updating the encyclopedia in real time",
+       "link": "https://cryptobriefing.com/grok-bots-manage-grokipedia-real-time-updates/",
+       "published": "2026-10-09T04:01:20.000Z",
+       "official": false
+      },
+      {
+       "source": "BASENOR",
+       "title": "Grok Bots Will Now Run Grokipedia - What That Means",
+       "link": "https://www.basenor.com/blogs/news/grok-bots-will-now-run-grokipedia-what-that-means",
+       "published": "2026-10-09T04:03:55.000Z",
+       "official": false
+      }
+     ]
+    }
+   ],
+   "quiet_line": "Nothing new from xAI today.",
+   "coverage_only": false
+  }
+ ],
+ "left_out": [
+  {
+   "reason": "Repeats and syndication",
+   "explanation": "Dozens more write-ups of Anthropic's Claude abuse policy, Google's Gemini Agent launch, OpenAI's influence-operation takedown, revenue figures and USA Today lawsuit, plus AP copies of the researcher firing story, repeated what was already covered.",
+   "items": [
+    {
+     "source": "Anthropic",
+     "title": "Building on our commitment to American scientific discovery",
+     "link": "https://www.anthropic.com/news/genesis-mission-commitment"
+    },
+    {
+     "source": "Washington Times",
+     "title": "Anthropic creates abuse, cruelty protections for AI",
+     "link": "https://news.google.com/rss/articles/CBMimwFBVV95cUxOR3lnWDdkNTk2RnhhM0F0VHdmYkhZZEptZnVybDM4MVI0RDNPVzhPUURIYXpyajAtaU9ReFBjV1RFQ2tkZHBfbzd2clVpQ19MU0VWdTc4aVRTOEo2NE95N3NRS2Y5WFVOMUxyQ3NJRl9EMmVHcVNySzhGdTI3TXlibG80Tk1lZDFHUy1RNV9HbkhEcVgwWFlneFU4bw?oc=5"
+    },
+    {
+     "source": "VICE",
+     "title": "Anthropic Is Banning ‘Cruel’ Treatment of Claude. Yes, the Chatbot.",
+     "link": "https://news.google.com/rss/articles/CBMimwFBVV95cUxQNFI2RDJvQkVWaUQ2d1VQRm5OQWVoX3BKczQ5TVhMbS1HNWpLNVNUVkhsOWh4MlYxTHJFRGRHYkd1ZFRPSm9nR3N1T3d4OHpZYkx2dF8zdEY1cFJOSzZsNUMwWE81SWJNaWRLMzhVTzExeUgyc1hQakpubU0wOHpvNXozWVFSNE14TldKNmw3RF9ZTlJ5Z25KR1ppYw?oc=5"
+    },
+    {
+     "source": "Business Insider",
+     "title": "The Biggest Changes Anthropic Just Made to Claude's Rules",
+     "link": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxOTlB6bDhZbk9GVVVsazVNbWFOMU9haDFhTnRnZmdYV21wVDR6c0ppVGF4Q2xMcWk0NllqUmFHUVJpa0czT2h2dW9xV00yWUNkc1VfU1ctXzhEUUJsM0U5UWhYZVNabm51QUU4S1RCMTJBVEt6ZnNoQzBpNTRnaW1iQlpjd2p1aFBrbGZV?oc=5"
+    },
+    {
+     "source": "CBS News",
+     "title": "Anthropic bars \"abusive or cruel\" behavior toward its Claude AI model",
+     "link": "https://news.google.com/rss/articles/CBMid0FVX3lxTE1Cc0xQa0oxTGNmSmZaYk9kZktQYkZmMzlJdzRkZWV4RFFOOVBxY2szQmhqazROLWhmeGFvYTFxanRlLURweGlKVjBIRnZMT21DSVJyeG9ObHN2S2J3TTBVWll3dXlmNjFiaWpNbnhuU2tVckV0SmtV?oc=5"
+    },
+    {
+     "source": "Anadolu Ajansı",
+     "title": "Anthropic bans persistent abuse of its Claude AI models",
+     "link": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxOMl9TNlg4SDJPNE45RUtXSzQtOWxlMkVUQ1VydkxmN0RaRmtydHhBSmNrRkJXTkVMbkZSbTZ1Q1BoSTg5LUF3QUhuR1VkZmNJQll2YXJaZllUNDloQ1FLNW1JQ2tTWUQ5NjlpUkZmR3N6Ylo1QW5waGhKUTVVZkpxV25SeGxSeTZKbXNfWXpkRDdSR0lueHdvbHFnSDVzbmI5cGRDQWE3U1VrRWc?oc=5"
+    },
+    {
+     "source": "The Daily Beast",
+     "title": "AI Giant Bans Users Who Bully Its Chatbot",
+     "link": "https://news.google.com/rss/articles/CBMie0FVX3lxTFA5SHBaQjVBUWFBOWlGYzRxcDFOSUFmVXM5ZDdOd1FnNENHSGw1Wm5BMWJtYWl4cU1yeGpsYlVpeWJBTFNydXFjMTFSSGtuZGFRR1BZX3FGZ0w4dERqX2FkMXdZQXRBa2pHVjhkX0FMSXhxNWg5V0pRN1M1Zw?oc=5"
+    },
+    {
+     "source": "Stanisland Magazine",
+     "title": "Anthropic Wants You To Stop Being Mean to Their AI Chatbots",
+     "link": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTFB3ZmlXRThBZnprblE3N2M3TThiU1JwMVY4NFRGUm9McjNMTkpBNm4tbkdxQll1bWNMeklYczh6aWowT1Q5UXJuYWp2QUphNTVKeE9sai1fblI4cm9Va3JhZTdoRl9salE?oc=5"
+    },
+    {
+     "source": "Gadget Review",
+     "title": "Anthropic Bans Cruelty Toward Claude Without Claiming It Can Suffer",
+     "link": "https://news.google.com/rss/articles/CBMinAFBVV95cUxNRnBsM1A2dk5XekFzMFdMN1hYdzRLT1RxU2VNaHB4c2hrYld2SzJFWEVEVTVnYVY1YldrSm5iT0FaQ3NCNlFERmNlX2NKZGZ4U2ZzMDhHMDZnUVlNU2hmeUxHVm9RNXdkOTQyaERrdEVTc1BNSEw3a2o5czlLSmxuY0lhZDI0emZPbmlxY1JfQ3BzZHF5UUE5SUYzaGE?oc=5"
+    },
+    {
+     "source": "The Rundown AI",
+     "title": "Anthropic will ban sustained, needless abuse of Claude",
+     "link": "https://news.google.com/rss/articles/CBMieEFVX3lxTFBhSmplcFZ4czFzeC1FNXBEUklCeUdGTFRpUVRIN1BfWXhOcjJBMHJ6NldGUmZITEpJUVF6OXBIZXJidHFuSFpPSnlvUWNFa2M1VU9yR1NHMFJNOWF6cFRMcm5XVUtsaS0yRVFuVS05Um81MWFsRXpBRQ?oc=5"
+    },
+    {
+     "source": "Yahoo Finance",
+     "title": "Delta's bumpy Q3, Anthropic bans 'abusive behavior' towards its AI models",
+     "link": "https://news.google.com/rss/articles/CBMitwFBVV95cUxOanhGdHpCR25FYlUxNk9WY0xQUlFZY1AwOVE3a2F3dVFPWXVZZE5WRnRGY05CVFNFeU13clZyV3p1eXpUZENkZjdHZjlRaEhvbmtVYVR4blp2OUV1STRRY2V3ZzkweGxIeUJ5U3V5aTg5dC1Jdjd6dU9BWkpxOEtxQkV6WkprMkxzX2RZRUFUaUVhZlUydmpsRWJkT20zM1E1d0NFcUZ6cmRiZndINEltYUFHVmdLVlk?oc=5"
+    },
+    {
+     "source": "The Tech Buzz",
+     "title": "Anthropic Bans 'Cruel' Treatment of Claude AI Systems",
+     "link": "https://news.google.com/rss/articles/CBMijAFBVV95cUxPWFloN3B3ZmZIMEx2dmtxT1VySndXbFBjRG8zOXdBOW1IanpPZURYaGVSM2FTOTByQzREZVN5cmxJcjRRMTl4YnFVTWFlenBNUldFcTBYUTZUbk02MjNBeVozUHVOWkRTbUFYMUExUk0tbTFadFI1dDJ4R0hkQXdnaG4yUW9KcndHQXhEMg?oc=5"
+    },
+    {
+     "source": "Yahoo Finance",
+     "title": "Why Anthropic just banned 'abusive behavior' toward Claude in its terms & services update",
+     "link": "https://news.google.com/rss/articles/CBMizgFBVV95cUxPODdKX1plR0gteDc5SjdvZnQ0TGtiSDdZeGdWU2FFMmlzWlgzYlN3by1oYzBVQjJabnhTQkFxZ2dLYmd4c1hKa2ZZb0hvc29LZDNkV2otU1FOejMwazlhLUdIM0RLLWw4MjcxWFVKLXhjbGxyUEpNWEVDTUxuSU1EamFTVU80dm5yUWE5QWVwT0RmTy1FMl9ZNkpKVERkbjhlcnlUN3RhLTVsVFdGVXlsTWFueGZVREZZWkdTWkIxQy1EcDRsaEtCZkxYM0R0QQ?oc=5"
+    },
+    {
+     "source": "BBC",
+     "title": "Anthropic bans users from being 'cruel' to its AI systems",
+     "link": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE9ramZhSWMyQlZTRHhlTjVYOXNuNkw0Ty1RYkF4dTQ5aVZtSUgtRjQ5SWpkTllONG5VYlVHaS1Mb1VsRXpTT2dvUUZ0RmxYczVWT0E0c0VvN3h3WW8?oc=5"
+    },
+    {
+     "source": "Protos | Informed crypto news",
+     "title": "Anthropic bans users from bullying Claude",
+     "link": "https://news.google.com/rss/articles/CBMibkFVX3lxTE1OWjZOdURXNGxUOWJjc2tpSmdXT0lXZnFHalRoT3FEZy1wUHZUOTJZMG9lR1hZZldpNEYtOWJ2NXh4LWZON2xOSXlBZUctcml2bmRnVFlJUGNpel9fNFJwNW41T0hMTmRSLVdMQVd3?oc=5"
+    },
+    {
+     "source": "La Voce di New York",
+     "title": "Anthropic to Ban Abusive Treatment of AI Chatbot Claude",
+     "link": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxQYXR0ZXE2czliU3h0SVBGVHI1RXVHckJZQ3k3b09odGVzQS1laFpiTURtNFZRWU53Y0ROcDdXeDlraGFab2Y3azBOVXctRTZkS19nalgyYkZXUGJHLWxWQlRhd09OMlVBS293WVRmX051eldzZmlfV1M5SU5TeVRsV2VoZlJUaW53RTJhQ3Vhcl9ZLVRNVUVFMUY1ZlVkOVJqTHUtSXhxVTFTd0U?oc=5"
+    },
+    {
+     "source": "The Register",
+     "title": "Anthropic asks users to stop being mean to Claude",
+     "link": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxNYm1BN01TVXF6eDVwQU81bWZXYWExX091aXN2UHRxUG1KZ2h0bEhqZUoxRHZBRXAzdTg1U0hSdjBoWjJ3MU9WSzNXSDNQUHdBQm15cndjbUZydzNiZVNGWDUwOVVrOEtLOXFQZU9GWk85VlQ2MDBCdTVBb1ExY3RXYXBObXBhbGk5bUZBckxyS3ZNTDVaOXFlUFR0UkdJdWc1Q1RHYXJfY0JCdw?oc=5"
+    },
+    {
+     "source": "KLVI AM 560",
+     "title": "Anthropic To Ban \"Cruel Behavior\" Against Claude AI",
+     "link": "https://news.google.com/rss/articles/CBMimAFBVV95cUxNOGhmUVI2bHZCM01ITFQxVzNmN2FHZzViY21lalpHdk5HMnFfTGJtZzU4U0RKSUF1ZHJ5d3ZYSGsxWXJPVWVsRGI3Q29jUGFIQTNDT3VsNWlYdlN3WXlfWlZSN1o3UHBwUXNBTS05T0k1SDd1RW9kX2o2VVJsX2hPQ2ZhMUhsTlppb0xRSWFGeXdRUEtld2c2TA?oc=5"
+    },
+    {
+     "source": "Digital Trends",
+     "title": "You can argue with Claude, but don’t be a bully, says Anthropic",
+     "link": "https://news.google.com/rss/articles/CBMiowFBVV95cUxQNUJNT0h2TU9WN0RGV3pYWk1kVW9mbGNkZ3dINDM1VTIxa2laUTA1eWl0WGY1NTF4YTg3MVQwSnFQcW1vQ0RORDkwcEszV1NrVkpXZnpuUE5oa283UFBXR0kyYksyb3Q1Z0JWOUFtOVlTcmVuYXI4U3g0dXB2ZVFjUy13TW5aSDhqLTMtWkNBcW9WbVFzcnBsWEgtWk9CTzJkRlBz?oc=5"
+    },
+    {
+     "source": "WION",
+     "title": "Can you be mean to AI? Anthropic’s new rules explicitly ban cruelty to Claude",
+     "link": "https://news.google.com/rss/articles/CBMivAFBVV95cUxPWFBSQ1pFX1ZKZG5FdzZVT3VoOWRrZzlTd3pHRlJYSERxa0I4VVB6UV9zcmxrN2xvNUJlbklTNEpLNHRqSDdVam9nMzR6dWZUNWd5WWs2N2JDZHpfeHVMY0JrNlYyTnlFU2d6T3NFOWY1RFF0VEVoWW8tVGIxUFlKM1JLczFMMlpsWlFmWFV3cFFyNEtLamlRNEFISXFPUkNPVTY0NkxHcEhFU3BldzRfTVhXdHFSRzhCbDFOc9IBwgFBVV95cUxNZ0kwdlFCS2REV21EWnJLX0xrS0l1YkpHTFBtYUJQdWIzUWFmSk9pclNaa1Zud01kLXAxWGtwNE5xZUl6ZmpWZnZ1QU9pNHk4VTRia3dYa24tYjQ2WV9JMEtpYm8ybmNhajhBSHRVT2NLUjY3T2RmZGRMRHktVzZyNDlDZzVkZncwVW1pQ1hKNDhWQkg0VDgwUGlqSVUxRHNnS3pOZW1heml6NHFybUtWR0VQSm10MEVjRXd1a19mcGxUUQ?oc=5"
+    },
+    {
+     "source": "The Independent",
+     "title": "Anthropic to ban users who bully Claude",
+     "link": "https://news.google.com/rss/articles/CBMiigFBVV95cUxNd28yc09vTGlxOUtabW51ay1TODJBUWltUU54VWpGMndLcXJTdTNfZHhBTkhMcnRZcW1DQy0zaHhIU2hZTGRaQ0hmQ0U5eHNUSlFCbm9XQzQwbG5tNnZVN0NTN0JxYVBQSk16N2E3MUFLM1NpVnRwWEpNcEpmX3g1Y1ItTGpyWVJ4ZGc?oc=5"
+    },
+    {
+     "source": "Mashable",
+     "title": "Anthropic IPO docs reportedly reveal over $40 billion in losses last year",
+     "link": "https://news.google.com/rss/articles/CBMia0FVX3lxTE1QZU1lRnpwckFTb1poMGtMOHdYTXUwYUFaT0p4ZVYtazU4S296UW9QNHN5ako0QlFNVFdBc0NRaGxTeGlQMGlYSlNlck1WOWl3ZWJ3RkZadTZCOWMyM1dOR2I4TS11RHNBNkRj?oc=5"
+    },
+    {
+     "source": "Українські Національні Новини (УНН)",
+     "title": "You can lose access for insulting Claude - Anthropic introduces new rules",
+     "link": "https://news.google.com/rss/articles/CBMimgFBVV95cUxNemFWMHJQTGVvMVNuT1diSGN4b2NpTm1RUG8xbEE2UG9VWXVzYmd5WGJlM2ItZHBEX29Eb081OU5wZkZrY3Z5UnFuNjNGbGE2M3pmQVRtZnlJTFMxZTlZOVNnTkhCdWdyYmFJdldodkVIekNmenduSks0bGEzZndmdk9lYjVNMFBQTlBiYnRvbkhRV1JyYkRydVp30gGYAUFVX3lxTE02SHdNbEt3c0JLTmhrX1FCZUtVY2hWVmYzMjBuN0FpQmZyWU5UdklWc1FYNDNXdlZCbjJRdkdja0E2TE9jN2ZXV25YT1F2LUl2YWJlM1hlNWVjMUJ4c3VGYXdMTHFtOFlVb3Z0dmVYeHRXQ2pzQk0zRFpiWTBnV2Z4NnFTZFFLR3JkY3V6dlVwaTJYX1hOQlZ4?oc=5"
+    },
+    {
+     "source": "Android Authority",
+     "title": "Anthropic is cracking down on people who bully Claude",
+     "link": "https://news.google.com/rss/articles/CBMie0FVX3lxTE1PVThiYVFmVzBfMWMtdGJPamNNUGNpWHNqUEU0dDkyd25Ba1hEbFRRM2FiVUptU0drNU13QWdKM3JfckJtaTlJOGxsS2VZR3J1WFFCZnNfY2VYb0VCVUM0eHhpNENQSHQ0b0VPMU1kc2xBN2tvdjNoQ2Uxaw?oc=5"
+    },
+    {
+     "source": "The Guardian",
+     "title": "Anthropic bans users from ‘needless abusive or cruel behavior’ towards Claude",
+     "link": "https://news.google.com/rss/articles/CBMikwFBVV95cUxPb2lja2Y3b2J4SGw2TDhuWUNxNmxablZvTlcwSVg4eHhuSUFwNUEzQTd0WFhOTlJMd0F5UHBDSnhxTl9nVXJlNjFrZVBSc1Zic01sZ1RuZ2tTTlQ3RVVLUEw5OFI2NDcwNzNPSVpYTUJmR1pVdmd2NWkyOUtxcTg5bC05ckRhX1pnSVRZdVhLSlQ0ckU?oc=5"
+    },
+    {
+     "source": "Forbes",
+     "title": "Anthropic Prohibits Being Excessively ‘Cruel’ To Claude",
+     "link": "https://news.google.com/rss/articles/CBMisAFBVV95cUxOVFdUOVUxZWlsaklRN003RVp3LVYxYWZ6d1JiTl93UnBKcXdhTHQxSV92TElyOWpoSGZvUjdmdXlqWkFsbk1jYWJBb1U1M1FiYl94QTJWOFVubWtFeERadEJMb1RlZVE0NHZSOFd3cGV6X2NqeEcwVWdiZ2NWRWVOLUVBQkJQdmFCLXJVMUhtdEx3NUwzUWpfblN1WC1uWGI4aU9YQ3lOb0xBMGxHZ0RDcw?oc=5"
+    },
+    {
+     "source": "Engadget",
+     "title": "Anthropic Bans 'Sustained And Needless Abusive Or Cruel Behavior' Toward Its AI Models",
+     "link": "https://news.google.com/rss/articles/CBMiugFBVV95cUxQRXZuZGdMS2Z5cks0bld4dTY0MFlOdkhka2M2cXJ4MS0xNzR3Nlg3bG9WaWM1c3JRZUg5Z0FJMDZTMktndUhKZmtIc05DMWNkYWdwMWtPaUMyZE8zMmw3cUtiaHNlQ1JPSWlTSXdmMGtBbktuRkxRcVRvbGZRQWg1MlVsbFA4Q1VmSWpvV0MtM2Z0TEZ4aWo2N1FOZDN3c2VhTlY5ZjN5LXRXSEMwakJhMGtLZWFLdjRPWnc?oc=5"
+    },
+    {
+     "source": "Axios",
+     "title": "OpenAI annualized revenue $20 billion less than previously reported",
+     "link": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxObmZsdFJwamstSi1rSFdObVV6VHp1MU5lTkpYek5sY09Pc09Na2U1UWZYTGV6dmVwSVUyRnhZbzM4VXE0MEh0NGlZX0lwNGg5U01kTjFXRzRxNllMS3FQSlptV202SjYxbTc2M3NRd0sydkwtdmFoR1NFejh4RHRlT2NGS1dlUW9RdTI4?oc=5"
+    },
+    {
+     "source": "Quartz",
+     "title": "Anthropic bans abusive behavior toward Claude in usage policy update",
+     "link": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxNaW45ZnBBbUZqb0p4bmwwci1JREhnYVotVUdEUGp3OXV0blg0bTV5cV9tc0tiVUlsRWJVV2pNbXBTbnZzUFMwSmtwZlpmcXNuallHYTNOX0J0RUprQjhiN1ZkUE9kd3V0RVpmMTBxQVBNZlZuTy04QVJpSFR1V0RsVnFodmJWUEVV?oc=5"
+    },
+    {
+     "source": "AI Insider",
+     "title": "Google Brings Unified Gemini Agent to Enterprises, Letting AI Act as a Workspace Co-Worker",
+     "link": "https://news.google.com/rss/articles/CBMixgFBVV95cUxONW5EQ3ZfZ3NPbTk2ekI5R2lKYXZjenloektIWG0zbzVud212enVyNVpxX3FrMmdBcXprT3kxRG9qRW56OF9GbS0wY2YzTldwdzhpeWN2VGVTS3hjYzI1STQtVmtJcmxITzliUkdMZ3ZnTTVseWFWTUpXZ0ZIVmZNZmVfenV4NlRpcGM2cDlOc0lqcWlUc1MxRU54MGp3a29yU3JkVXNJeXo4dGN2aGFIZUgtOV9YcmFNNTJMMWlRdktHOVp4UVE?oc=5"
+    },
+    {
+     "source": "Inkorr",
+     "title": "Google Unveils Gemini AI Agent: Streamlined Task Automation and Seamless Corporate System Integration",
+     "link": "https://news.google.com/rss/articles/CBMi4gFBVV95cUxQTG10anhBYmJINFVjSTNIR3pQcnRNdVA3dkNWZTZWUDBweUpVM1dBTnkzaG9jMTlKd0oyYUJzaFB2Y3ZGem5MRURUMGFhbS1IeWtBTkZ5cHd3WnRmcEprRG5TUVFyRWlUbnhMMUxrYUFFR2Vad1pnUks5cUdNMmktQjd3Z0ZaQzcxelZiSUgtT2hZaFJsaWdQUlVoOHNBWlJyaEkwNTh3S01oOFJuV0pabGNZQ2RJRVU3Q19QdFlnQmpfcmZUSF8zbzE0aG9PMWxPQUpBTWJ0d2lRYTEwdVhNVmFR0gHiAUFVX3lxTFBMbXRqeEFiYkg0VWNJM0hHelBydE11UDd2Q1ZlNlZQMHB5SlUzV0FOeTNob2MxOUp3SjJhQnNoUHZjdkZ6bkxFRFQwYWFtLUh5a0FORnlwd3dadGZwSmtEblNRUXJFaVRueEwxTGthQUVHZVp3WmdSSzlxR00yaS1CN3dnRlpDNzF6VmJJSC1PaFloUmxpZ1BSVWg4c0FaUnJoSTA1OHdLTWg4Um5XSlpsY1lDZElFVTdDX1B0WWdCal9yZlRIXzNvMTRob08xbE9BSkFNYnR3aVFhMTB1WE1WYVE?oc=5"
+    },
+    {
+     "source": "Dataconomy",
+     "title": "Google Unveils Unified Gemini AI Agent",
+     "link": "https://news.google.com/rss/articles/CBMifkFVX3lxTE1JRm1SZUdKX0Z6ZXVQLW9hQkhMS3ludWk3V3hwVThiaTczQW5ubnptU2oyUzFRbnJKSlg5TlNzNlphZ2owMVRzcHJfUWQ5MWJlbEV4cDhHVTdMRGNwZE15U3Y4RnIzUW5MRDQ2RFpoOGFmSnM4WGNIVFhzUVNPQQ?oc=5"
+    },
+    {
+     "source": "TechJuice",
+     "title": "Google Cloud Launches Gemini Agent for Workplace AI Tasks",
+     "link": "https://news.google.com/rss/articles/CBMiigFBVV95cUxNN3pWSEw1X3I3S09LWll0ajA2ejUtcGQtZG83Wm94SUZMOFI0LThKUzJ2V1d2VHUyLUxwU291NloxdnpKMmlHNWFCT3dlUXN6b1dZeEs0a253a2NjNElRei14dnFqTjROUmlyUjl2eFVXVkEtdVFTZzlTdFJXSHhSTVBmY1ByQTNmTEE?oc=5"
+    },
+    {
+     "source": "entARABI",
+     "title": "Google Launches New Gemini AI Agent to Execute Work Tasks",
+     "link": "https://news.google.com/rss/articles/CBMilAFBVV95cUxNZU9oTXhvaThwX3VwcXJLMVIwWG5NYmY4RlZtc1JaM3NVT1ZyTXVwY09PVGhoZko3Y1dmY1FtRW92RE1tR1gxSGdzeEZpbXlURHNvNzN6d3FlMF9NMXJrMUoxMDhVLXJJZ2w4bUEySHhOUUZiNlBHNDhlN2F5WFR1RkxQWDZTeURIZkVlUjlSYWcxYkY1?oc=5"
+    },
+    {
+     "source": "Technology Org",
+     "title": "Google Cloud Launches Gemini Agent, a Single AI Agent for Work",
+     "link": "https://news.google.com/rss/articles/CBMifkFVX3lxTE5lanRydFdObWdlNEs1RHhJN0FLTnJBeGNqSHdwTm5aVzZLV01LcWRJZ2VfelRKQ1BqRnRQYlBmR3dycXZ2VHRmZmsyNm15ZXJaNjNGOWRrS0E3Z3NLZ0syUE5nWlRDUnBYbHdORmVuS19HX1BQMVhwNmNUTUZyUQ?oc=5"
+    },
+    {
+     "source": "AI Magazine",
+     "title": "Google Cloud: What is Gemini Agent for Autonomous Work?",
+     "link": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxOYlJkRk1YZHQtME5FcUt1WV9hTTZvRFdranF0QS0wRHlLQ29pWmZOV1VTYlV0WnlyR3JsY3NBSi15MW9UbHNTMndwSi1yelFUQjVSUWRlOEJSOVktcmJId3BGcmhUb0IweE83Zlh2VXAybURvTGlSTUkzTzQ4WlRJR2ZxbElMMWhK?oc=5"
+    },
+    {
+     "source": "TechNave",
+     "title": "Google Cloud releases Gemini as a universal AI agent",
+     "link": "https://news.google.com/rss/articles/CBMilgFBVV95cUxOX2MtaUFMenhxZk43S2tHOERfQVpJdGFaTTc2cjVUeWlZNm1QWkFuOHEzZnI2NEZ6dUM5QnctUHRtanZjS016WW5KLUFJRWNISDBRdVB2RzhhbjVGN1U3OU5NV1VpZXR4b052T3NHcEliTWRWRW9BSWdwaWdmTDJKUmt1dWdrem1SNXVBckxVbVVhNTNMQ3c?oc=5"
+    },
+    {
+     "source": "MarkTechPost",
+     "title": "Google Cloud Launches Gemini Agent, One Universal Agent for Enterprise Work",
+     "link": "https://news.google.com/rss/articles/CBMitgFBVV95cUxOVkZUbHJ0d0ZZRkFnZGtPVW9ldzEwN1FmV0JfWUlMNmR3R3ZZVl9aa2xJNWF0c0prN2RaQlJCVUFfaE9vUEhzdTFHTUdRajdmVVF6ejRLU1pXVmczdW5FVnd2czNacVRKb3pMbVNyMlJySFVUcWxyNEZ4S2RwQzFPa1BXWGNVQW15cnZMMGQ0c2YwWW8weDNWOHU2YnFTZ3FKLXBCN0NxOW43dmM5S290UTFJc0ZId9IBtgFBVV95cUxOVkZUbHJ0d0ZZRkFnZGtPVW9ldzEwN1FmV0JfWUlMNmR3R3ZZVl9aa2xJNWF0c0prN2RaQlJCVUFfaE9vUEhzdTFHTUdRajdmVVF6ejRLU1pXVmczdW5FVnd2czNacVRKb3pMbVNyMlJySFVUcWxyNEZ4S2RwQzFPa1BXWGNVQW15cnZMMGQ0c2YwWW8weDNWOHU2YnFTZ3FKLXBCN0NxOW43dmM5S290UTFJc0ZIdw?oc=5"
+    },
+    {
+     "source": "CXO Digitalpulse",
+     "title": "Google Cloud Launches Gemini Agent for Work as Competition in AI Intensifies",
+     "link": "https://news.google.com/rss/articles/CBMirgFBVV95cUxPZVpKNTZGMGxLa2tEUFNqYnVUV0EwRVM3TS1ZYk1UY2VrLUFGb1U4QUlvVmFyYmJsdVpTRVhFbUVNM3V1SlZ6ZFFfRDg1TXNXaUZFRy1odTY4S21GVHRrLTNHdlFBNjl0UTR4VmRCdzZWd0Y4anB1b0VRVUd0NlNzYXRGTFJXVnkyekFGc1FweEsyOFhEb0htcE1DUUNtUDlCM0F6SzJuOU9lc3pXV3c?oc=5"
+    },
+    {
+     "source": "HR Katha",
+     "title": "Google’s Gemini AI steps into the workplace; has its own email address",
+     "link": "https://news.google.com/rss/articles/CBMitgFBVV95cUxNdHRCcmswdDdvTlZsUDhJbFhleExnakFlYXVHaXFlMUZoWW1tQlcxOWdaV3dzeVJselRwUmx6SzlTNlJKdlhLa09tY0FBTnkyaUcwWk9KY01YVHZ1aVYtMHpma3lzUThwZUhkQ1A1WkYxbndYUFdlZ0ZXUm1uTFFteE51VS0xd3dSQXNPZnFtMXMzcXlzdWdBelBZWHh3VFl0SzJJeXRYUVZfTF9MdGdNLWViQmdRUQ?oc=5"
+    },
+    {
+     "source": "GIGAZINE",
+     "title": "Google has announced 'Gemini Agent,' an AI that automates tasks, handling everything from information research and document creation to programming.",
+     "link": "https://news.google.com/rss/articles/CBMiZkFVX3lxTE44b2N2UWE4T3lnUExnbXpJcjFWUFRLcXV6OVFDcE1oa2p3bkR1ZHN5VEYzR0NnQVlSVzdZdWxKNE56WEpfT0UzZk4wZ0tMNXN4YWZFSWE2R1J0QkZqVlhSNjYxekNaZw?oc=5"
+    },
+    {
+     "source": "Digit",
+     "title": "Google introduces Gemini agent that can serve as your AI coworker: Here is what it can do",
+     "link": "https://news.google.com/rss/articles/CBMixgFBVV95cUxNaDN3Z2s2VzNWX2w3UHdhVUZBM2NFSHJ5eFptQ251OTRXMFVUYkZaYVJtQ0hnemE2dDB2b3JtZkswMFFZc2pGMC10MkluSTJmWEx0NmNsaTIxTlhPV05MYXdMV3Q3bjRtajlqV0lSdV9SemZYV2hpSEY5Ni1lb3N5ZUpUS0tPekRuWFRIOEp4cE5xdllOWmdNQTI3ak5oMFNibE9fTXMwdDVWUWkyOGN5ZmZBRnQydktwd0RUbHJrYmxvYWM1NlHSAcwBQVVfeXFMTmlyWm1aRUxuWlhGcGRJbkM1SHRRUmVpWVh0aTRnNDh4a0hhODJxLXJYblBtSkZLZXN2NHJueHBxZERERElQVndKaGR4aUFJRTBRZkZYV0JsWjd6SFNnV2ZyZkFkenhubTh6elJDLWFxSF9CeTlSZ0VLZmJQZlE5ZnJsSXhIVkpiX1FaSlNCQVdOVXhRWTJFZmxYSkRzME9WMEh0a3pnc1Zwdzk2Q0dNaGVwZnM0cG9BNGptaXNCa2FQWkpWNmJaeFpWY1Zr?oc=5"
+    },
+    {
+     "source": "Tech Wire Asia",
+     "title": "Google Cloud introduces Gemini AI agent for enterprise workflows",
+     "link": "https://news.google.com/rss/articles/CBMigwFBVV95cUxPUjl4N1BjYlJVSkFsVUNaQzB2WFM5ZXp6bHlVVEpoVWhESmJxXzVCQXR0ZEkzZk5kWjRYRjB1V1dJZlpmUjdxQldsMUtSNlU3V0NmTThKeWVPbEpkZVc5clVsMTdPY041V252ODc5d2h6YVpVRXZqdjJWeHVDRU5JSnBRUQ?oc=5"
+    },
+    {
+     "source": "The Economic Times",
+     "title": "Google Cloud introduces Gemini agent for work as AI race heats up",
+     "link": "https://news.google.com/rss/articles/CBMi4gFBVV95cUxQOUJFZDFMeDhJaG96NFFpUTA5YmJQQXhJYnp4N3Z1dkhCY2QzZERWTHZ0dW1QU3U5UHJrcjVVVHRqT2RjbVJWZEFuRUFnZF9aeXBHLVFPbjdKQWJrM3RYSHFUOEJWT3NvTTRGM2pEeGphMEtnZXNiYVo1Vlc0R3JpaWctd1AyOWM2c1p3bUJCVzV3YlVMRERXeWhfLWk5MVNFX2JLY09talZ1cmNQdUk4M0lweGF0b25jN2g3ZnpsT3lPbWk5Q0k1cUNqdlNUUWtRV25mczhhNnE3OXowV0s3LWVn0gHnAUFVX3lxTE1SWW8wSmNna29ManNqMWFnbi1PQUU3NDMtWmZwY2FTMHI0VlFBUXpaNkdCSGFMdE5RY0llYmZqeG5YVE1LdjZmeF9rSFo5QXVvS29QX3NtU3VhYkpPTE5Ta1BoUXJFd05wVU11MmFXbzlkenRabVVTMm1veU96a3RIR2dXYUd4VHk5VTRoSkRsb1dPR05KNnpfWkJlMG1iNkdqOHhpRjdBU1FoZ0p3eFhnUFJwNks5dTFPUmwwQThGZ2FmTHlqRXI5NG1aTDVlS0xZcGtRV3I5M3ZCeFpselMwX1pGMmxGcw?oc=5"
+    },
+    {
+     "source": "NewsBytes",
+     "title": "Google Gemini can now complete tasks on your behalf",
+     "link": "https://news.google.com/rss/articles/CBMimwFBVV95cUxNSURxOHpHMVpJbHl3NnR4ZlZ0a3lGSEs2QlNWblFoLTdkOC1XQTZ2N3dmRk5SSlN3RHE2Q0xOT1IwSlhUWVBBZC1OYWlvMFBpWDEyZWRLNldTUE53bHpkdlVnaFFHQXhzenFnZDhsVEVqTUJURkE0VnJqQVhoYkJGVTBJU09XLWJRVUxibk1XWndpbXlLSWEwMk8zZw?oc=5"
+    },
+    {
+     "source": "AIBase",
+     "title": "Google Launches Unified AI Gemini Platform, First to Be Deployed for Enterprise Customers",
+     "link": "https://news.google.com/rss/articles/CBMiSkFVX3lxTE9HR1FNdWFsbmptWGsxSmpDLXlBLWRjMXBaNVBVbnBqbGRLNWFnWGlBQWRwX0lUUzE5QmhQMk5OOWVQeDdyc19uMjFn?oc=5"
+    },
+    {
+     "source": "shattered.io",
+     "title": "Google’s Gemini Agent Launches With 3 Linked Apps [2026]",
+     "link": "https://news.google.com/rss/articles/CBMibEFVX3lxTE1rMl9zajQ2clB3OVEwU1Bxb1RIRDR0eW1oak5WVDlYVVI3TXZ1X016WGc3QVNQVkJxakphM2NwOXpqQlg4NENkVk9RZzdLT0FtYjc0d0JLMVh2NGd0REZ2UVZQbGtoSHBOcG9YTQ?oc=5"
+    },
+    {
+     "source": "디지털투데이",
+     "title": "Google deploys agentic AI in Gemini, targets enterprise market first",
+     "link": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxPRHJHR193enVmU21rTWhnT0xQSm1SQTIwV3J6SUtpQkdhRmNMV096VG80VjR1WTdPTWZtTFlyLVZUSmRKMjFyWE5LOVFlRGh0dWlTU3JLVTdjVDFIZnNqdlg0U2xBVmJLWmNVWTRBQ0RtU2NSNlNIc3VHekticlNDU0dtdnYtdVhsZElHaHlRclRWWFZNbkJnX1BBbnlSYWFITnJac2hXM0YyRW8?oc=5"
+    },
+    {
+     "source": "Gazeta Express",
+     "title": "Google leads Gemini into the era of AI agents, first for businesses",
+     "link": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxPS3hYcDVFalBjY2praGhVcUhyWHg4b3FkWFI0WnBOME5JRzRjNUw4Rmh3RUZyYU0wVFo1bFlxXzY5cHRTRHVqVmx4azNTcUgzbGFjYWZ2dld0RzFnanNjcTZpVTdrNFNqdUQtQ3RLcWpzbjk0RDk1YTJFYkdDdE5XbWJHUUI5SUdfdHJNcU45LTlRVm5zdDVnS0pqMWVzcDQwR2hlbUtFc2Q?oc=5"
+    },
+    {
+     "source": "The American Bazaar",
+     "title": "Google launches Gemini agent as AI giants race to build autonomous workers",
+     "link": "https://news.google.com/rss/articles/CBMixAFBVV95cUxPalFPNjhfckdQQXVSWnBOaFhvaW0ybTlXUFJXMVp1eHQzcHJpVWdCaU5TNF9qVEV0OVNtTjg5eGFseVpPX0xzd2J1c3p6Nlhyb0ZsNTlfU2Y3RFFFTFo5RjBhd2lDUm1OanNVZ2ozdFl3S01qQmVBR2RWZUg4R01LU1dDbWlOeS1QNWZvZlNheXczZGNnNUFsRkJEN2NBbUwtY3lIOVZXR2dwamVGdEZmV1Z5MHREWkNpQkFZOWstMGREVHU2?oc=5"
+    },
+    {
+     "source": "Cryptopolitan",
+     "title": "Google launches new Gemini Spark AI agent that can work for you",
+     "link": "https://news.google.com/rss/articles/CBMifEFVX3lxTE5tOFFVXzl6UldhUzAyRkdtNnF1T04wUXlTdDQ5UGM0ZUliUWliVlJoazZuaGoyZ3pHZjgxUGFadVBUeDZybkFwbTNqZFpxTzEzV2hnQUczQVdQZXlWUl9SYlgwNzJHSjJCNE9TRVV1T3c3clNzSmptTloyVXc?oc=5"
+    },
+    {
+     "source": "Android Headlines",
+     "title": "Google's New Universal Gemini Agent Wants to Become Your Next AI Coworker",
+     "link": "https://news.google.com/rss/articles/CBMipgFBVV95cUxPeEdkTnRHOGx3ZmEtMFFud0h1aVBIVjlxNHIzc2RtV0FIZkY1ajNMYkZUVzhZbGYwRGVsMkJjY2xGT0tCMThKcnkza3JyekZXSmtiRDhHZUdGZ0Mwek83c3RqLVlPX2Z2M2FQTmljcTB4V2gwWnhNMGYwZVN2MFJZdEJERVpEMV9NbkluWEpoYjdVTUhtclhGalpLQ3ltVlh1ZDdlMjV3?oc=5"
+    },
+    {
+     "source": "Pluang",
+     "title": "Google launches Gemini AI unified agent to hand...",
+     "link": "https://news.google.com/rss/articles/CBMigwFBVV95cUxNQ1VZVDlURVlEMkNtN2JKLUw1UWMyd3JpbFJTOWZPcWJKLUpOMXQtNG85U3p0N25RU2lxVVBRdWZrZnAtb0d4Snh6UE5Peks1YlNXcWxjY1Nna1hIUzBuZzFwV2VWZGdDTjByNlF1YnhpVnF1TFdyREktdHJMMVNQSDltSQ?oc=5"
+    },
+    {
+     "source": "Press Gazette",
+     "title": "Who’s suing AI and who’s signing latest: USA Today Co sues OpenAI",
+     "link": "https://news.google.com/rss/articles/CBMijAFBVV95cUxNbmlBOGF2YlY3cWZ0dXBrNWU2WV8yMGtJVjFCRUx2eUs3b0NNTzBsenpyOEloaVppUlpMOGxOMWtRX3BJYkcxbV9mZ1d5VzZLMmMzM1RNcXUycnRRTGpKV21FT3dJVkpuYTdQeEdJbzgwdUpJcV9kMEVwbkN3VDZKUVV1RlNEVVI5ZGN4eA?oc=5"
+    },
+    {
+     "source": "QRNews",
+     "title": "Meta Launches Muse Gadgets Platform to Expand Muse AI Beyond Standard Chatbots",
+     "link": "https://news.google.com/rss/articles/CBMirwFBVV95cUxQQlp6dndIYUJpdUpIWlM0UTIwdHI5OHI3T1d2UXZDZmRpU2F5SmlVOFlOSkFtU3c5cmVXcDdLRFdEeGRwWlRTVEFCdExlUE1JbkNUNGJpQ1lrX2xsd1I4TE9WTjRLY3dsT1dNSG9ZRVh0Q3JoNzhob2hXUlI4R183TTJ2LUhTckdZUUJDU1RkQmhSTDdDbVpwVVh6bktsd1hJcUV1c21wU1hkcnQ5Z1Fj?oc=5"
+    },
+    {
+     "source": "Radio Free Europe/Radio Liberty",
+     "title": "How Iranian Operatives Used AI To Publish Fake Stories In US Media",
+     "link": "https://news.google.com/rss/articles/CBMifEFVX3lxTE1icjEzTUoyWnAxd0ZUMHNwTXNGcGZLcWZpaW5YdlNTZjFLUU5IYXpUeXEtM0RzTUpBRHA4R0p5QXUzVzY3MFFnV2VtZGR1UG9udGp1OVh1cE1lZkZJaEd3bHVhbUZPb2hWdnQ3dkI5cEdDdmM3S05lZWdjeljSAXxBVV95cUxNYnIxM01KMlpwMXdGVDBzcE1zRnBmS3FmaWluWHZTU2YxS1FOSGF6VHlxLTNEc01KQURwOEdKeUF1M1c2NzBRZ1dlbWRkdVBvbnRqdTlYdXBNZWZGSWhHd2x1YW1GT29oVnZ0N3ZCOXBHQ3ZjN0tOZWVnY3pY?oc=5"
+    },
+    {
+     "source": "The Washington Post",
+     "title": "Iranian campaign planted fake articles in real U.S. publications using ChatGPT",
+     "link": "https://news.google.com/rss/articles/CBMitwFBVV95cUxPQnJfdmQzcThvdk5kMkxlWXpMZlhIUXM1ZGR4SGlycFdUZV82Z1N3eHVCVGk4UnpKb0s3U2lvX3d0RVFDNnVVekhyUVhSQlJOYlQyLVpETDI5V3FSZDFYeDcyLU5nbXB2SGhmeTNBbFIzNUsyZFRFcWs0OHBZSU9IZlpkRVUwUl83ck55U2E5dkZpM1hoN0s3blJScUZaT3J6a0w4b1FOXzQ4U2JVQTREUEVyYkY5bVU?oc=5"
+    },
+    {
+     "source": "Louisville Public Media",
+     "title": "USA Today network, including Courier Journal, sue OpenAI",
+     "link": "https://news.google.com/rss/articles/CBMilAFBVV95cUxQT3ZQS0NyczFLRW9VV0FHbFI0b0tEVFVXX2dKOVFuM3J1cVpWeGNhbUo3YWRiQV9sc3I3LUktakQ5U05Kb1hQNGNyRFphV3J4V2V3a1dZMi1DdVc5OEpvd2ZLZG1aNHZjZmY0V0s4eDFQRjdjY29VOFhtdXNqc2FFTDdfa2tHSkNPT0NuLWhTSUVoeTZI?oc=5"
+    },
+    {
+     "source": "IranWire",
+     "title": "OpenAI Bans Iran-Linked Accounts Using ChatGPT to Push War Coverage",
+     "link": "https://news.google.com/rss/articles/CBMipwFBVV95cUxPcTdEcWVTZkkwS1FVSzQ0RF94c19FcFF5VmZ3SngyUVExSnVITUc2OFVycXpvUG9UdEZ5ZUtCMC15N0kzWUVHdUhZd1ZzajM2WU03ZldSeVpDTGJsZXBTUzNGc2ZBRzdseE9qMFJDMlBKazJzVVItem96cFRzWjRXMHRvN2JJR3Y2R2NSc2IyNHBFQnR2cHR6TENWNnItMFlnRXdva0hyRQ?oc=5"
+    },
+    {
+     "source": "Greeley Tribune",
+     "title": "OpenAI fires 3 safety researchers in dispute over AI risks",
+     "link": "https://news.google.com/rss/articles/CBMif0FVX3lxTE5vak5USlJnVTB6dlNtc0hmSmU0aUtvQlpyQnFoT3lHUjhXSWZTRWc5WWxrUTgwSVEweklXXzRpX2YwNVhoTHJ6YmFxVVlnVzZoaUxNV0tNQ2EyN1VoLVdRdEhocTJrRnlBTjU1TDgtRlRrNG16WXlOM3B2VmlXMUk?oc=5"
+    },
+    {
+     "source": "The Record from Recorded Future News",
+     "title": "OpenAI says it disrupted Russian and Iranian influence ops that used ChatGPT",
+     "link": "https://news.google.com/rss/articles/CBMif0FVX3lxTE9yeU9ST3A3NWdwUjVsbndPcEM3dHNZLTNHOGxtT242bWxKbkVFYXM0LUNqVkNtVmt6UF9sUy1ZWDJubVg4QzY0d3ZuemFweHBQZXotOThxTlZpckxNUVlBTnBPcHlTVXRSdXFWRWhGMWFVTVRyMUg5eHNGTHVabUk?oc=5"
+    },
+    {
+     "source": "myMotherLode.com",
+     "title": "OpenAI fires 3 safety researchers in dispute over AI risks",
+     "link": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxNMWNTQ0ZqTHB5RzZCdkt5alk2NEhCazIzU1NEWmpId1NPNklpaU5JZGJWT3VFZGlodkpGYjZPajNsQjJUVE9ud2N6NlBDSVZpYU5XMjNBY0NUV0VxWWVWdmYtQ3RsOXE0ekFXVlgyOUxPNGlKcEVnMWRsMzcyYlVLcUVyb29mZUJKSzAzMzVDZWxUMm45S05EUmFVNXVocDZtU2Q3ei1vTm85RUlVamJNLVBQQURXNHlq0gG4AUFVX3lxTE0xY1NDRmpMcHlHNkJ2S3lqWTY0SEJrMjNTU0Raakh3U082SWlpTklkYlZPdUVkaWh2SkZiNk9qM2xCMlRUT253Y3o2UENJVmlhTlcyM0FjQ1RXRXFZZVZ2Zi1DdGw5cTR6QVdWWDI5TE80aUpwRWcxZGwzNzJiVUtxRXJvb2ZlQkpLMDMzNUNlbFQybjlLTkRSYVU1dWhwNm1TZDd6LW9ObzlFSVVqYk0tUFBBRFc0eWo?oc=5"
+    },
+    {
+     "source": "Baltimore Sun",
+     "title": "OpenAI fires 3 safety researchers in dispute over AI risks",
+     "link": "https://news.google.com/rss/articles/CBMifEFVX3lxTE1oUE9MZG1KWkJUdE9qajhmZjJnT3NrakVGNkhVMEdzSlVNempSMDFZQlBWNTF0TnV1MFNpRUJZZUFaMDE5YWRrNVA1VWp5SWVWQ2QxSDFQTXF3SXlJaDJQU2dkdkFIMmJXczNuUE9jbEpSeUNzRVdMUGREUFQ?oc=5"
+    },
+    {
+     "source": "Euronews.com",
+     "title": "Iran and Russia used ChatGPT for propaganda by ‘fake journalists’, OpenAI says",
+     "link": "https://news.google.com/rss/articles/CBMisAFBVV95cUxPNkZjUjhoMjltd1dqcXBFOF80cEdLSXhDQnljRkp4TE5mQXJwM3lacXFGWEliTkZ1WWN0ZzA4ekJjQkZId2JoNWkwQ3oxbjh1WWdBc1pfWGtyRFVuRjJMMGRXem1oVDlra2swd3MyMzdIX0ZzR1pmS1ozOFkxT2RhcHc2OWhtUnlmN0NJOTh4VzA2UzJsaFJVekZlMjRQUHI2ZHdHSkdYY1NFWnNaWmk0bw?oc=5"
+    },
+    {
+     "source": "Gulf Coast News and Weather",
+     "title": "OpenAI fires 3 safety researchers in dispute over AI risks",
+     "link": "https://news.google.com/rss/articles/CBMikgFBVV95cUxQUW9pX1g0dzN5aGJYZThvbDRlWlkwV0pZYkZvTHMtYVpsY0pTSlhQZ1l1NHA4QVhqUDQyZTduLUV3NWpsdnFBdjhMa3RHMmV6N0ptNUlBLXYtR2lkdFBQZXRFTFVDQy14Zlh6NEhic01adjJ4LU9Ia3llc3hQUXRjWEZ2RWdHVDQza0tITVJ5QWQ3QQ?oc=5"
+    },
+    {
+     "source": "Bozeman Daily Chronicle",
+     "title": "OpenAI fires 3 safety researchers in dispute over AI risks",
+     "link": "https://news.google.com/rss/articles/CBMi8gFBVV95cUxOSjBQZkhqTHloSTk3OXhWLXJPZGI5M0E4LXZrRTU4QnpGUnBmaEpzaVFFWDZCdUpad29uZkJfYm1oVUVSRGZ2UlBFUzBBSEtkWVJRUVNSODBhWnUzMjROQzhTd1JwOHowU1VqOWtETzJzMEdtMjU0QjdmVURDWXBpVlNqcnBEaEtscThNZmpyVTVOcW9aMVZvSlpmRmNVbXg2VzBQN2dfNHh2QXlmRFNmVWc1emZBR1pQYXB0d3NqSENhblUyRTRvNlcyZkVZaWtLXzJDM0hvbVgzYWNLWkRmLU1ZLUc2cENRaXlnT3hCT1FWUQ?oc=5"
+    },
+    {
+     "source": "Hawaii Public Radio",
+     "title": "ChatGPT for Teens has special safeguards. A watchdog group finds most don't work",
+     "link": "https://news.google.com/rss/articles/CBMi3wFBVV95cUxOeHpLeDBMN1hwalNFM1FTTW15U2VRMEVjQVd2U3FoMmduc19wZ2RSVHBoWXZ6NDVUUy1CbE9FZFpMczZzMDZpRVpKMHNsalYwWEM5WEh2aUQ3MVFXRzVmWUNiUTJQSU5rVE05VkpWSk5BSFE4ZEhWSEVvblhIYmxVVFJRTXpFb0NBdG5hU2hUVkZZRTNrSlJhaFBOVHhjempnNlR2a1puTW1YdUJwYVVVTkRzdTVpNTJxc1VzMTQxWUZJV19ENWVKMzJYbjlGcjFfR3cwZWxjN3NrRnZlNjBn?oc=5"
+    },
+    {
+     "source": "The Guardian",
+     "title": "OpenAI projected to bring in $20bn less in revenue than expected",
+     "link": "https://news.google.com/rss/articles/CBMihAFBVV95cUxPb29nSEpYRFJFcjZHb19PT2ZXRWhDWGgtbC1sdW1rWDBVclk3VlY4NWs1bDFpaHdGdHZscnB2djZUUUl0ZU10ZW1uTHBnTldDdWlCS3NyM1YwTElMMVRVQmZhRUluU25tRTVoWWV2UXR3X083LUJWZ0V2MjFEeGR5WFFTaEI?oc=5"
+    },
+    {
+     "source": "Yahoo Finance",
+     "title": "OpenAI Expects $70 Billion in Annualized Revenue by End of 2026",
+     "link": "https://news.google.com/rss/articles/CBMiogFBVV95cUxPRmxoLVE1TERoaF9EZkl2d0dQRkNIcDhsczJNcTNhdFlRSWZ2UHMwTnNOTnRCXzFVaW9wb3BQbzlzZGVNRkM4OWVEdUg3QS1RRE9JY0paNTkxYUtSbGZlRTNYclRFWGRzY0pjY1g3UnZvTzF1QXlHMXZOalF4TC1VMW5RZ2JUNDRwZ19xUWttYmNJZUlYT3NWeWlPOWd3S2tCaGc?oc=5"
+    },
+    {
+     "source": "NPR",
+     "title": "OpenAI caught Russians and Iranians using ChatGPT for influence campaigns",
+     "link": "https://news.google.com/rss/articles/CBMilwFBVV95cUxQZE9QY05vM01MS0RQbVNwMkFkTUlyWjBQUlBZczZLSUdHa3ZSUnF4MU01eFhvVUhWYzE2YkR2QVlDdmtvV29ZbXNxUTlKamJHdDdKRnplSC1HWktrbGR1LWRNVnFfSXQ1UDBRZVNZdFYxekx1WUlOcDZrV3c3YlpPQzhVQnVWQjF4RTBtZjBSaXRpVjVxbTVZ?oc=5"
+    },
+    {
+     "source": "Crypto Briefing",
+     "title": "Elon Musk clarifies Taiwan Semiconductor’s role in Terafab project",
+     "link": "https://news.google.com/rss/articles/CBMibEFVX3lxTE91RUJoWDRTb0hXaUtGeDBOV29zYWhVOWhSYW5wVXcxRUFlVThRVWtVNVJPMlJ0RUFnSU1mNHVLWVhPUFFKbExMYjhFVTdxbFZOcVNWQnQ0UmRUanF0bXE3WUVwdTVoaWhnZGRqVg?oc=5"
+    },
+    {
+     "source": "Stocktwits",
+     "title": "SpaceX-Cloudflare Partnership In The Making? Elon Musk Reviews NET CTO’s Proposal To Tackle Starlink’s AI Traffic Challenge",
+     "link": "https://news.google.com/rss/articles/CBMilgJBVV95cUxORXFGa1NJbzhMUWU4ekV2bEZwVW40SG5iMVlydlctSVFfY2YtWDVOc1RLel9tWUhnR1k4aVVlcHFPaWlna050WjBuMnlsbnNLZ05kc3dFSUpqdHVFcTIzMVlMLS12XzhpTTVWVHFtMVEzNDVVTDkxV2tjR2ZHSWNubmVzTkpoSXdwTHMyN1JIbmFnVldVSnhZQUVPcnQwT0R6UjRHc0tFT1g3NE9aUFItWUJCbFp5UDZLSUl2cFlrcm5ka2F4emFJNmJFMldJVDh0SnVkRDZKUUlvRmZfb0J5U2hUR042WVlFZXUxZllBMm8zUEpyRW1zVEUzcFdyRVFvcnZaTGNrWWhIQ05Md3RRTEN3Vjhsdw?oc=5"
+    },
+    {
+     "source": "24/7 Wall St.",
+     "title": "SpaceX Built an AI Business. Its Best Customers Are Grok’s Competitors.",
+     "link": "https://news.google.com/rss/articles/CBMisgFBVV95cUxOa2YzUjBtLW5VRW9hR296cDF0MjRBR2kxbl82WEVfY0dHT2pVSUo0TUswTE1NYmpfWkctNm82WUZjdnU4V3VXM2tlU2pCcVl2X2FKWFMwWk1GVG9OZEdOYWQ3NzRESkNfMmtRanlqTjFPdGp4akRMWDl4OWhZT1R2eXBVOEhJY1NUMWZ2ckFEcWZwOXhIREpGRmlKZjZnVnhoZXNMQ2xkMWh0QzVSNUNjc1RB?oc=5"
+    },
+    {
+     "source": "News On AIR",
+     "title": "SpaceX and Tesla CEO Elon Musk to rename SpaceX AI arm SpaceXSI",
+     "link": "https://news.google.com/rss/articles/CBMikwFBVV95cUxQMHR4SVdrc1BVQlFDOTZhbHpFdWx1a2pEa0RrZ1VHLWlpcjE2d2Q3dTNNcUtoX1BtMTZMSEplbDZEMzBuZmEyZEFHY285anRhSWFuUHVPbmFsOUNpSW1CUHo2SzNxMXZkMGNrbm93ZjlXRXlWYnRTeVlCaTVLWTJ3YmJMeDdqQ21iQWtWM1pzMXROX3M?oc=5"
+    }
+   ]
+  },
+  {
+   "reason": "Opinion and analysis",
+   "explanation": "Columns, explainers, profiles, how-to guides and trend pieces, including reactions to Anthropic's abuse policy and stories on OpenAI and Anthropic hiring former Trump officials, did not report a new change.",
+   "items": [
+    {
+     "source": "Bloomberg.com",
+     "title": "Watch From Anthropic to Waymo: Kleiner Perkins Bets on AI’s Next Act",
+     "link": "https://news.google.com/rss/articles/CBMilwFBVV95cUxOVmNPbWZUZ0dJMVc0MVFNVDFYc29lZ2V2Yk4zVzBIUXNZSUJvbm1iQjhrTkROeGtZSDVQczZQSTZwYkRLenRTckV6SE1ZS2l0eko0UmcxOHg0ZUpwZUZrcVM4S2VEMGU1SXpOOFd3TGdWd3A5M3g5ZklzUERvY2lPZWdLTnRpMmFjMU1ibHQxOF9mNWhpdEVv?oc=5"
+    },
+    {
+     "source": "Bloomberg.com",
+     "title": "Anthropic IPO Forces Question of How to Price Rogue AI Risk",
+     "link": "https://news.google.com/rss/articles/CBMiswFBVV95cUxNTzV2bmItYVJFajdYemxselN3Rm5VTEE3WFZOMVpjMTd6OVl2aUdQVWdmdzVnc0hZdTRvNEtTTkRYdTBXLTF6Sm5KcGZ6X3NVaWo3VGxkek80b1hPQWJkQ2gwN3ktNEl1U0RCejNYZE4tbGl4Wi1tODJydHdBaXBGMHRlNnJ3UVQtVXlqWTFaWlozUEpoN0lQN3BIcUpzMjF5YVRVWnExSnh4bndzM0Z1VUl1MA?oc=5"
+    },
+    {
+     "source": "TechRadar",
+     "title": "Anthropic bans 'needless abusive or cruel behavior' towards Claude - but whose feelings are getting hurt here?",
+     "link": "https://news.google.com/rss/articles/CBMiggJBVV95cUxQRUlUOGVORHNSdUNMWDhjeE15UUIxcmVWNzdYaVhpcWpJaXRMYkVyWHlFVjVVTjRZSzFRdGJvMV9jMGswcVdhRTNrTjBhcjJSbWdXSVEyVjdwZV9aS0lWUUJONGxNWTJzMXh4V2dib3pFVURZT0JscnJDQlNnZFBJbHhRcVA1WG1kX3NLQ0I4MGNEUHZKUGc4bXlXeGJSN2pWRHktc25QcnE5VUlFSW5kbWhabktPMFlYRllQWS16Z2dTLTcyN3o5ODkwUW1CUUU2X0liMGc5ZHFJc05aSXlYMEpnZTFkb3psRVRnUzFrVkJkMXRWQi1UTVNKeWNmbzhIa3c?oc=5"
+    },
+    {
+     "source": "Finimize",
+     "title": "OpenAI’s Math Isn’t The Same As Anthropic’s",
+     "link": "https://news.google.com/rss/articles/CBMieEFVX3lxTFB3OVBYeC1iaGVoR1huQlNsMURDRkhrT0xqZXpuVTBMTHF0cEpyeEtZSGNfZDg1Z2lQTzM1QWNZbGZsRF9BR2UtbTgwa1I0ZTJPZWxlUW1VWTlKWHRYZk9veGNoeUJ6X0ROVVNRY0VyNllsT2FSajRVMQ?oc=5"
+    },
+    {
+     "source": "The Washington Stand",
+     "title": "Is Claude a Person? What Its Answer Reveals",
+     "link": "https://news.google.com/rss/articles/CBMihAFBVV95cUxOaEc1eUlFSGcwenJuTlNBMHFxY0J4QkktNDI4dzNaVlVvU1VieUhQZUdjSC1zLTh4SmJGa1lQaWRWbS1EczIyeUNIRzh5QlFLTmdTdk85Qmt5cktMRHl4Tkl2OWpXdmpuNGlaWkZ2QWVQMFJHQUc0TjhjdGhxc0F5dkZOc1Q?oc=5"
+    },
+    {
+     "source": "WSJ",
+     "title": "The Other Anthropic Founder Trying to Fix the Company’s ‘Woke’ Reputation",
+     "link": "https://news.google.com/rss/articles/CBMiZkFVX3lxTE9pSTBZMDc1dzdWSm5hVS1uNWpZckxKZFdhbFFzRWtCa050M1hjV2JGMnBNUFBDUTF1dEhzQnVHamQ0NWlOSGttRWZIaWpRN1lkSUxsZl9TelZrLWZoX01zV2hqQ2pOUQ?oc=5"
+    },
+    {
+     "source": "XDA",
+     "title": "I ran this hidden Claude Code command on my setup, and apparently I've been giving it terrible instructions",
+     "link": "https://news.google.com/rss/articles/CBMihgFBVV95cUxORmJqZVcteVhRazB6SnBhSW1ZX1ZHRHB1TWljSWtJcTdWQnRzNWZleENTeVFLbWJNRzhwazhxdkJZSFZkdzhCeGNSMFJueXowc1FFMXBwNjBOQUNwLUNyLU9lLWFFREFBQUk5ZjV2R3N2Q3AzZ05YNHZuNzFucllKYzRYNjg4dw?oc=5"
+    },
+    {
+     "source": "New York Magazine",
+     "title": "Anthropic’s God Complex",
+     "link": "https://news.google.com/rss/articles/CBMieEFVX3lxTFBUb2lCZXNRbzZmM0JRTmk2WE9ONlBmNnZFTFhkczJNZnREOWtzRVNwdkU1eUpld3JpNl9ZXzBJYjBwM0RYWkdINzNRN2JJWjF3MEFrd1FYZTE1Q2pZZlVtaU1ERGkxMjVja3JuUzdLTWFzTUZJUVl4Qg?oc=5"
+    },
+    {
+     "source": "South China Morning Post",
+     "title": "Anthropic claims Chinese AI firms secretly use Claude. Is it true?",
+     "link": "https://news.google.com/rss/articles/CBMisgFBVV95cUxQajRkb3h5WUlwWWFQTjYwN1ZWVDNfUEk0eHVYOUVFNlJpYURPWmVCYzhnM3ZYd3hQV0pZZDhPdGItTlpMT2tqRU02TDNUTTE4MUczNDZtSncweE54QWZVenozQTY1YXNJaDZqaGFxaW53dXlYMUxhWWtKSHYzZHlybF9UYVFzU1FxMVpNOEJhUGJSTFlXWUltTmJOMDlrWjF5S3RBQ0VXbjJBZzBVa3BtUFF30gGyAUFVX3lxTE5xTkhRX3FPRkNEUV9fa0ZEdVROMF9la1Q1a2xHcFd5M05MNW4xNUp2YUw2R1ZqWVBMYTdTa3lyOE9YMTZuMl9UR2l4WTB5aktPUlNJTU1zWHNxVGNiVlBJeW03bjI1WG1yT3VvaU0wY1gyb1lVbXBfZlZJcDRzWmRETjlrc0RzQkNZd3d3WE16UWdKZ3RRVTlfdEZ2S29BMURPYmM5LXVheGpQMDBFNVY5cmc?oc=5"
+    },
+    {
+     "source": "CTech",
+     "title": "Claude Code creator's prompting formula: Say what you want and let AI figure out the rest",
+     "link": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTE1ubnQxTzZnTDF6cGRGRGpqdHdoTVlmZm53eUp5LUUxZ05Jb25kMzl3bXlfTWpCOU1fVm9jZTB2LUViQTRMWHNObnhBR1Q1RDRYekRpUlZSWTVXRWNPZDVYSkp0ZXVNcmc?oc=5"
+    },
+    {
+     "source": "CNBC",
+     "title": "Bradley Tusk on Anthropic IPO: Why add public market pressure if safety is your top priority?",
+     "link": "https://news.google.com/rss/articles/CBMizwFBVV95cUxQRGFlaV9NcHhtcXp0WlNOOXFtcjVER3dlWGUta1lvaGZKTWJScmQwQ3liYXFHMEV6Q1BJVXR1WFlPemp0Zk54c2s3RDFGWUFFNDFWSTlXOHBHdGJrR2JuRk5zUVhpaV9UQks1eDVGdl9oTVZUWlYzSjViZldTbHE3cmNGWlR5alF4QkRlNnp2NWtDLTBOaGtES0FwTjJlLTZQUlVRWmdYWkZLVWk2Y2dsaTMyb3N1cGt0eVVtaDRQWHJ0aHRydHF6dFNSbFh6c0E?oc=5"
+    },
+    {
+     "source": "Inc.com",
+     "title": "Anthropic Just Banned Being Cruel to Claude. The Reason Should Concern Us All",
+     "link": "https://news.google.com/rss/articles/CBMitwFBVV95cUxOcGl4TVplNlRrcUw1OHQ0dDRsMGJFdlVjbVN4ejdjSmpyc2ZzUFpycjdQdGZISm5MQkdFOS1mZkY2WllkQVFFZjdhSDVuN0NxdVlYVW1aS25OZzRZeWFpblJQdzdPRjh3MlVfOVVTdUk4bTVyb1E4NjE0NElKYy1pWjZJSzYzaXBTYWZBREdzWG1SRS1Fb19xM1Nnd2UwMVJKY3BNMUthNW44bFgyMTl0cWEwUkJ1RVE?oc=5"
+    },
+    {
+     "source": "Quartz",
+     "title": "OpenAI and Anthropic are hiring former Trump officials for senior roles",
+     "link": "https://news.google.com/rss/articles/CBMif0FVX3lxTE1vZ0tLSmlaRlgzUks4R3NCSlBmQWZ1ZTZVX0FxaUtYc0JKNG1qNzJhWFJsVWNjOWlPQzRoTnhYYzBtY04xcm5HVDFCNzN2aTVGN0JicmFTcE1YcGVGNThLSUcxVTMwQzZhNE0tSnBXNmlHUGJEQmJiT0NqazFSaWc?oc=5"
+    },
+    {
+     "source": "Business Insider Africa",
+     "title": "Anthropic wants users to be nicer to Claude. Here's what smart people are saying about its move to ban abusive behavior.",
+     "link": "https://news.google.com/rss/articles/CBMizAFBVV95cUxQZ0lHdzB0QUVrcDBLek1iaFZsN3JEWnd0aXYweFhyMUkybi1GTFdNNFJsR2J0dWgyaXY3VFM3T0FiRlJKNWVVM1lGT2dSbTUwb1VsQ2dLcE9KYjNDT2F0NnFRUDZHRG81M3JOTHB0OEJtMkV6Z1dnUXpuclJ1alhFOFJuMUI0aF9zUi1oM25LWFR5ODNXNDloOWVMcExhbGJzeFBZYVlZaUhKR0loV2lzRWxPT1lOQjZ1Q1lhMTVCM3RhS1lXYWlZaWN2dWc?oc=5"
+    },
+    {
+     "source": "Yahoo Tech",
+     "title": "Anthropic wants users to be nicer to Claude. Here's what smart people are saying about its move to ban abusive behavior.",
+     "link": "https://news.google.com/rss/articles/CBMilgFBVV95cUxNOEp1ekQ5czNlbUl3WVdJb25oc0NjUWpKczRxWkJ1S0dieHlDSTE1aWwwRkhkOWlyQThhNG0yd04zeWRiYzJ3VjY3ajI0ZzAta1NvaUpTeTJSVGJ0YnFxU3FKQ1ZUN3pOMS1UcDNVQklsbkl3NFNLZ3ZDQzV1dlpPeE1jSzBkaTJUVUtCaVJ1dTFCZmdrN1E?oc=5"
+    },
+    {
+     "source": "Business Insider",
+     "title": "Anthropic Wants to Ban Chatbot Abuse: What Smart People Are Saying",
+     "link": "https://news.google.com/rss/articles/CBMipgFBVV95cUxPNHNqdW1RQ2xLTjFVWDZnZlMwYUJCM1pFekVCekNmRmFCTjhIOG01MXpJU3JfNl9SUnMtOG9zN1lTWHRBRUFpQ3Q1d042cjlqNkViWWNpcUdZQlBhWXpsNnVOSGNUMS1qNXQwOWJqWWJPR2poMWw0Yl90Tzlwb20waEpTbkRNeWVCRVZaT1Y3ZVg5dGVVSDBDTTlGNjd5X0wxT0Y5aGhB?oc=5"
+    },
+    {
+     "source": "Firstpost",
+     "title": "No being mean to Claude? What does Anthropic’s new policy mean for users?",
+     "link": "https://news.google.com/rss/articles/CBMivgFBVV95cUxQcjBpbXNGZFFOVF9aenpweXlBcWJuWWpDU3d3WFNueHZVMG5OUGtyQmVXOUYwTnZSYUNKbzllVlMxT1BpWC1sRDBkM1FiVm9ObkFQZlJGLUJ3UFc0dVlzNDBkS1FqdVZxUlRZa1hzZzA0MGJZZVNmRmZYNHVzR0VDeFQtS1liV0VremptSjRWVGNsM0xUOUFoMnpISjljZlotSHRJbjNqeC13R3lVbjJVejNCWVN2bDc5S1RkRHd30gHDAUFVX3lxTE9CSkZLQ0Z4TFhtWTVUWUR6Ry1OeFpwVTFjVUdhVXJNMGM2OG9Vbno5Ukc3b25yTVZsV2h3LWsxajZubnFQWXIyM3dQVWt4SkNHRklaTTFnZWlndzBKREtWa0dwQXBvbUo1SFA3cGtYT24yVHl6OVJacTVSdHdQSnBMN2FvM1o2RF9RM0V2dk1La0VIRzhqX3R4bUluYndHam41NU43eFhWM2xZWlctcTY1a3hJbFpwWl8zbUI5R3pRdTk3dw?oc=5"
+    },
+    {
+     "source": "The Tech Buzz",
+     "title": "OpenAI, Anthropic Poach Trump Officials in DC Trust Push",
+     "link": "https://news.google.com/rss/articles/CBMikgFBVV95cUxQWFM3TGcxZi1EVEEydFRtOURsVUpyTnRhRDlLb0NDQmRZZEhZRmpxek1tb19MUTByOGpUQXUybEU1S3hlOElqanlpUUVNLVE4MDB0VlpaMVpsWmdZZHNIal9zalV5SXM3blN6ZHZ1TVhQMDhYeWloaFdxdnIyN1QyQmVnR1JPLTdob2VrMWY4b2N4UQ?oc=5"
+    },
+    {
+     "source": "ContentGrip",
+     "title": "Claude’s campaign rules put provenance in focus",
+     "link": "https://news.google.com/rss/articles/CBMibEFVX3lxTFB6UTNRaHE5S1U3cGVNZEU4aWlMYTQyUldaNEF3LWRwYzQyS2pUeHlySGtJUHRqNXJtYnR4NjdhMlItVUJ2V0F4ZnI2U25zTzI2UFpXb2gxRXlQOE5zZGtTVjlmTTZLMGZOQlpuMw?oc=5"
+    },
+    {
+     "source": "The New York Times",
+     "title": "Video: Anthropic’s Quest to Give A.I. Morals",
+     "link": "https://news.google.com/rss/articles/CBMimgFBVV95cUxOUC10ZWJYWTNOamd1T240WTYtVW5SM0xLOEJWT2RaR2N0UmlUUUNCN0tzWGc1LUp2WE5PdFFoS2dTbWJWQjAyTmNyMlBCWnAwemswTG9ERDU2M1VxNjhFcHN4SDAzWXFtTkp5MHFsT25PTmRvMkZQeUFMVzRvOHUxZWlTLUl0Ujc2NTZuSjBDX2hMRjlyOENRbjd3?oc=5"
+    },
+    {
+     "source": "CNBC",
+     "title": "OpenAI and Anthropic poach Trump officials as industry fights for Washington’s trust",
+     "link": "https://news.google.com/rss/articles/CBMigAFBVV95cUxNMHpYbFAtaXdvNGhkY3pGc1FVanI0LTBER09JSU9SeXpXQkdCVndPZ3dTcDVPQVNrT0NISkJwWE5MOGMzX2NHbFVTa3JBcFhNV2FMR1FPanNJS25yNEtvMHI2YURldnJfeEhVMlVvTUZrbzJqMWdKekdFd0dOWFdKbNIBhgFBVV95cUxPYzhZUWo3RDNTX3ZBbzNVRFBWQ3VkTlN4WEVaTV9TcTQyZ0M3V2loR1JEUGwyTmdjcFA0SmNWb3BTWjJzMThQSGZDd3Z3VVRjSVlNNFRmSC1KNVJhQVh1NzJyWXpob1JFT3JRcjZfR0lFWVV4UmRha2pzUUtQS21iSEpGLThJdw?oc=5"
+    },
+    {
+     "source": "TechRepublic",
+     "title": "6 Best Gemini Photo Editing Prompts in 2026: How to Get Better AI Images",
+     "link": "https://news.google.com/rss/articles/CBMihgFBVV95cUxOa2VzcDY1U1E4SVN4NWJYWlFVamEzeHd5cFR2eTVKSEM5MHdyNmZrbTRxRXNRVkpzU3dUbmVHZWVCemxhdEVpekg3aXNTajJmdG1vSE8wTEhsVHpIU00wdGhwLVZDRmNIeDJObmxhUnYzNi1HS25zaXFmODd2ZkRDV2FiaWVQUQ?oc=5"
+    },
+    {
+     "source": "Yahoo Finance",
+     "title": "Google’s Gemini Agent Launch Signals a Consolidation Play for Enterprise AI Infrastructure",
+     "link": "https://news.google.com/rss/articles/CBMinwFBVV95cUxQY0FIVmhIVHltcm9YWTVMSnVWbk85N3hIRXItczdlcUdXMmxWQlB5Mzd1czBBVTVBc3l0MkN5bnNaTHM2RGdwM1Q2YlQ4X0FjTzRvbkR0X1Fla0hWaXl3bFhyX2htbV9hYUpPVWxhclZWc3cyVVNBRHE1bDBRdU9sQUR2YTVoeEtuNWdBb3U2OGRrVXozWXNZQWJGMGlpTkk?oc=5"
+    },
+    {
+     "source": "Times Now",
+     "title": "Google Gemini And ChatGPT Navratri 2026 Prompts: 10 AI Ideas For Stunning Garba Night Photos",
+     "link": "https://news.google.com/rss/articles/CBMi4gFBVV95cUxQdmkyWV9rZ044RWdYaEQ3Qk9GaVFFcUZ1YU04ZTFRdVhqUVd5RDBvZ2g1WWljckZKQzFndGN4em1NNVR3RllfUkxRUHpPQWRDaEp5Sk56bV9EWnBVVGZtWGRsdldwdFB1UVh0RFJ5MXI4TnF6T0J6bG9pTGtCT3BtUzFXWHFmQ2E2ejdUV1M2MUN2ZmxQVUx1ejRuNXA1SG1XZlhBZVdZUFRtbDBvM0RmQlQ3WVZ4UmVNRnVXa2t1dFhiOXZiMEJSRjkyWnhZelNkZlFSRzljVXVzMExfZ2ZrQWRB0gHnAUFVX3lxTE9aTC0tSl92b3lPbDM3bzdGVExqQktUMDM4ZnNib2JKNmpTN200ZURDckE2NldUMzR1SndSUUtSSHpzYlBnelh6aHV6V2dya01NYUJRdy1hTFYzN0ZDMFMwRDNrb2taVmxDeHZ1bUJjT1piMWF0N3VFYXV5azBUVW53Y0w1ekw1bzZlVF9iczBQWlFJSVoyUjllOFVOZU9ZblVEZjhEcWFRc1liNTFUcTZ4U0pnQ252Y2JNUDEtc1ZJQ25xUS1mWkt4ZnBOc2dybFRKVnNIMklpMXk4WWRFTTd2aFBKV3NIaw?oc=5"
+    },
+    {
+     "source": "ZDNET",
+     "title": "I tested Gemini Spark - another Google AI fail, or its next dark horse?",
+     "link": "https://news.google.com/rss/articles/CBMidkFVX3lxTFBXV2I3bm1RaG1oUXpXeG1NcWJhVGFnVE4yaFRvSjhQOWJjQ1JmcjJiOWJXaURKdFlaY1plQTFpNlE4OWIxbUE5Xy0wSUZqQjZXMzVKRWJsamhreTF2U2hLWG5SZHhjQ1B5cTN6UkZFclFwUlEyMFE?oc=5"
+    },
+    {
+     "source": "PCWorld",
+     "title": "Worried about letting AI loose in your Gmail? You should be",
+     "link": "https://news.google.com/rss/articles/CBMipgFBVV95cUxOVEt5SkNwUEhZVWJRckRqZnZEaEFFNFl3RkVpVmJYSUliR1hiZ2VOalVJVkIwajFIM3p6Z3FEbVBMM3V0bGhkc1l1UkNPd1ZHUERFaWhERURQZDdjSzlwV2ZnaV9zVkxFS2N4bTc5TUJ6OGsyRUJLSEhNTHMtZ1E5RlJ6OXZaXy1OZ3lMZTdJVmltbEM4OEtxVFZCU0tuTjFmX19Ga0VR?oc=5"
+    },
+    {
+     "source": "Yahoo Finance",
+     "title": "Inside Google's AI Slump: Can Gemini 4 Argon Fix it?",
+     "link": "https://news.google.com/rss/articles/CBMigwFBVV95cUxQek9yUWwtMEY3OFN6UW9SYWFwQ0tIUHVYRlZ4cUZyenVrUUhiOUwyLXZrQnhDTU9RY185M3o2Z2V1eEhOREttd2Z5cWJzSHA4TjlUYkwtd0FRRS1fQmlQZFdPY1lvcHEwV2swQ0FqbWVtWGQ5SGhjZ012cjBSaWRNVUNvVQ?oc=5"
+    },
+    {
+     "source": "Android Authority",
+     "title": "Is DuckDuckGo AI actually a good alternative to Gemini and ChatGPT? I found out",
+     "link": "https://news.google.com/rss/articles/CBMilgFBVV95cUxNaEt4RVgwU0xfWU9ucUk0MXBmMnlhMWxQQnZEamZOY1M2R19Zd0ViRFh1LTYyMFFVcVNHZUtNMkplNDZvZTFSbmg1MVh5VjNEMDVtLTVfd05YQ19Idm0zdFM0Zm5UaXBwTXRPM2NnWDkwY0dHOF95dG1KV3pVaHVoV0xfWDZWYUg1NENzMUFYYjhnYkl0aVE?oc=5"
+    },
+    {
+     "source": "Notebookcheck",
+     "title": "ChatGPT, Gemini, Meta: How to opt out of AI training",
+     "link": "https://news.google.com/rss/articles/CBMimgFBVV95cUxNRzZ0dkt3cE15UXRVLWhrZ0dlVy1nZmR2VEdiU2lhUWNNbGtYa2dlMUlsMnV0WFFKeDRJWmNqMk9GQUNkZGQxeUJQWFFKdmVtYW5LOHduOGVmOWZPQ0JNdENXenhrMTJVbWt6QTRpa3FWdzV5SFd2NDA0QzJhYlYxMWs3VXJVQlo5UkprdDEzbmxqVU52cTdSWXNn?oc=5"
+    },
+    {
+     "source": "Esquire India",
+     "title": "5 Best AI Image Prompts From 2026: 90s Photo Trend, Passport-Size AI Photo, Gemini Saree Look, And More",
+     "link": "https://news.google.com/rss/articles/CBMipAJBVV95cUxORzk2VXl5M3BHZ19YOUNydXQzZ3UwVmNvald3b2dTQWxPZDRrZDFlbzBkaXRmMjJQSFpzWWVpdDk3YU5qczBuVzlTc1V5UUpOWEJXT3VxaFRZTk1TTjg1emVuUUtObWtJVHZqV25yYnJ0Uy1vYks3ODFKOWVqUlBBb2VXVzZFZE54M2tkWk8yOHRpTDdESFFKMlZxQXZVbjQyWWlJcHZSMm4zZVQ4ZnUwWjU1SzlmWkx3OU9LTEFiWWlUUTVISk9qbGJiWTJTUV9BdGZ0UDVhS0I5M2tfRUxpZDQ3RW40aURVcURYak4xUUYwcU5mbzFaVEtuWEktX3cwTzA4Vk5TRkptSUZKM013YVlFRjNaLUhXdVZ3bjhDV0l5ZnNW0gGyAkFVX3lxTFBlMExuU3g3Ymt0VUcxOF92Mk9JMEx3MG9FNl9FQlVUMzRVUXlNSE9Hang0a25hRmJ4Q3piTFVDV0dNWGhNU0diaFc1Uzc5RU56dmNZaWVLY1daY1o1OGxKVzQwaVZiMXdqdkFJUXhQa2xKTTl0dGdIUDNGTVhpczZCel9EUEh0ZlM3VUh6NnNNd3FqLXpIMkdmcDZpTjZvbmZ0VWRfUUdTVzFwSGZmb29ESTYzOU15SUt5RlVKa3NZMkV3WHpDcmFtdGs4Qm5IVGROM1pkYmNNMnd6NVdrdnV4bDlqUC1ZNjlWQmt2Mm9MVUk1QmR5U3RWZG9Ea2tHeTBJNmJ2VXJyMkY2S2Yzc0haN0h0RUYzOUhNS0JYZ1lLWkFzQ2VmbFF2VkFScW90TURQQQ?oc=5"
+    },
+    {
+     "source": "The Courier Mail",
+     "title": "Meta’s AI bots killed my business and cost me $50k",
+     "link": "https://news.google.com/rss/articles/CBMigAJBVV95cUxQOWt3MlJXM25CV0JqanpzTEVZdFE2YTlaa2VVZV9lTWwyN2gwcFUyckFlRzRCeFBZaGFxSXRGbktIWWJfQVI4aTZkOXRaaUFFY3hZTTdrVEtQMDc2ZU1YYVlWbUVPZ2JIN1YxRDh4b2VrbS05dEN1TzVZTFNqWEVxc3hLM0YycUROSG5TcFRUc3JjMXdELWw2TG9Scm9QQnlnV1d1dGROZ1cyTFFJSnBTZkFxQnQ3elc5VzdNUWRoZVkzdjRBMHBtTzUwLVUwalZZTWI3ZGNtTlYyUXRJcksxNW5TYlJseXZaZjZva1UxMFh0Y0pBaV9nVlJhMXpDSC1y?oc=5"
+    },
+    {
+     "source": "HackerNoon",
+     "title": "Meta Doesn't Need to Win the AI Race: It Already Owns the Starting Grid",
+     "link": "https://news.google.com/rss/articles/CBMilwFBVV95cUxQWHMzMDVyUi02MVJidEJEQ2w3QXlYR3JnazZqRE9sRkU0em5rX1dDbmpMT0pITEVwaDBIUjhPeVRGSVRRMkR3Y0YxLVNvSnVyM3diWHhIdS05Y250SUJDZ3A5d0VJdHphTDktUDlUelQyN0E3ZUk3aVM1M21uRWFvY3FKZG8xREpzR2ZabE4yUk9GYjRPQndN?oc=5"
+    },
+    {
+     "source": "Deccan Herald",
+     "title": "Explained | What is Meta's Muse AI agent and its advanced capabilities",
+     "link": "https://news.google.com/rss/articles/CBMi6AFBVV95cUxPck9BWjVLRC1Jbjh4dGc0NFRnY1RhbjU5WGcxQXZlNm5WdFFxUGhMQ2ZlOVYtb1BheUlDQ21ZNS1QdERVdDhGX2E3ay1vUkx3RF9xVktWRF96SzV5OHFkT21pdkEyRU9MLXhFRXc3OXJXeFB5alVwX2xsNklRUzR6d2xLNFlkckdGY2k4bkJBdUpkTDJUeTFWLXVudy1DRnVXRzVWSUpPRU1RUUc5SzBMVmE0emNjNHIyTGJ0M194OVp4aWR0NHA4aVgtQWJHSTBwZ0Q1V1RnM0lzekszOGlXTVJINFpyRHY3?oc=5"
+    },
+    {
+     "source": "Yahoo Tech",
+     "title": "Meta's New AI Assistant Will Know Who's Your Crush Before You Do",
+     "link": "https://news.google.com/rss/articles/CBMijwFBVV95cUxNcHVCVS0wWVJZb0M3ZUtUTjJpTVhoVWg4MU1UWVNlaGxWaEp2UEZtY01KWmV0LTk0QkJKVFVuRHBZRGpSanZBNjFvY0RFMVBzaDEwbFNVN1Z5dXZjUTROUHBRNzI2RjFUWU1zaGMwOXp6OWlhaTQ3YVJicnlBcUkydS1tcUExWm9xVjIxZGRuYw?oc=5"
+    },
+    {
+     "source": "The New York Times",
+     "title": "Inside Mark Zuckerberg’s Decision to Pull the Trigger on Meta’s A.I. Agent",
+     "link": "https://news.google.com/rss/articles/CBMivgFBVV95cUxOQUtkVjlwSXlOeEVudTI3NWxvd0RVeDBVOGwySmNxOGZ3ZDRmODQ0UTZsZGpLRzNhZXQxWFRISmloVm5xTVdlMFFnNzI4Tm4zdmpiWnlURXYtc2lPeWszZTh2T0RMSnpKbHhjdk5rRmMxUk1sYXFUNkxqbGlSWkNBdkRVTmlJdFIyR005NkE2c1g1aHlkYWFyLTRvbjQwdXFpdzBsUVFkSWI1MkhvaUxoNHQtbzR4RS14M0VCRlNB?oc=5"
+    },
+    {
+     "source": "The Edge Singapore",
+     "title": "Yes, we do need to worry about AI",
+     "link": "https://news.google.com/rss/articles/CBMilwFBVV95cUxNZ21fNTIySTRXaVZaMUxXSFRXRzd3SmpFRVFHM0ZLVzFsdG5aSko5T3NTeDVlSHZhSTFCc1E5aUlrZURhd1ZlRmR5amk3NjhRYnpQNGRhN3RNdWpZNWx0SklJWF9HRGVoR3pkNGN5R2FyQUFXYlFGQkhIN2ZjaElBenR5Yk5rd29xRE80YWNhVjB4Vlg0U3Rv?oc=5"
+    },
+    {
+     "source": "The Edge Singapore",
+     "title": "Trusting Meta’s AI agent to do everything for you",
+     "link": "https://news.google.com/rss/articles/CBMipwFBVV95cUxORTVjVTBKblFKMzVRdlVUQlRrSkxhMFBkZ2ZJNDhYZ2VoUFpmQjFic0pJR2luOV94SkdUdWJJZ0Y4RHI1QVN0ckctSGV6ZHZUXzNxZ014amNIVlNRdlpOcUdHSTVRa3JBV09jU0lFSC1uT3I2UnB3V1RUdXJLNHlrbmlJZGVETDBwbHNnX2p0Skw0eWFNaVd6c0tNenRERUhlT2pTemRjVQ?oc=5"
+    },
+    {
+     "source": "SuaraGarut.ID",
+     "title": "Meta Expands AI Business as Zuckerberg Faces Public Backlash",
+     "link": "https://news.google.com/rss/articles/CBMiaEFVX3lxTE1mS3hzWGswWURBSkNHNDZSZVlPcmJZVUtpeHNEb0k4czdSUS10SjNhQm9FdmRzaEZ5azlIUGRCZWNmanROUG9PeC1SaEhIaDFlR1duNzFhaWoxYUY1cnZ4MlY3a3Atb3JD?oc=5"
+    },
+    {
+     "source": "Bloomberg.com",
+     "title": "Startups Fill a Void Left by Google to Rival Meta’s Muse",
+     "link": "https://news.google.com/rss/articles/CBMirwFBVV95cUxQeG9YTHJYQ0pKYnJZdWZza2xXSElzbzNkWkxNR0dPbUpSSnp5U0M0MVNINXktTTFoSUFpaldrUVV4QTNid2dIV1pmSko1MklFOG1vSG1PeDVRMlpLcFpvMGYtWE01SndINlltejZJbnJ6Ums3NHgtd0JaSGRqVDc2ZVFNNS1lSVpPbGIzUHlCWUh6R2JyTVdlalpMS1lwWjU4N0FoYWFIMko0emVCYW9v?oc=5"
+    },
+    {
+     "source": "Business Insider Africa",
+     "title": "Alexandr Wang says don't expect Muse to magically make you $10,000",
+     "link": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxPTlpHRXdLeFRNdElZS3ZyZ3RjS0JOLXRxc3l0ZFhEMGhPYUE2RXlaZFVMYWhFYnBPV0xvUzlNaER4c3pIUHh6dldnRjUxSVBOUHUzR0ExWDZJVXFIZHZ5R3BTQVU0R1NqUEZFcHJLSXZXZ3JXQThzNkl0Z1preEtPN2llNGlZZnpJZnB2eW9mZWlZYVBxWjNBTmpIeHpMU2ZBQ1NGa2ZPa0ZBU01mZFBTWFhnUUtQc2dW?oc=5"
+    },
+    {
+     "source": "Bentley University",
+     "title": "Leaders from Microsoft and OpenAI Weigh in on Why Trust in AI is a New Competitive Advantage",
+     "link": "https://news.google.com/rss/articles/CBMipAFBVV95cUxNY0RfSWRMVDJpMG5BZkFRUHJ1YXd6TEZWNk0tX3RvLWJxbGdabmFLLTUwQmVaWUl0dGJZai1xUmFQWUxreThXMG1vTVhjcUZBdDN4ZDJ6ZElVUUliZzZVQ081ZGRhd0FsVllvM29za2lTR0pOU1JyTHk3UFZhSDJva3dVODVXSlV0dGZuN0kxV3MtdmpOR1RnTDFXUnRISWFyNmU5Qw?oc=5"
+    },
+    {
+     "source": "CMSWire",
+     "title": "Is Earned Media Now Writing ChatGPT's Answers About Your Brand?",
+     "link": "https://news.google.com/rss/articles/CBMilwFBVV95cUxOdXBfSGNKdE5IZUFOOW42cGNlcWt2NGJoRFk5WF9tYXVmU0o5ZVNCUHI0QUdoRmxLZHlwLWdnTFEySEZqX0phUXE5a3drV2NDTXZ3VTY2QVMxcjBSN1lybm1iQTVDbV9wU3NYWGc2N25lcWliZHVKaFRqbnh0dHpEYkxFQ3IwX1N6aWppMEdydnJfSDZ5aTJn?oc=5"
+    },
+    {
+     "source": "The Next Web",
+     "title": "Sam Altman says the OpenAI share price will come second to its mission",
+     "link": "https://news.google.com/rss/articles/CBMihgFBVV95cUxQaF9ZUzI0M1FiY01WNWEtVy1nRU5JTVFleXNPekxOTDRhUjFpRUdCdndCZGRNZTA5aU8yY25aYndXclI1TGZ0aUkwZVl3SnBPRWhhcGZuejdPSnZBS1RYbDRSVXo3bFI2YzRZeENNT0Fhd2JVSmJ3c3hpSndIeVFfd0YxZnJxdw?oc=5"
+    },
+    {
+     "source": "Forbes",
+     "title": "OpenAI’s Ultrafast And Decisions API Shift AI Race To Speed, Cost",
+     "link": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxQczk3Ym4xT3k0a0ZjZG94M3FUV2ZJWkVibEV5QXpGREgwZE51T3YtOXEtNlktcTQyUk95R3NMVlJBZDJDRzA2TGl3b2x3enI1X0U5bVVCSHpnQmhKcVV1eXNmZmptSlozdDNwTDYtOGxLeGkxUS0zb1Vtd1Faa1MzLXRweVA3Vmh4WmxLNW1kbWdsR1pKQVJQSkR3SGp3R3RkT0p1LW9vMTk2cVBhX1h4TDZhMXNpR1Fq?oc=5"
+    },
+    {
+     "source": "Vanity Fair",
+     "title": "Sam Altman, ChatGPT, and My Daughter’s Suicide",
+     "link": "https://news.google.com/rss/articles/CBMigwFBVV95cUxORUNxVE5iQlZDN1gzQy1GQlRnN3JwWnE5Z0FERU9MZjlKOXVVUm9BS295VzFHekt3cGNuSzZWNG9KbnNrNHFLb2hpOUdERXdreS1nODIxYUFRY1lOTFMyM1BNT3VqUUlUOW0zU2dtLXJQSEJSOExETkVhZUZrYkF6aDJiaw?oc=5"
+    },
+    {
+     "source": "SiliconANGLE",
+     "title": "OpenAI revenue falls short, models play hopscotch and Trump cracks down on tech green cards",
+     "link": "https://news.google.com/rss/articles/CBMixgFBVV95cUxQRjM4NFp3aVFVVC1KbGVVWDUxLTBlVXJKZUcwRVEzQlFvUjY0bVVUU2tQZHpSUkZqYXV1ZmE2WnkxaUNiYmRnLUhWM1BrdjdRMHFUMTZiYmtUeWhVdUxEaVIzV2RpWUZsTldBUW9MaVQyTDFrMG80c1J0QWVsNUs0UVhKUG9QOFFiZUF6SDlUd3lQX0hzZkh0MnJRRjlJVmZZTUg5YzVlODVoSXhCSW53bjFVSGtpWjB1SDU4Q05IOG9CcU1EbVE?oc=5"
+    },
+    {
+     "source": "Observer",
+     "title": "As Google, OpenAI and Meta Push A.I. Agents, Enterprises Need Models That Think Less",
+     "link": "https://news.google.com/rss/articles/CBMibkFVX3lxTE1IaDZmcWp2UVZ6SUxRXzhsZ3dlTTgwQzF0OGRNcUgtR2Y3RzVMbUN2Vk1fTUJEeUdmbE94bV9XVkxhQVgzS2ZnRVV5ZXhSbDNiTXpfT3NhQUd5NzdrR0FveU9MVzFNZ0hzTFozNmhn?oc=5"
+    },
+    {
+     "source": "Fortune",
+     "title": "Sam Altman says we need another Renaissance. But we really need another Industrial Revolution",
+     "link": "https://news.google.com/rss/articles/CBMihgFBVV95cUxNZmMwbXdKV2ZqaTdzRmVfYVBsbHFIWE1remF2aGJraFo0cFlERDBNTHVkc1IyWm05dlk2RjZ0RXFIM2lwemhWbXJzbzJwb1BweU5PbWZPajhCUGZjQ3JYYkFNOXh1cjJyX1VaQ0Z4SlJIcV8xWEt0Mi12YW1VNDBnWmxNVUYtUQ?oc=5"
+    },
+    {
+     "source": "The New York Times",
+     "title": "The Fallout From OpenAI’s Revenue Surprise",
+     "link": "https://news.google.com/rss/articles/CBMihgFBVV95cUxPcmxMemhOTlY2Zm50Slh1VklHTGRhdzVocEpERGVxRXVKWEM5RGliRVN6Y2pLMXg4enE5aGFMWE1Kd3VzYXhhMUk3UFpseGE3M2pkUVVudG56MTBBRzJIZTRPQkkxNmZRYlEtR0ltT1NCWjkyUnNza3VienFIcHYxNnFuU1Q3dw?oc=5"
+    },
+    {
+     "source": "Scientific American",
+     "title": "Meet Mark and Sam, the AI agents that ran my errands for a week",
+     "link": "https://news.google.com/rss/articles/CBMipAFBVV95cUxPRzYyb3pnak9jZEEtMHhVMFo4d3ZUTWpfSzZ0b0NwbjM1ZVFoc21hUWxuX2hCYUNCbHEydUswMnNSVjdFdnFDUF9Mc2hTd25BZ2F0bGEtTWQtZmNYclZXd3hEd1FuZkZCOGlPMExlbVlLTHNhcmtkaXVBWVlNeld4U3lmVjFCSTFYbVpfNFNKTjVjeTNkZG52cC1hZENvMmRCTVBUWA?oc=5"
+    },
+    {
+     "source": "Reuters",
+     "title": "PODCAST: OpenAI's revenue gap",
+     "link": "https://news.google.com/rss/articles/CBMijAFBVV95cUxPa3VDS21LdGxMb2J2NWg5eU9sYVRrbURMMVo3M0txSV9iQnhWY2luTlZuY28xdGJyenhJQ3BrbGs3Y1kxRVpFanhiVWl4enM5ZEIzeFNPcURGTmdyN1NPaGd4QWlwaG14VlgzaXU0UDN5OERRMFJVVENLOVhYQUJ5U25Ebnc2SGY1OThaLQ?oc=5"
+    },
+    {
+     "source": "Tech Policy Press",
+     "title": "Nippon Life v. OpenAI and the Future of AI Legal Work",
+     "link": "https://news.google.com/rss/articles/CBMiigFBVV95cUxOYmRKdE1HTFNXem83RDc0eXU4ck41SDFldFJWdXFxcjQwTGF0X3BTMkRYbFpKZ3FUcXJqMmtId1JJUHFLSDVRY093SVFGXzEyN1p2RUNrZ2dXcTFXbUROMmJ0cmFkWmdxWXU1cm5XUXFKdURxOUhLZzRZakxtbmppQ2J5RUo0U19SZVE?oc=5"
+    },
+    {
+     "source": "Christianity Today",
+     "title": "The Confessions, the Comforter, and ChatGPT",
+     "link": "https://news.google.com/rss/articles/CBMijAFBVV95cUxPRjhxRFZ3bklhbUdnRktNaFloMGN5aDkwUU5VMGRsUzlrYlFKWWEtejVZMjB1U2dYUUNGQmJxMFFXTG5ZMzJwc3NkR1NGckhmSGVwb1NBdWhUYWRiZHQ5cjhDV0liSTNNMGxZUlF0YmJ5MjN2SXlfOEtBTnluODVvcmJmSGs2VzNIWHJYSQ?oc=5"
+    },
+    {
+     "source": "The Acquirer's Multiple",
+     "title": "AI Spending Risks: Can OpenAI Justify Its Huge Funding Needs?",
+     "link": "https://news.google.com/rss/articles/CBMinwFBVV95cUxQLXRUOWRVOXdZcG45QTUtdHVrQzZzTjNWQTdPQkhtYnMtSlFudXJ5VGxXME80LW15Z0U0UURzdFJockpZOW1sa3pWSXZwc0pyYTVDMFJDTDlBQXVod1VqX3dCRkdTUXVYWEdVTEpuVUx2M1BKa2dqaUMtTWtZWmlBdF8xaEVNNTZYXzZSUzVCZEJPZUtTMW1acW40OXhMOFU?oc=5"
+    },
+    {
+     "source": "Gizmodo",
+     "title": "Elon Musk Has More Empathy for Robots Than Humans",
+     "link": "https://news.google.com/rss/articles/CBMihwFBVV95cUxNVXVWdnNfNm45enhyclYzYm5iY0pScFREbTBQSlpsak9yRlZYU3FIVDBKNGtFSXVJMU5wMUhpUU82bkNzMDVRcUdrRlFMWU1felVQb0NHbHNKamgzYVR0Z2l6anlqUThqZC13cUVwNEhyYWVZM1NJcjFiN0Z6LXNKMGNVLVJaeUk?oc=5"
+    },
+    {
+     "source": "OfficeChai",
+     "title": "Elon Musk Says That Anthropic Banning Cruelty To Its Models Is \"Right Move\"",
+     "link": "https://news.google.com/rss/articles/CBMiogFBVV95cUxOUm5La3pLSy1aamx6QU9CTDlZTXJkeTh6eDc4QkItVVdqb0lCdWNFRm8wSzR2M0VIX0Y2NkpnQW5SaUxQTW9WOVdEUG0xU0h6X2M3ZzdmeU5EeGh4YVh2Y1VhQlhpZy1EbU1RNUdHRzRsZU1zeDV0aVFNQnVDYU9pN3VQTzhIQ1ByYW1PNGRiVFhZNXNZUUcxbDBJSzk0b3puekE?oc=5"
+    },
+    {
+     "source": "Fast Company Middle East",
+     "title": "Big Tech is cutewashing its AI agents",
+     "link": "https://news.google.com/rss/articles/CBMif0FVX3lxTE5GYzFXUEhuemJQRExSN2dNeHgzLUNMTEhkenRRamllYnRsS3pJckdzZkdFVVl6Y0QwdHZfSU1wUHlKNGN6QzdrLXBoRDk1MEthZXpLejNQekQ1UTY1cmNrMDlVbWdXaVlSbVFVWnYtVUIweGNkajBseEF6clhGd0E?oc=5"
+    },
+    {
+     "source": "SMH.com.au",
+     "title": "The world’s richest person is testing Wall Street’s limits",
+     "link": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxOS0xDOFpUc0dMbFREWFZNZ3k4SzZNRFp3NVBPSmUxTUMzd2U0RmdlTWNPeUhsd294b3BYclBMYTgwRlRRallPWTkzbVFKZ1dFcUF0Zlp1WEd6TTRndG5QYWJhZmdBS3RxanhKQWdnVWlUSXdZSklhd2x6N2tnZlgzalNPcGNtZDZUUm5KQ2NtMU15Q2FoVlRNREx4V1NVb1FaSExfLUlKOU9qLW5CdzB3SUtRb2VveTdoOTg0?oc=5"
+    },
+    {
+     "source": "WSJ",
+     "title": "Personal AI Agents Are Great-Until They Share Your Bank Statement in the Work Chat",
+     "link": "https://news.google.com/rss/articles/CBMihAFBVV95cUxOa19qU3JmcFUtZ2dfVlowT1NHZkNzQlE4LW8zZUxFc2hoMzF5RWhpWEFpQ2pFaHVCZDZ0b2NwTFVLalFyNU5IRHR2cHhBblZtTGk2UE9sNHRCRWFHMWFaTHg3dXA3a2JFc2pIU3NtNVJyOUN0Vk82VzRBSTNReUNjTlE0bmc?oc=5"
+    },
+    {
+     "source": "WIRED",
+     "title": "Inside Elon Musk’s Midterm Spending Spree",
+     "link": "https://news.google.com/rss/articles/CBMilwFBVV95cUxQYjRZX3Vxd2tENmY1Y3Z4b0xlTElZc2FuTEZTNjlremJpb093ZlBxMWV5aDJwY0RXaEM1eGk4N3lObDhCLUs1RVdqQ0pwMUhjak9seU5LODl3VFU2UElwWl9YaGN2TDNYNEdPdFp1NVRKVWhCeE9hYlNvYzNwbUFPSzF2S2hRYXpjMFhOOE1IZjBEYTVHYjdB?oc=5"
+    },
+    {
+     "source": "AOL.com",
+     "title": "SpaceX Built an AI Business. Its Best Customers Are Grok’s Competitors.",
+     "link": "https://news.google.com/rss/articles/CBMifkFVX3lxTE0za0NYb01RTE1LTkxabUNDVVY1TGw3cDY4aGhNT1ltRWxzZmFCc3NjUGxzdklQa3pxV3pHNmVYeFA4Nmo5cV9BZ2xHaVIxeUxPRUJqZ3VuT0VZR0oxM2EtQjlVTlFjMUVBeFJtSGYySVAtaDFwUllnZDdMQ2tsQQ?oc=5"
+    }
+   ]
+  },
+  {
+   "reason": "Stock and valuation chatter",
+   "explanation": "Share price moves after OpenAI's revenue report, IPO speculation about Anthropic, Meta stock forecasts and Musk-related market stories involved no concrete deal.",
+   "items": [
+    {
+     "source": "Benzinga",
+     "title": "Anthropic $2T IPO Hype Meets AI Spending Risks: 6 ETFs to Watch - Tema Photonics & Optical ETF (ARCA:LAZR",
+     "link": "https://news.google.com/rss/articles/CBMi0wFBVV95cUxPVXlYb1gwOWlkZ3I4RHV1UVlsSXQ3eWtFdEhSYWRxN0lRS21fZExpNy02NGZ6YllNMnVBWFdWLUJYX0t1eVp5bVJQT3JCckdHakV0bkgyREM4TzlIVjhFSjJCc0M0ZEdrbi1TZ2NBMjJTODZBcW4tYnJsQWxjVmFRNXQxb2ptaHRENmFOMXpyR3NCNUVhaG1sekt5VlhlVS16cVM2TklhZUZBVkw3ejRYc081d2dreG96VUc2WmJPcFhOdnExT0pzb2tOVlljT1ItanVN?oc=5"
+    },
+    {
+     "source": "Investing.com",
+     "title": "Anthropic and OpenAI IPOs: who benefits more from the bifurcated timeline",
+     "link": "https://news.google.com/rss/articles/CBMizwFBVV95cUxQZE1YdnFvX0pCbVBTdmZnZWdoVDN1OHVSWDJqY1ZxeXNSbmtEWWlaRVVtV2JUR00tc05scDZLMnF4aExiSzlMWjJBVEdmcXhpbFhGcGRTQ0piWl9jVDhUMmp5UGQzQ3FKcmMyMThIZzB4cUZWa2t6X0otR2lzemdZZ2RUazJEaWN4SEFIWWVfVml3bFYzdF84cU1BVHhlZzZVUUNEQlpGWGlvWDMxc3RnbWd1MW9DUnY1LWtma0dMWDZWbTRpVWtLSjd5NHlyRzA?oc=5"
+    },
+    {
+     "source": "New York Post",
+     "title": "Other IPOs on ice as investors await Anthropic’s mega public debut",
+     "link": "https://news.google.com/rss/articles/CBMirgFBVV95cUxPYkZrS0dKeUZWeENXZVVrYVdVMWNxNThXRno1NzhuRWRaaXR2Mmhhb01VY0g3NVJidDQ3YWExY096ZzZ6ZjBfamE4cmhEc0hxSWNZN3hPbEtjUjZ6Y3Ffb2I0dDVtdGQ2OXBXSTFhUlY3V2JkRjVpZkxVaHBFUllNR2VMVk1CUUMtWkNWWnRMMVBZUnBMeG54WjRjeW9WSlhZVVFoWWN6cXAxeUV3X0E?oc=5"
+    },
+    {
+     "source": "Newcomer | Substack",
+     "title": "Competing ARR Estimates & Fuzzy Valuation Math in the Spotlight as Markets Get Edgy",
+     "link": "https://news.google.com/rss/articles/CBMia0FVX3lxTFBuYi1JSURYODF5YWpnTWZlNEg5ZmZFZ0o5bDFmRzV0QmxwMG5BbUNlVDR3WVhtSEJhSmtsTUlFWkZaVWpvbm1uOW05OUxKWndBNnRERTdiY0NRQkFrV3hTQ2NSLUIxWDNSeVhj?oc=5"
+    },
+    {
+     "source": "CNBC",
+     "title": "Revenue at OpenAI and Anthropic will continue to be very important, says Gabelli Funds’ John Belton",
+     "link": "https://news.google.com/rss/articles/CBMi2AFBVV95cUxOSDhpNXZ5ZHBPb183SEoyRmw0VWkyVmtJenVBZl9vR0pUYVZFeDBjZURqQkw4QXJ5cHhSMktxTURtNi1fcFJQQU5lcFVJOU4yTXA2SlRXaHFaZEJTa1BVVVFsemF4Wm5sTzRrMEVvdEs5RndHZjM2UmlpcTF4N0xDV0Zwa2QwYUh5VkhQX1JIMDQ4QnlUUU1aZjFzWjBaS2J0ZUtCWWNRVTFiN2hEMTRGOUwyUlVkME4xeDNwZ2hobWIweHlRUW13UGktUUZHTE1NUnJqeS14REo?oc=5"
+    },
+    {
+     "source": "InvestmentNews",
+     "title": "Pre-IPO investing: When should advisors buy into Anthropic or SpaceX?",
+     "link": "https://news.google.com/rss/articles/CBMihgFBVV95cUxQTVd2amxDNWhFVG1HcVlGS2drUkZJYUxqeHhwRFMzXzY0Y0I1M1owaU9CWXdqWVZVeTROWEw0VXFzTmE1SFoyLWRaaVpwMVBMSXBEOUtNSnBEM3ZPcktjYXoyc2pOdWlnY0VHb3dUandGY19JUmlnVjNhclUyaURPZEZZM0RGZw?oc=5"
+    },
+    {
+     "source": "Seeking Alpha",
+     "title": "Broadcom: Anthropic Financing Risk Is Priced Too High, Buy (NASDAQ:AVGO)",
+     "link": "https://news.google.com/rss/articles/CBMingFBVV95cUxPWG5yN3h5amMxZ194OXBmbUlIN0Jmd2VXd3JjdUdyX0lIODVoa21MdnpsRWpnTGFUeXhwdXc4STI5Uno2Wm9OalZSNzJyeHEyS3VPb196M19UemJfMEtDU3RvWVpScWNRT0Y2ZXdpS1NpTmxQcy1RYmVtcVk5aElqM0dmX0syTGdWdU1JYXpQeU5Ic1lZMnFmelhWUW5IZw?oc=5"
+    },
+    {
+     "source": "Seeking Alpha",
+     "title": "Broadcom: The Market Is Likely Looking At OpenAI/Anthropic All Wrong",
+     "link": "https://news.google.com/rss/articles/CBMiowFBVV95cUxObmJCV2dPeXdlWmFwR1dpS0xjV29BUHpQd1dtM2lJY2JYZ0dISDZSX1BKakZPZHd5aTEybkdlaHBzNUV0U0x6M1k2bHZVQ0NLYXAycFJoRzBBOVJwWXlBVjJuVnlEQkpNNENaMjkwWWNNRi0xc1FYcmNPSmZ0NDczcS1tVXRrYVVxZ2o4em9mTHRvN1NBM3JmYTNBYWVnek1qVzRZ?oc=5"
+    },
+    {
+     "source": "NAI500",
+     "title": "Anthropic’s IPO Is a Test of Market Sanity",
+     "link": "https://news.google.com/rss/articles/CBMigAFBVV95cUxNTHBpMzBLQVZxcWhBNks4NXNjNzlnLUhrZ3NxcF9oRDJCdlhLMjM3MlRlRG81bm1SWU1MNkctWmV4WFotWktWZFJyb0J3OTc1WVJieVo1UWZuNElzSEhwR3NvNV90V2I1QzNqSXhqcy03NDVwaDc2cVZOQ3lteU50Vw?oc=5"
+    },
+    {
+     "source": "TradingView",
+     "title": "Key facts: GOOG: Google Cloud AI $24.8B; ~80% use AI, ~90% Fortune100",
+     "link": "https://news.google.com/rss/articles/CBMivwFBVV95cUxQdXFCNzJKeXFuQzhNVXpvVFZOSTEzSThDcnNHOXVqcG9IckM0ZUhST3ZGcEk3WUtGblpIVHkzOTVOeVlLTTliVW5IeGpxOGZLSXVHS3Q4YWQzeHp4OUJpN3NqeWNKU3I2XzZzQnR0Y291NmdDR3k0M2JzcHVHLW1QSDIzTkZlT1RYeUhuLTFleWpXN21sMjN3UmxWaDdzN0NLLW1vVktIenI0bktuYWRzRUtBR2dNck5Yd3E2N3BNdw?oc=5"
+    },
+    {
+     "source": "KuCoin",
+     "title": "Meta Stock Rises as Muse AI Tops ChatGPT and Gemini: Can the AI Agent Boom Last?",
+     "link": "https://news.google.com/rss/articles/CBMid0FVX3lxTE40ODhnT3UzRVpibXVLc0Zkcmg3dVpsbjAyV29DWERtYW5Yd0N2WVdndzA0V1VKTlE2aWF4QlZoTmNmM1EtWVotdHp1cG1qbXRYYTB4NnBDd2swcGk5VnVTLUtJSDBnVklNenBET2h6bXktUmx0LU5Z?oc=5"
+    },
+    {
+     "source": "Barron's",
+     "title": "Google Workspace Gets AI Agents. What It Means for Alphabet Stock.",
+     "link": "https://news.google.com/rss/articles/CBMifEFVX3lxTE1yY1pHX3kzR3UzXzdZd0lDTjJlM3VLVUFSWW1kaEFLYklVMzFUX2gzRVFhTEJ4RHRTWUltVTB5V2dEMjQ4T2pjV2JxWklzUWk3R0VyS0dNVzlxOXFpVl9iSFh5LTdaUWhjRk85QWE2bm8temJUQkNZc01maVA?oc=5"
+    },
+    {
+     "source": "TradingKey",
+     "title": "Meta Stock Forecast: Muse AI Takes Off as $145 Billion Capex Raises the Stakes",
+     "link": "https://news.google.com/rss/articles/CBMirAFBVV95cUxOLS10WWxiSmtyNFRtMllaSjFiUTRVLUM4bUUwMERVaDQyRnpidFg5OERpNDl4enlqVXFUZVVpa056d2MzYlQ0RGwxR2JJYVBnb3c2V204T1ZjTHNKTTZlaTI3NWtvTDkyTE14Um14c0NLNnUwNHhLb2hSNEhQRG1zZEg1T04tQmN1TmI0Z093Ri1aaWd1T3h5RUw2WXlxYzFqQVZCTDNLd3czSVdu?oc=5"
+    },
+    {
+     "source": "24/7 Wall St.",
+     "title": "If You Invest $500 a Month in Meta Starting Now, This is What You’d Have in 2030",
+     "link": "https://news.google.com/rss/articles/CBMivgFBVV95cUxORHpPaHNueHBLQVhBOVdkT2I4dXBUZVRUUVhHV0ZFZW1JbURpNmsyMHB6OG5xNFNaeGZabjB2aE9DSzJ6Um9DWl84QkpfWE93eEtadXF2a0p1NWVsaXQtWTh6aUJWcVFJRHlRZkdjQTF4VUE0QW9UNFNfZy13eHJLRDh4cW42RzhrWWlidWR0SVZEckd6aDh2WndLVllfQWVJaVo3UGxIY2hDQlNDU2F2c3o1dlpCZnREV2Y5VFVB?oc=5"
+    },
+    {
+     "source": "Insider Monkey",
+     "title": "Meta’s (META) Sales Jumped 28% While Free Cash Flow Shrank. Can Muse Close the Gap?",
+     "link": "https://news.google.com/rss/articles/CBMixAFBVV95cUxPdUJKWUllR0dKZm52LUZhdlZ3NkRmZGp4UlVaMFFybTBZaXZmMHcwel9GQ213WUt4aWg1U1Jvb2lON2NMTU5tOEFmanZ1SGFOU3FMQlJfUWdwSXJVSnVWTTh2T3lFWER6UFVGZFR5WTRaRzQzOG1WNHhMYi1oRk4zSkJwUDd4enlVOU5vdy01LUF6TGZDUHVfMDRlSTlYaUQ3RGdfTUhFRWRKdllJcDBhajR5NG85SkhrX1RTdklPTUJ5djYw0gHEAUFVX3lxTE91QkpZSWVHR0pmbnYtRmF2Vnc2RGZkanhSVVowUXJtMFlpdmYwdzB6X0ZDbXdZS3hpaDVTUm9vaU43Y0xNTm04QWZqdnVIYU5TcUxCUl9RZ3BJclVKdVZNOHZPeUVYRHpQVUZkVHlZNFpHNDM4bVY0eExiLWhGTjNKQnBQN3h6eVU5Tm93LTUtQXpMZkNQdV8wNGVJOVhpRDdEZ19NSEVFZEp2WUlwMGFqNHk0bzlKSGtfVFN2SU9NQnl2NjA?oc=5"
+    },
+    {
+     "source": "Barron's",
+     "title": "Warby Parker Stock Surges on Meta’s AI Glasses Push. Smart Eyewear Is Booming.",
+     "link": "https://news.google.com/rss/articles/CBMiggFBVV95cUxOTTVkYlhmMVZ6U0dmT0QxUTBjakhnLXRyUEI1ejJKRUpjTTIzdWFOTmdwUTdDeDVrRzhyRTdRdF9kMHpMZW15dHRFZEpVT2ZsRHJzVlJ5M24yVEFQMzl5V3VGOEVvSFk4VjRVa1RvbDEzLXE3NkFTMzhGckhzY0pqM3FB?oc=5"
+    },
+    {
+     "source": "The Times of India",
+     "title": "Mark Zuckerberg tells investors Meta’s AI investments are accelerating every part of the business; and to",
+     "link": "https://news.google.com/rss/articles/CBMi7wJBVV95cUxOOG1VNUR2blZsamh4RUU4MXR2eUUzTTFEaS1SLXFQNTRoSVB0SmkwMFlScUlVZU9qNzRJMG9XbFdRZzRCdWFGR3JXZkdlc2J0UV9aZUd4dnc2R1NxUmY0Z2Z6Mlhrc2s1dzczVjhScXo3Um9YSEtwMEZUd0hIRWtGYVlvOGJpZERDaXMxQ3didWxudkhxVy1GSFhrRUMtQURDLXAzZ1lxajM1NDZON0hqXzZINGtXaEFHX25BRGM4eFg0NVJwUW5lS2JoYm9qQW9GWEFlM2VKOUdtRTVsNng4dUltY2lTX0VEdk9GVmxaSmxXb2M1ampuV3V1bXNhY0dZZnd6SGdtNHM1Tm91cHJaQnpzR3ltRXpkdkI1Um1XamtJS2puWlJqS3JEM180RzNBNXB5ekt4eDh4S3V5RjBwNjdpcE0wT3l6dHdKMG5jaVo2d2hiUlFrU0l4enZHNzhBaUlwc2dFYUtqRHA3U2RZ0gH0AkFVX3lxTE52V3E1ZUdGMkt0bmdOSC1NZGtMT1R0ZmZTQjNVbnFxRkR6OHRDWTRvaGVhRjdZRzRoMzVIMF9vX2xHWWhSaXpVVjRUemg5VWk2LW9DYXZ3dm9BQ2o5U0JzaTRGZWF1V0ZYNDBoekNpLThMNXdKRjYwaGR4a3B2MTc2aTFYbmVLMjJja0pEMG9NYVd3bEZwcHJYMFdGZUhQQlRQSTBWNUhEc2t1aTBMbm9haF9wSVQtNktiY2VEeDJBaUhIdDVhdHd5aVhId0tuME5nY19yaUtlcldqbVVLQ2JDTkN0NWN2QzE5MFpEMVg5aTdrc0N2Y0l1RUQ3Nk9vaHg3MVloTzB0NGZJZG1aUGF5TTRiRkotejVKUFRJQUt3bTVCc2o3c1UwdUZVZTRvNGZMbk9QOTJlUnNyNXBLX2d1akpnRHFXaE0wOVVyaDc0MWhxbUFNYW1GamVNcG5uVVR0eUFGTFdxQVFPN2RrdXc3S0IyUQ?oc=5"
+    },
+    {
+     "source": "Simply Wall Street",
+     "title": "Meta (META) Now Has Two New Problems In Teens And AI",
+     "link": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxPTWgwUUdWcDJ4c0MyUDIzRVJZQ2Y2ZXFRT3NHMGtKT1hFV2gwTzN2MGRlM3RTdndwTnNlZTVNVHp1X2toTThwU1FHWGFOLVVPdlY4eDVYSWdxbXhvbWowYlVORm5lZWhEY2xNQ0p6Yy1sbEhUckFxeG41X3lSWUJIckZ3Ul9wSGR3ejl1WkdmVl93WWZyWVI5MXhNSTUzYXI3RUNna1VjTGk3T3pGU3JNaTlVbkVtUm1LN05ybDNQd0lOZ9IBwgFBVV95cUxPTWgwUUdWcDJ4c0MyUDIzRVJZQ2Y2ZXFRT3NHMGtKT1hFV2gwTzN2MGRlM3RTdndwTnNlZTVNVHp1X2toTThwU1FHWGFOLVVPdlY4eDVYSWdxbXhvbWowYlVORm5lZWhEY2xNQ0p6Yy1sbEhUckFxeG41X3lSWUJIckZ3Ul9wSGR3ejl1WkdmVl93WWZyWVI5MXhNSTUzYXI3RUNna1VjTGk3T3pGU3JNaTlVbkVtUm1LN05ybDNQd0lOZw?oc=5"
+    },
+    {
+     "source": "Stocktwits",
+     "title": "NBIS Stock Down About 30% From Peak Amid Meta AI Cloud Threat - But Retail Still Believes In Neocloud Opportunity",
+     "link": "https://news.google.com/rss/articles/CBMihAJBVV95cUxQVnV5RFdJUHRjcXM2Nko1RkFPc3JTRklsTHBDcklaOGxrSkZRdm81Z3hUTE1WX0QzcjE5TUFNTDBPMGpSeXBwM2Z4b0ZkS3ZpMjJFQ1FxbDZzZWxXdVpVRkJFaTRUcGxCdVF6S014YzJ1cDN0X2FnS2ZicG1VU19wUzZnY1h0ZXNmS0lpOVlURkJVUUl4SHVBMDJiLWdQVjU3VHY0VzZlSUY4X09QaGJqLU9XR0hVdnRoTkNXOTB6M05rLWZqWENlTVRfQW15MXJjTEhnUU5pbzBRbGd1ZmstUnhUaUVvOWI1Y0FSX0dwR2ZEN2R3cWZWdnNKUTYzZjVNczlXeA?oc=5"
+    },
+    {
+     "source": "Pluang",
+     "title": "Trump's biggest August buy was Meta, which surged 31% in 7 weeks on AI and ad growth hopes.",
+     "link": "https://news.google.com/rss/articles/CBMirgFBVV95cUxQRkNlbzVkZVdnZUF3REFLeXBFWWRGLUIySUdkR3lHOEdmWEl3MVNfWXpDMjBGdEZVMWNmUW9RLTFXd2RwcWU1RjRBVGJyS2NUeWR4YUlzdGtqZFJFZTlCcGRaQkxueGlNZ0VFaGw4a0VpZ2JycmJYWVNHQlRwaVgyRGxtS1diUWdQLTdmOHBvX2EyVUIzRzB5dTJZQkFmSTJfTTJvN2FiS3NFSVdXcGc?oc=5"
+    },
+    {
+     "source": "Yahoo Finance",
+     "title": "Jim Cramer delivers strong verdict on OpenAI",
+     "link": "https://news.google.com/rss/articles/CBMinwFBVV95cUxNb2pGbF9laklHUFJCOWR5bFZFVnRfeVBDMFRPUTBGOGZtWkc0eHdJTzZPQ2R1dGVEVkFKR2R6bUZyRjVRc2hEcS1HTTIzcVNtUERiV3pDSTVHcUQ1VmxMYVI2ZXBBazZiTEZWVHp4QkdlOGRic2FSc1FnbWsyVDM5U2dRRmtWcDBLZ1JEcVpqaDR6c190emFWdml4eTJPWm8?oc=5"
+    },
+    {
+     "source": "MarketWatch",
+     "title": "AI chip stocks wobble even as investors get clarity on a key OpenAI issue",
+     "link": "https://news.google.com/rss/articles/CBMivwFBVV95cUxPeGdDX19XYWJWaVFjMk4zRFo3QWVzbVZYZGpOT0RfUDFQRVBta3RuR3ZObVRqU0oyakUzdmxlNWljZVRrX1pHOTJuZFp1dE44end2UkFQLTFmVTRyRWVSM0t5VE9mYndrUnNEeVg1OHllbTNSeXpwTHdSNUxTbC1kdUppU2lucDVEYlVSU0hqMFdBN0VRd25waWlkZ3VpN1JsUlY2bVhha25EZzdnMGxUUTZQaUdKSWh5VE90alk2MA?oc=5"
+    },
+    {
+     "source": "Bloomberg.com",
+     "title": "Watch OpenAI’s $70B AI Boom, Goldman Leads Wall Street Trading Surge",
+     "link": "https://news.google.com/rss/articles/CBMikwFBVV95cUxOZURKNWktVVJuaEEwOTFFSjk5OERXODdEUmJFMVZ6NW1mM2xmTmVIM0FOYjdyLVpmWFdoSXdqOEZ0X0RueU1hUlFiX0xfNGJaTlVHdzhlb2FaM0Nrb2dDeGMzWUNzS0RJRDNPcjljemQyelN0VW82VVFFQXhJWS1fYWZVU1RHR0ZFZVl1aFhNODdTcjQ?oc=5"
+    },
+    {
+     "source": "Yahoo Finance",
+     "title": "CoreWeave Stock Fell Nearly 8% in a Day on an OpenAI Revenue Report. Here’s Why Its Borrowing Model Raises the Stakes",
+     "link": "https://news.google.com/rss/articles/CBMimgFBVV95cUxPaElYTld6QUkyVWx1R1Y3b1gxUVZ5WUhZbnowWGpaUVlYbVBLMkR6WWZZVHZKVGJrbEdIc3Axam9lTklVcFkwTGR2TEkxZHdHZ3BPWWY1RnFTVVpmX25EZ0JKT3JremUzQmlMOXQtdXBsUmpEaDVkS2M2eF9ocUZwTHAxXzg4MUI3QjdhWXJXRldGOTk1bDMzRnNR?oc=5"
+    },
+    {
+     "source": "Yahoo Finance",
+     "title": "Arm Holdings Stock Fell 6% in a Day as an OpenAI Revenue Report Hit Chip Stocks. Here’s Where OpenAI Touches Arm’s Business",
+     "link": "https://news.google.com/rss/articles/CBMilAFBVV95cUxPZkFBMVZXWjJPV3ZUZHB4clhHdlNtaDB0VmVsZzlHbS1YLXA4WUY5MmxwbHBENDBCNm85MVlSNjVUQ21pWXRqVzZFYXdtdWFERE42TXhkOXpVSDJoc2s1SGgyVHNrR1JBN3dmcDdVZGtFRndPLUtIVV9GbXBucVVJOTllY2tJR0ctem5HWVRYNEdsemQ2?oc=5"
+    },
+    {
+     "source": "Seeking Alpha",
+     "title": "OpenAI Is Too Big To Save? The AI Selloff Was A Warning (SPX)",
+     "link": "https://news.google.com/rss/articles/CBMimwFBVV95cUxOYzBnb3FPZFZWN3BReHRXVVhza0hPOUw0MjBObk5QZWJxaFQyRW1vX3NuWWhFbDg3aTFKYTduTjhoUTQ3dDA2MTFDejdDZkdjb193dURKVXNYUllaVWxmbW5PY1ZGcTU1ckdITGhNQlhvTTg0OHFvRENLTkZ2aGZDRUt4cml5b2VNbUU2YVhjLUtwY2pRNW01SXhZYw?oc=5"
+    },
+    {
+     "source": "Yahoo Finance",
+     "title": "$10,000 in VGT the Day ChatGPT Launched Is Now $30,500. QQQ Turned the Same Money Into $26,100",
+     "link": "https://news.google.com/rss/articles/CBMikAFBVV95cUxNRUFISW1jNFcwY0lWOUxIalBUUzBNajc4d3FKRlY5OXlrT1pHQ1lzeEFKWUU5M0pSMzVVT3RUSjJsZldXaEpidG1maXM5UHBlNFhndXhlZV85TXRxd2xyN1Z3SG1VMUV1Ni1NQTBFVkhDejlLclpqaHRsUFgwTnkzd1ZkNjl1TjY0VTJXUGc2ZkU?oc=5"
+    },
+    {
+     "source": "24/7 Wall St.",
+     "title": "$10,000 in VGT the Day ChatGPT Launched Is Now $30,500. QQQ Turned the Same Money Into $26,100",
+     "link": "https://news.google.com/rss/articles/CBMi0AFBVV95cUxQdjN2bFRPWUNVRVphWmhjWUJvcVJNOGd6dW10WEdLNmFuWW9TVzlpLXhXQXlHTTFwa1N2NlNWQlVvcmJuY0ZPWnRaR3paLXlaNUVQeURZdUR1eEEzTTZPNndVQy1WbmFfV2ZjY2p5Um1FbXI5Vkhta1VHb05jOEJDb1dfWGVrWjdHN3h6WEZPSEZ2cmhUN3V2WTZ6czB5cjRZWDJaQjJTZXlPREVaaWo4RVNldDBCQ0RQLWtjUWlKMUpQMzU3NVZwc0lpVkNSVEt1?oc=5"
+    },
+    {
+     "source": "Bloomberg.com",
+     "title": "Watch Tech Stocks Rebound After OpenAI Revenue Scare",
+     "link": "https://news.google.com/rss/articles/CBMikAFBVV95cUxORnVhOUJJaTY2dzkwSmpHN01DYnEyZTBORm9OVEExWEwxTWVSSkhNZmx6YnVLeUEzeHBQaVBxWkpEWWlGX1JFUThnWER2ZjFBQU5XSlNpMWFGVWlmbmk3ZVFucFR3cHNUMXliVGg5Y1BrWi1uR1A0bkloMDUwQ1M3Y2g1SnFSdU84UGN6RERQTWQ?oc=5"
+    },
+    {
+     "source": "Fox Business",
+     "title": "OpenAI revenue shortfall exposes vulnerability in artificial intelligence ecosystem",
+     "link": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE5JamNjclhJNVJSN0FsQlNDMnY5ZFktbTN2LVU0bk9ha2otZU9UVGhVaTM5UG9WWncyZzd0ZExaTDBGWHowaWo4SFZia2N1RTFpYjdBdEZ0ZTI1aFk?oc=5"
+    },
+    {
+     "source": "Yahoo Finance",
+     "title": "Nasdaq rises after OpenAI revenue report rattles AI stocks",
+     "link": "https://news.google.com/rss/articles/CBMioAFBVV95cUxOcDlHaWo4R1pjSjdRelRRRVNPa1RXQ01HUzYxWFBpa0VvYjNzS0RIaTYtUFRjSmN5SW9FT0pQLWpnVU9oQU4yYjRuM1UtbUZuVWNPMUwzZnRrZ3hSVDQydlkyYlUtWHVoS25fNHltbFhFcktUTE1rUkx1VWhyOW9MMVBCZlFTMFVDZEJHZk9RQkxObkJFalBZUnQxNEU0R2VR?oc=5"
+    },
+    {
+     "source": "Quartz",
+     "title": "Nvidia and Micron stocks bounce on OpenAI $70B revenue target",
+     "link": "https://news.google.com/rss/articles/CBMifkFVX3lxTE1OZkZJMktSbEpPT1h5UG5Gb282YlRTaTFIZ04zNmpIQzZhVVF0R1dpWXUyRzRWVHRFYUFwRmlxRGpmMjJBak1OajFyb0xZcnhFNU1wS3BQbXNGOXVpanBKOVJaVngzd3JGRDhGMTBUUnlsNkFvV3UwS0x2T21hUQ?oc=5"
+    },
+    {
+     "source": "Morningstar",
+     "title": "Nvidia and Micron shares bounce as investors get clarity on a key OpenAI matter",
+     "link": "https://news.google.com/rss/articles/CBMi0gFBVV95cUxPcC1lM1BCQ1U2R3ViVHJVTDQ4WlZya21BV3NackZmcm5CLVFZSkxIWEFtaEF6QlFoQXlWcHFCTW81NkpFZlJ1RnE4WmpHUFVGdmZUUWI1a2toc2ctNk1FYVcwT0o4aElwMXJHaFVWWkNtRGs4Qnh5X2UxRUltaGx4ZmZSamNHdXpzaGpSMWdrRVZaX2ZSaWJyMDV5dXV6T25zZ2FJbFM2cFNRQjhyMk8zOFc2RVBjVzVvbXRGQW5lRU1JcnlKMWI3eTZKY0lHM0h3clE?oc=5"
+    },
+    {
+     "source": "Futurism",
+     "title": "AI Bubble Teetering on the Brink as OpenAI Admits to Massive Financial Failure in Leaked Documents",
+     "link": "https://news.google.com/rss/articles/CBMihgFBVV95cUxPeG5zTmlRT3dvT09lYXlMSlp4dUF1UVp4bXRZNllVQXo5VktBbV9FYlFmdTFJektVUzB1Nk1yd1Y0a3BGNk5OaTJWVnB3a2tXZF9GOTVtZFFPQnllRFN1TWl5eWwtQzN1OXhtd2ZIRVdPRmhrdlFGWkdPMjg5U0c0cnZ3TjdCZw?oc=5"
+    },
+    {
+     "source": "Euronews.com",
+     "title": "What happened to OpenAI’s $20bn? Revenue scare rattles AI trade",
+     "link": "https://news.google.com/rss/articles/CBMinAFBVV95cUxNb3BwZGNtQkZvWGhRdm9vNW9DQmZ1V2R5X3I1dTlhd2hHamxtT29HbEdxYk9pR0xpRURlU2paRk85R2hfWGJ3djVQMzJPRlpYSUJBLXZGR3dlLVZVeWhrTk9xRUh3YkktZm1tQ3pqbXBTZEh4YS1Ud0dkWXd1SzA4ZlBuRmpydDhYeWlpeW1id29CN0d4OXBES241ZUs?oc=5"
+    },
+    {
+     "source": "Yahoo Finance",
+     "title": "US Equity Futures Higher Pre-Bell as Traders Assess OpenAI Revenue Updates",
+     "link": "https://news.google.com/rss/articles/CBMimAFBVV95cUxOVjk0NDNVX013am5ZaHRoY3FFcmZQZk4ySU9FRXNNeGZIQmxsWFdaU1N5emtPdWl5RW4wcGtGRlhDZ0ZIWlVYWGwxejlKakx4SnFyYktjVUEzb1VEVFdPRmZ6Si1BWktuQ2QzNkxpY1VCaWdpRXBrYS1HMDdxWHNiX2FvSEktVk9PV1MxM3VjQzV0Z3pLRFlFZg?oc=5"
+    },
+    {
+     "source": "Barron's",
+     "title": "CoreWeave Stock, Oracle, Coherent Rebound After OpenAI Confusion",
+     "link": "https://news.google.com/rss/articles/CBMihwFBVV95cUxQVjdXZ0ZSMzZkZ0k3N0Y0ZWNwNTYyckQxeGRnaDBZWnF3dmE0aWpVcGp0am9LeHZpVlZ4VFR2eUNhOUkzWU9wWHFWSExreDBYSFNYdnRCQ3JMcE1mODV1SzY2U0lGNDE3MjFfM1RqYW8ydHotVTZKR2xBOEZvLVhMT0ZFbzJQN1U?oc=5"
+    },
+    {
+     "source": "ChartMill",
+     "title": "OpenAI's $20 Billion Revenue Gap Sends Chip Stocks Tumbling",
+     "link": "https://news.google.com/rss/articles/CBMirAFBVV95cUxQWVNNMV9XcXFzUm9hMlhqakpxa2lsTHpTQm5JWTFINjNPeXVTMHR4bFU5UVZkajhEQk9vOHBza2tzY2lhbmFFUm9RV0F2RmhWMS0yYzJFeFlOVnJtUG1sQ09ndENHdElhYmktNzhDbFhEWTkwX2NiMmxrWVYzNHE3UlpKcGZlTzJOTTNfMHNFSU50Zl9XeGRTbHZTdTB3ZWozbzhUVTRDUllCLWlH?oc=5"
+    },
+    {
+     "source": "Yahoo Finance",
+     "title": "OpenAI’s Revenue Appears $20 Billion Lighter Than Reported - and the Gap Is Accounting, Not Demand",
+     "link": "https://news.google.com/rss/articles/CBMingFBVV95cUxOa2NvWVdFeEd5azMxLUNqY2Rpc2VsYTh3NnZNRkZ0MVpPTnRkM1dWSUR4R1NGZ2FXVElia3RKbDJTbWQ5dEdqa1FaUFN0STZhRms0M2M4OHFQeGpDRndRanNHemc5b3NqVVA0SUFBY1lxQTZOYlpuZC1zSDdxU2pTZUx0TjNVdGtuUnRJMFZ4cWZ2MlMtTl9tNTFaZVJrZw?oc=5"
+    },
+    {
+     "source": "Yahoo Finance",
+     "title": "SPCX CEO Elon Musk Has a Warning for Anyone Betting on AI: The Compute Crunch Is Coming - ‘People Have No Idea’",
+     "link": "https://news.google.com/rss/articles/CBMilAFBVV95cUxNalZQNF9qY2pIdXZiNXRMM2p2aFREcnVUZ19pNXVqMmJ4bURVeFc2ZUhmYkh5bHI1Vlp5ZklWV05LNlZXeHNMZ0FselhkZnZJRGoxa1ljQXZna2VpTjR4aU5ZdGJ3eXpibUVIbUFqaF9UdG9Nanp5VVZqVlpOLTRhMXhLbkppYjFYOUsyQjRPeWRYbFVZ?oc=5"
+    },
+    {
+     "source": "24/7 Wall St.",
+     "title": "SpaceX Vs. Tesla: Which of Musk’s Babies Grows More By the End of 2027?",
+     "link": "https://news.google.com/rss/articles/CBMisAFBVV95cUxOS0tHWnRlTWp3WDZ0TmJnbXpWdnF2eHFDUWN2TE5ZeFlaaTRZVGd1STRDY21SUVBhY1ZhanZ6ajFDTU14MmgwMGh4OXJpdTAtQk52UFJlRDZhUjd4bWhxWTBXNmJYTDJGQ3V2X3dxeV84SlpyR3locjRseG9maWNrRUswZlhCR0hoQ2FXc0xhU0F2Z3o1Y05nRHJZT0VJSy1zbU5XRTBGaHlCUEE4UEJpWA?oc=5"
+    },
+    {
+     "source": "Livemint",
+     "title": "Elon Musk’s big borrowing spree after SpaceX’s equity issue: how much more can Big AI borrow?",
+     "link": "https://news.google.com/rss/articles/CBMi6wFBVV95cUxPVlhtMnVuVXNmNm5TMXBiQl91TU4yTkRWRHRHSVhhd0l6WmotcnVmbzVndlc3Yl9VekFkeEVqc1hwdVFnSXZRNG1jTEstbmxITEhKVmRCYW5HLXdRalpWZXBPMGRmSVA2ckx3MnZxbHEybTBDWVpXYm0ycWNrb2JhSGJ4bkwwY19rVldlR1RzS2VsdUxPU0s3WGZZM3ZsbU9lN09JSmVqUzRzUjh1MUh1X3hQYmsxMng1WE12NEpTb05BMnVGTFA0TFB4NTBXRFVNWEJyVWdjM3NPenBQa1RvZ284NUtEdkhEZmNJ0gHwAUFVX3lxTFAxNFZNNHg4SWtkTnRPSnFHOE96LUEyUjRwOFExNzUwOG9KdERzc2hWUXpBbml4THI3ZllVN0s4VnkzOGI2Yk50bWhjM0JEVjVwaU15NTlJcmx2TzRWQWpJbVdUclhFWkl3TVhpZE14MjFUTkJVWGxGWEg5ZGExZ2IwVllsMzdnX25mV3RHYjJ1clhtY3VHQzNKQ2c2Tl9XaDhydE9PcWMxV3hpb01VaVBkalF1czZyaGx0bXJUd0c0TURQMlNWM0p1YUF0Z3V2eUtjR1h3LUxzcHBVajRacmZPbEg0aVk1eEJRek9OU2ZFMg?oc=5"
+    },
+    {
+     "source": "Wccftech",
+     "title": "TSMC’s Upcoming Earnings Might Provide Major Clues For AI & Overall Chip Price Hikes, Believes Analyst - Elon Musk’s Terafab Might Surface As Well",
+     "link": "https://news.google.com/rss/articles/CBMi8wFBVV95cUxNeW1MMDFDbVlhY29iTVU1YjdWY20wZVVsMXJFVjBtWGxiVW90azZ0NkVIcGNROTRSdUhEYjFIZzNKOXMxTmdzSmxsaEJjdVM2cEsxR0JzTkZqOFVyVGs4NzlKQkxPeGJIV2k1bkZBYVhUcWVlbGQySENLUmMtRS1Ca3lhM3dKVVBWVWhwc0M4WkZ5WnBNS20wdVpjeWZ6VHBoRDJJSmYwOGdhT2E1WWdrVkdJZ19oNW9tTkx3TnZHTXBsc0diRXNzdnh3Z0IxODdtYjEtd1lxRlNBSTd6Y2dOUnZPa1NpS1JiY2VVRDRoMzJvSWvSAfgBQVVfeXFMTkNfM2VVOUNFaC1VMHNFWVR1YllrX2x0X2F2cjVKTnlwSTdueVdibi1uM3A3QnAtN0N5UmRQclljYmxjelN6RFd5VGVwNnZReWdKd2U3dkQ5RjlGX01Oc3Z4UzdiYWFZTmpsREw0UFJIdFVRWDhwN0M0M3hZaWgxY2FGNEtEdGFPamJzcy1ORW1NVktOY2FhQkRQQzJ4LTlQQ0kycy1LTmZrR2FiVXM4YXZYODAtOVJaeVE0MEtKNjJXMkgtUGM4cVlFUmo2XzZSbnROblMzendUTWVIUzA1SFFWS19CYjl3M0MwNHpzeTVyQ3V1Wk5FWEE?oc=5"
+    },
+    {
+     "source": "Stocktwits",
+     "title": "Dell, Super Micro Stocks Rise Premarket After Elon Musk Denies Report Of $52B AI Server Deal With Foxconn",
+     "link": "https://news.google.com/rss/articles/CBMi_AFBVV95cUxPVDlwTWlqalpndWtPWEdZODdHYkF4dzNXMVNBTFRMb3BBQV9IbU9DdGF0eFJtalpqWkdOZmxUQXNLcHByNmx3dDhEV01PQndmam1JYVQwRlRDa1JGWkMtOGwwZHUzT0FlSWl6TGZrVDMyMkNxS1ctYW5MczR6Qk5QVnlfcEplcm1CbkRRYjl1U1ptY3RjT3AxTVhIX2lKYzE1MS1tTnVIV1VSZzYzbXdmR1ZTeTZqU2JBRjZXN0h6aFRJZ25Fa3h6V0M5R01yeEpJUlR2eFVhOXh6WDdKWVkzclNpbGdDMjRvM2lUVWJ6N1VfT2ExTVFFSVRaemU?oc=5"
+    },
+    {
+     "source": "Stocktwits",
+     "title": "QCOM Stock Slips Toward Fourth Straight Loss After Elon Musk Dismisses Reports Of SpaceX AI Phone Using Qualcomm Chips",
+     "link": "https://news.google.com/rss/articles/CBMikAJBVV95cUxOVEhNRWdnTE8zNm1KSndVQWdmYzJwSDJ1UVBmaTI0aHBsN2JwY2xOc0tYR3FFV0hBamgxUEdhS29DV2JUWXM5M0pUbDBaVDFwWWhsX2xnZDNVdUNtczY4VnZNaEMwVEFsMlpRdG9SUlNudzRrVEVNSkJKWVJQQlI1Snl5dGc2eHdKbC1tNjlNY3ROdkJGVk5xUDZUREZ5ckUwSGgtR29sNnh6c3FPYTMyOUwxQXRGWmlmNDQtdXNNODg4QjhmYVpRYjhmRnBrZWFTZnNQc0s1WExYVXlZVHNoOFdqN0NGdS0zdldDVUhHSVBtalE0LU9mbU1JSlMyREdOU09mdnZyV2VtWVFHQ3JtZw?oc=5"
+    },
+    {
+     "source": "Pluang",
+     "title": "A public government filing reveals Elon Musk's AI plan centered on an overlooked company, says James Altucher.",
+     "link": "https://news.google.com/rss/articles/CBMihAFBVV95cUxOc1c2RkxsQm5BbEMtcTUxdG45TTN6MWl2TDBndWlmYnVkWlFxbm56N2llU3Jub2NSZU1RS3lMdnc2emdFRzhrYmxYSUFjZ1F2Tk4tS0JwSjJRQzMyS0NILS1VRVZxdEhJZE1IUHJLaFdUT3ZXMDh0V0EtOGpzWDg4RjlRdGQ?oc=5"
+    }
+   ]
+  },
+  {
+   "reason": "Not really about the company",
+   "explanation": "These mention a company in passing: software bundle deals, Musk's science medal and politics, Grok's opinions on Starlink in India, third-party ChatGPT apps, smart-glasses bans by venues and unrelated stories.",
+   "items": [
+    {
+     "source": "Mashable",
+     "title": "This Deal Days sale gets you GPT-5.5 Pro, Claude, Gemini, and more for just $69.97",
+     "link": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxPMXo4ZkRvT2NYUEpRSzNELVJSa1o2V3BaY0RQbEdheW9kZWY4NUpFa0FRSFo4T1l3M09MOFU2SldiQ04wcEE3clpMX1Q4TnpXTTd5WGlJN2FXU1VSOWxRd0xLRldIT0kxb1RoZDNrNmFKazBBZDRnajhuOVpOcUlHaGF6b1NOeXdHdXE0?oc=5"
+    },
+    {
+     "source": "Cville Right Now",
+     "title": "Get lifetime access to GPT, Claude, Gemini, and more for $69.97 until October 11",
+     "link": "https://news.google.com/rss/articles/CBMitwFBVV95cUxNcXRZaDlaSHl4OF8tSTBPUS00aXB1WVdpT3JoYXNXVDNYZ01Xd1QzZW81QXRnZC1ZWFRudGtnQUlISzJEYXoyTHRhUHl2Q2N3XzhwZEI1bUp0RURrczlQVnFVRHoxNm5FZE50QjVVZHpUSUFycmJVNDAxR3kxTzdZUHVkNlFEcUs4TDV1X2tIOEpGdWZvdHJ1UmxVek50RjlTYTQyOUwwZ2RIQk04N1RFcEJuQ0tpNnM?oc=5"
+    },
+    {
+     "source": "Mashable",
+     "title": "Deal Days gets you ChatGPT, Claude, Gemini, and more for just $59.97 for life",
+     "link": "https://news.google.com/rss/articles/CBMikAFBVV95cUxQNVVSdWNnNnJaLWNQTHh3MWwtNkpBR2ZMVVBxV3JBRDlDTlhkWkJmMF9lSldmdHRBTjF3b19ldk5rdndIb3VKQ2NLakNKYzBfSU5mNTFZN3BLUm9ZbUNXNGxpcmZZbWtGYk1EQURpYnhqRE9QMktLcXNleEhndFUtSGptUFhZczAtNkNVLXRVb04?oc=5"
+    },
+    {
+     "source": "Google Business Profile",
+     "title": "Gap adapts AI Search to consumer behavior - Think with Google",
+     "link": "https://news.google.com/rss/articles/CBMikwFBVV95cUxQek1WRDJzb1Q4UXA0X3pBM3VhZTVSOGk3V21SeXU3OHBZRXNaanIzQTJSd2FNa2ZveEJpN3F2ZXRpOGMyRXhyN0NoZnBfUUFZN09reGdIRURheHM4SzY4ckhWTG92SDU1ME5ERXhqbzlWT3FSVE4yOF9KN0Y0RkctSU9WQ2pEQms0ZVV5NTkxUWRSNXM?oc=5"
+    },
+    {
+     "source": "NL Times",
+     "title": "35 Groningen clubs, museums, events jointly ban smart glasses over privacy infringements",
+     "link": "https://news.google.com/rss/articles/CBMisAFBVV95cUxQRXMwSUFkMnA0UUQ2MjZNSnJPbzV6NWxBdHVyV1ROVHpCMnl5Yzc4RHhPOHFyR0lEZXBra0czc3hnaUkxaVp0Y0Q5c2RxQjEzdTlBT1B1Wkg0OVV4dnVndlh2aURIM2VULVNndG1ycDBYd1JoV2laZ2Ryemo3akUzaF9pUHM4LURMb3EtWjVxS1BVLTZ5c2NjUzFSSXk3OHFXNXJ0d0VWaTA5WGtza09VMQ?oc=5"
+    },
+    {
+     "source": "Sandesh",
+     "title": "Web Stories in Gujarati | ગુજરાતી વેબ સ્ટોરીઝ | Visual Stories in Gujarati",
+     "link": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxPOG5ickM5MWlqTWFTbkNob0hFVVpNNC1FZEMtZmJlT2E3eFZOYkJKcTBXSTBCUzJwaFR6cjN2ckUyN2V2ZkFHTDdIY0N3ZXBSWmVPOWRYZHhFVlZlQjJpcU9Qa21UeXY0X2NwNUhnSlVodFdhTktEODIwTE5rclc2b2hUc2pHdnppMzlGSFBveW9sV2VzMHoxdms1ZW95bC1UVWl5Z2lRSWdXUnVRMnNVSGZyRmRwQW5PNHR1Q3BsYUIyQQ?oc=5"
+    },
+    {
+     "source": "Rockland County Times Newspaper",
+     "title": "The Morning Muster: A Column For and By Veterans",
+     "link": "https://news.google.com/rss/articles/CBMikgFBVV95cUxPVmFfSC1TN293ZzkwcGpVdGpFQ2ZYNktXNzItdFNmUEdQZ0dRX2NMdV92cDY0VTlqVW1DMTR2VWhuSmJTWUJ4eFJjbEpxU0YtWVE3azgzRmpyeUd5UGRBVWZBdEFtU0p3U3hLQnJ1aVV0aFh6WkhwcVh4eDYxSHlQU3plQ0FHUzh3N19TMmYtOFJsQQ?oc=5"
+    },
+    {
+     "source": "Digit",
+     "title": "Amazon Great Indian Festival 2026: Ray-Ban Meta smart glasses, Apple Watch Series 11 and more wearables get discounts",
+     "link": "https://news.google.com/rss/articles/CBMiggJBVV95cUxQWWlMbWlwbzZGZDNSZXpUVTFpWUpWdVdUSWtiTEdCTlBLR0ZoOVBGeHlIZDNWMl9jYnJaN1Rva0VWSHhhZUdDYUk0bXc1SnVuMmlzbDJhVzVTRTZBbURZVEJIZHJ4LXFQNjRNdDhDSWFraHlLak9ZeEVNTnVvUXVCV2N5S1JoV05Bam1Ub255clVrcnB2aEdtdWFTcHBYQnJialFkOVlxWmRnNk9sY0VsZGVma0JNMndLS3lId2x1Ri0zcmZONUtDN3dsSkpqUGh5RVFQbGF5b0xmWTZPbi13cXBaQllaV0pHbFZxOGp1MFNHVml2aW5wX2t2ZjNsTWl2d3fSAYICQVVfeXFMUFlpTG1pcG82RmQzUmV6VFUxaVlKVnVXVElrYkxHQk5QS0dGaDlQRnh5SGQzVjJfY2JyWjdUb2tFVkh4YWVHQ2FJNG13NUp1bjJpc2wyYVc1U0U2QW1EWVRCSGRyeC1xUDY0TXQ4Q0lha2h5S2pPWXhFTU51b1F1QldjeUtSaFdOQWptVG9ueXJVa3JwdmhHbXVhU3BwWEJyYmpRZDlZcVpkZzZPbGNFbGRlZmtCTTJ3S0t5SHdsdUYtM3JmTjVLQzd3bEpKalBoeUVRUGxheW9MZlk2T24td3FwWkJZWldKR2xWcThqdTBTR1ZpdmlucF9rdmYzbE1pdnd3?oc=5"
+    },
+    {
+     "source": "Irish Star",
+     "title": "'I asked 7 AIs to estimate Donald Trump's IQ - their answers were absolutely savage'",
+     "link": "https://news.google.com/rss/articles/CBMif0FVX3lxTE9FaUdaWWQtR0tRaGFNU1NkR1hIWTFZX2d5ZFQyTWdYMWpQeS1TNHI2Qm1WRGZDd0N3bGxBU0pSTnpWRFFqYkhDZGh1SXhnRXNNWVhrVEZ6ZUQtME0yek91ajVwV2ZfUW5LdldpTVg1dHJkNWxmcFlmeW1ZancyTlnSAX9BVV95cUxPRWlHWllkLUdLUWhhTVNTZEdYSFkxWV9neWRUMk1nWDFqUHktUzRyNkJtVkRmQ3dDd2xsQVNKUk56VkRRamJIQ2RodUl4Z0VzTVlYa1RGemVELTBNMnpPdWo1cFdmX1FuS3ZXaU1YNXRyZDVsZnBZZnltWWp3Mk5Z?oc=5"
+    },
+    {
+     "source": "Modernet Digital",
+     "title": "Meta Glasses: 5 keys to choose the most amazing model",
+     "link": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxNdXp6M2NVblJBN2t4N2g0d1RQR2NqUmZneDFZalp6RHI1VVZFcnhzdERyN0pvc21lelk5UWt1b2QzS2t2aTM2djkwWGhtTVhIZ1VMeEhOOFBrQTZ1ajVDbFY5QjdpUmxaME9KM0NTZ05UZWVta1hHbEV5MlU0Vm4tdTM1ODRvWDc2eWZ2ejJxYThLZERpanVtWlUwZkZwMmlGckpFMmlua0phV3RScDdFZnRWb1RFbnBaZkp3?oc=5"
+    },
+    {
+     "source": "Business Wire",
+     "title": "Nectar MCP Brings Consumer and Creator Data to ChatGPT, Claude, Gemini and Copilot",
+     "link": "https://news.google.com/rss/articles/CBMi0wFBVV95cUxOS1BNZ0Z2Sy1VT2Zxa2xkUjBuazNTSUd3ZjZxb1dURzlGbTlaX3UwNUxnRmpHdVpWVmZyaVhpOFNON3lIZmJNbjB2M19zelN6M2pFQlZoZHQxZUE0cnN0cHlNWG9IV3RDSFMwd2lPOUJ3Z3hBdGROeW9FNzBfM0dMRGdaZGsyQTUzbVRhOEw3S1hScmZFUjFaTGpyRXY2ZHlpUGhTNGJlQnlvcDBIckpsNVVrSVdmZTk1ZmFaSEp3ckMydmp0MG5QWVVvcjVMNnU3YnlN?oc=5"
+    },
+    {
+     "source": "Yahoo Finance",
+     "title": "Sam Altman-Backed Bitcoin Insurer 'Meanwhile' Raises $37.5M",
+     "link": "https://news.google.com/rss/articles/CBMinwFBVV95cUxObnF3dnAwRmp5Y2txUEpUcmdRTU9FeW93OU4zSEhZUElQNzYxR1h6N09BQUFYMDU3Q1FtZERoazIyb09mV21aQTF1NmRMUDJTQXdDcU9OVmtIQ3dPM054cjg1ZnBYUXQ5X0hiem9SU3dVZ0RDWEp6MnFmdW5jRFc1ZFA5TmEwYlN2aE1FMEZ2OElyNzJza1I1ZzJEZXpCbVk?oc=5"
+    },
+    {
+     "source": "Dronelife",
+     "title": "DroneClear Launches ChatGPT App to Help Travelers Navigate Thailand’s Drone Rules",
+     "link": "https://news.google.com/rss/articles/CBMifEFVX3lxTE4yOFluQnJBVVdzQkdZeERMbWF2REpFX2xHd3pESEdPd1RFa1lNaDc5c1R1cERtT0tHelRCaG9sLVRLOUxYSkVTVlZ3SXA2M3F2ZGZBYjZBQ2VRdW1jNWVWVW5nb1k5NFVnSENkUk1nS1ZFMnFJcDdRUmQzSmw?oc=5"
+    },
+    {
+     "source": "Windy City Gridiron",
+     "title": "Bears at Packers Q&A: We asked ChatGPT since our sister site is running scared",
+     "link": "https://news.google.com/rss/articles/CBMi1wFBVV95cUxQb3dBLVBSa2JxUzV5dS1KLTFlV1Npc0gzOGl1THdMOVprMW1WQUYxaHA4SUZ1am5KVTdzYnhWWER3OFM3M1dVOTZmUGhwSERRdWRVQmliU2FSZHlta0s4VHJsUFBVZEJrQzhkX3lHaWd3NDlIQzhCRVFnU1JuallUY3VWc3hEUkY2STBlLW0wMnBmMVgwT0U4TE9sUnN0WkM5TS10Qy1ZMEVXSW9Bb3E0dU1oVXBfY20wNFowcEl6T3Q5QngtUnllX1NrVW9DZWNzNzRMV2Rjbw?oc=5"
+    },
+    {
+     "source": "CoinDesk",
+     "title": "Sam Altman-backed bitcoin insurer Meanwhile secures $37.5 million in Bain Capital Crypto-led round",
+     "link": "https://news.google.com/rss/articles/CBMi3gFBVV95cUxNU3dIV1VzSUY0bzRqV0g4U3VBaUlTQnltaU0zbmlIUVVOeExiQnVjODhlaTZNUnRsUjFOS3JsOEUxekhqcWVqOThkQ0lLcXZsamE2aDE1QXY4OUp0NjBYQWFDWkM4YUlFYUExR00zb1pVMkVwbXdYeVROQmxLbWRWWkdjTzJqSUpWbzhuMW9QRzNNWm14d0VzVXhPSUdxMy1lZ2ROX0tkc0hSdGw3cElJaERUSnpFZmlzdXp2R1JsVlFuanJ1ekZXdjhKZEtYNGt1SWswRW1GcjJBVmtKdXc?oc=5"
+    },
+    {
+     "source": "ABC News - Breaking News, Latest News and Videos",
+     "title": "2 DOGE staffers say 'no' regrets for people losing income, didn't reduce the deficit: Depositions",
+     "link": "https://news.google.com/rss/articles/CBMioAFBVV95cUxQdVlrbU1wbmdHUFpJNkpCekVVV1d1cUUxLTVsajdHOGh1QnNKRlhUWUhrczdkWWgteW1zMDJPcTdkY1JNZlpyVEVQbVJ6dzJPTmJXVzM4OGlXS1loN29zSms4NXFEZmNaZGVGdmpwM2dTb0RCa08tdVlZWnRXb193QjVkMmppOWQ0MjRHZWdFOG5uN2FxNzk5cnk4bnBYSkwt0gGmAUFVX3lxTE55bXNXTmUxbEFndGYxVkRiUzVXRzIzUmdCczJpSkhIbEVxTEJSbVlmb0tiNTV6VWlleGE0LXhQbWM3YUJQY0dpbWhDaVh3RnMwOHhQQzBKaExsQTJQR0Y4ZGFpaHhPQjRZMVFJckNUNDJZZHFxTS1LU3d0dDJHVXpkdDFwRFgyX1p4eW5WcDRkVHhFS1FEczkzSGluSmY0bUZxSDVPaUE?oc=5"
+    },
+    {
+     "source": "EURweb",
+     "title": "Mike Tyson Says He Delivered Diddy’s Letter to Trump: ‘I Did What He Told Me to Do’",
+     "link": "https://news.google.com/rss/articles/CBMiXkFVX3lxTE5TTDdGVlVHQkt0dU11X3VONUw3X3NWZHc1c3lwTDZoNV9CREwxVDN6R1FYbk12VEtabGx2VG1FUV9NOFZZLXpfekdDN01XaC1TdzVQWGFYb2NrWDJ2VVE?oc=5"
+    },
+    {
+     "source": "Daily Star",
+     "title": "Trump's AI bot starts telling jokes 'humans can't understand' and singing about Elon Musk",
+     "link": "https://news.google.com/rss/articles/CBMiigFBVV95cUxNcUI2eklVdXVkcERONmtQd0xGMmxEX1J1eDJ2Q05rSFU5UDFMZ1ZLNFdxSHZiTHBEX2JCVUlSdW9uaElqU2ZtMmxzblJ1dGxGa18xYU0wTkxrSXo1OWRteUEwN1REMzZFRnA1WWp6VXIzbEUtTWUxRllXVEVnNlIzV091VVJSM3doV3c?oc=5"
+    },
+    {
+     "source": "Free Press Journal",
+     "title": "India Could Benefit If Global AI Boom Falters: CEA Nageswaran",
+     "link": "https://news.google.com/rss/articles/CBMiowFBVV95cUxOREJLXzVhODJwYXJ6NmJ1WnVWM0g4bWZneEtFX2pwY01iaUcxYlZFcUFPVkR5cGR1OUNSNWl5RjJMS3I0ZnFLdGw5OFRWZlBSWkZmSDFfcDV4dlBuNlJNVkZoS3MwYXVhUmRDcXpJOWwzbXJ0VjBUVTNWOWYwa3NPWnBTdnUyN3NOcnZxUHcySlpOYXlPSjBjbnlfa0VjOUVhd3dr0gGoAUFVX3lxTE9NQVVaWTVOblhOaHZWTjBueWNNamxZOFB6NktrLXlFN1dTbER2ZUs2Zk1rOURDZnJGYThyUktNQ3NueHBVNk91bTE5dnhzRkVuVWd5dXZiUzBNVXU1MzAzZUtKSUhOS2VGLTFhOWRJTWtWelZIQTJncjh4bHNJSFpMUHo3enFRUm5oYjRoenAybHZLNnA2bnlDdGFLV3A0bEROdl9QQ2lMMw?oc=5"
+    },
+    {
+     "source": "primetimer.com",
+     "title": "Elon Musk congratulates his ex Grimes on releasing her first single called Accelerando from AI-inspired album Psy Opera",
+     "link": "https://news.google.com/rss/articles/CBMi5gFBVV95cUxPcE4zWkduSDZJSTFlOHJMVDJBQzNXSGdOWFo0RUJhV1pyaGVmbWtJcVhMV2RhV01mVTFEaGo1OU9ZVGJ2cDNCTTZUd1ZCSlRFNEdiWlVuSVpjbldlMzBKZTA2aUt1Q3lFaEhOdXc1SEM3ZVRYR3JuM2Q1WF80NU5Ic3dmejI3d1l6NUZhUVduUlNBeXJsWDBXbTQ1eFcxRDhRRWxsU3JJb0FteWdFSXY4NmRNUkdUdGQxWVpqbnNXdFZWcTU4b2tsZVhObHItMVdKb0lPQWpmanQ2SWdpNHR2ejVUQlF5QQ?oc=5"
+    },
+    {
+     "source": "The Daily Jagran",
+     "title": "Elon Musk Wants India To Give Starlink Green Light, But His Own Grok AI Lists Why It Could Be Risky",
+     "link": "https://news.google.com/rss/articles/CBMi4wFBVV95cUxOZFl1Y0EtZFZWTzRHd3M0R2x5M3hUellYd3FISW5tNGgzVFdEWkRuY3NyTG02YjZKVmlGbXNYN1N5RnZ2ZWU3T21CNmZqVjZTUDJta1NKbWVrblVQRXlneG16dGI1azg0U0NqaGNhLXVTWlI3aS12Nzd1MnZPTFl4WDVZMlpCV2tyUWZsa2NQY0tDZUhNMEZhUHZUckNFNmpkUVFwSlZnSHBxM0xWaWc0c1lwX0w1UFYwQVJkYVpkUTgzRkllZklTU201MXFQbHh6TDJPNHZpSGtDQzV2NzBWSFZRNNIB6gFBVV95cUxNcmV4cGlPNTJtbXNRbm1SdFJ1NU8zVEhxV0ZjX183ZGNDVnNieXdiS0QtaUJNSGNGWmNjWE53SHdKWXpOSnR4MzlfcV9RVWNBWUZncXZ4NEdVeGRtcXZENVZuSXZ4ZTRxWndyQzd2RVFaZlZndnprOUpKS3FzNk5VNUNreUxIOFFqbHRnUnJ3emxhYV9BbkxQMFRiNnhWdkxQZXFQUVJMblZ5OUhCRXJHRXg1cGVZZDM0NDVETU9nRGlIZkdNRE9xYUx6MThtQXktd2Jxd2hwZFJHRXYxUHR2T24xaG45WmpwblE?oc=5"
+    },
+    {
+     "source": "Free Press Journal",
+     "title": "India Does Not Allow Monopolies: Union Minister Jyotiraditya Scindia Rejects Elon Musk’s Satcom Claims As",
+     "link": "https://news.google.com/rss/articles/CBMikwJBVV95cUxQb3BOeGZrVGxodHUzMmpjWGlyNncxN3UzSEZBN2pqZWNiRXQ0UFRqZFpaNkw5RVlpUXZsakNDeHVleGdzV1NBZjVvdmYxWVFpbW1LMlp5aDZqcnh0TFk1X0VCSllfa2VuQThRNktOUmxwMnRRc3lUeVVhMFhJMjNnUFVMMDV0cE8xMGJmM2JTb0lPNG9UdGNJNndsU2p3Y2QtWnc3MzRYU3dvckIxSG5Qc0c5OUZiQzRxX0JDaTBmbHh3dEpKazFXV1NCUjRmMVVqX1RvenItSUw1RmR5U0RLSTFUNk9CODlxdEZyTnZfZlNrY1N0YmZCV0xOXzdPaVo2SFlhd0NRZUM5WW81MzE0b0M3Y9IBkwJBVV95cUxQb3BOeGZrVGxodHUzMmpjWGlyNncxN3UzSEZBN2pqZWNiRXQ0UFRqZFpaNkw5RVlpUXZsakNDeHVleGdzV1NBZjVvdmYxWVFpbW1LMlp5aDZqcnh0TFk1X0VCSllfa2VuQThRNktOUmxwMnRRc3lUeVVhMFhJMjNnUFVMMDV0cE8xMGJmM2JTb0lPNG9UdGNJNndsU2p3Y2QtWnc3MzRYU3dvckIxSG5Qc0c5OUZiQzRxX0JDaTBmbHh3dEpKazFXV1NCUjRmMVVqX1RvenItSUw1RmR5U0RLSTFUNk9CODlxdEZyTnZfZlNrY1N0YmZCV0xOXzdPaVo2SFlhd0NRZUM5WW81MzE0b0M3Yw?oc=5"
+    },
+    {
+     "source": "Times Now",
+     "title": "Elon Musk's Own Grok AI Chatbot Explains Why Starlink May Not Be Right For India",
+     "link": "https://news.google.com/rss/articles/CBMi3gFBVV95cUxQTF9lbTZLUDRkUDAtN09xb2dLNzVMNnJBaGFRdkhnUDl6Wk13bG5pbUg3RGZ0aHFtVkZXSWtzT21BZU9XeGdYNnFNbFpmcDFNT2RVbl9BYmtKcWpMR1p4SWgzbG45aHdFUTFQd2Q1aVNRbUhfb1p6R192Z0ZWTEFfMjBibGxhNm5rdjlsZFNwMXRLV1JkQm8zcFZEZDlrWVlUQWt6dDlvcThYaUxYNUw3OWJRQU5oNkVBenY1SXgtWFEtQXhFQVZwMFVDZGNydDZXNGpGWDRYVmZrLTk3ZVHSAeMBQVVfeXFMTU1jdnkwT0pjcUN5Wm1aWEwxbDFyY0gzVU1nU19tcXBlR1NiSmg1R1RjbTFNYUtvYktIODl3VzhkZDVHOURjcFJpQnlmX3pNWXdadlp0bzRhdzJnVXNfWmJJTTZpUk1BcGlISnVaNWNTQkpjNEFxaXRkc0pCYThVOENIS0YtRGR3bEtvbmwtSE1NN2s3M3hYZ0o0Mk43WWd6RDFzc0wxWXhkdllQaVdreDBHSWhjTkxwU2h4dWdoR0dGQlMtdzhXQ20yTlB0LTR2UnVpQjgzd3J5MlpUcGxoYTllcTA?oc=5"
+    },
+    {
+     "source": "Yahoo Finance",
+     "title": "Elon Musk Mocks SoftBank's Reported $100B AI Fundraising Plan: 'Only A Fool Would Give Them Money'",
+     "link": "https://news.google.com/rss/articles/CBMinwFBVV95cUxQdzBhNW8zb29Yd3Exb0FTX0ItMWRBVklXRFplYXlaNHFYZFY1WVdFemRCbTV5RklMWEgzdE9LNmp3Z1VlRzN1cy1CaGJHbVZhbVNzZ2dvMGw4ak02dllFeVVOVklsRDV2WTBJM08ycmx5UGNCWXY5bTZ2d1FOUThmYktIdzF1eURGNTRaNGhmcXc4VGplbTdiV2xlMHY0Ylk?oc=5"
+    },
+    {
+     "source": "GBHackers News",
+     "title": "Warden Stealer Malware Targets Claude, Codex, Grok and Cursor to Steal AI Agent Data",
+     "link": "https://news.google.com/rss/articles/CBMiWEFVX3lxTE5iTXlteXJVV0FIR1BrXzFQekhzdlBTU2lGWnNkaWp4RFB0X2FjbzcteThZb05wS0cxeWwwckNkUjdRXzJGYm5sdmJRbVUyUi1MMFcyWEt2VGTSAV5BVV95cUxONnhxX0szeF9pbnpxcU5ZWHoyR3ZuclkyQ1ZiblBNdEo5MnZnZmp0WlNPM1k0b1BnQjRQazlyNW4tQTdNRElxbkhFOWtKaVQ3TkphRU9rQks1eHlITGZR?oc=5"
+    },
+    {
+     "source": "NEWS.am TECH",
+     "title": "Trump awarded the highest U.S. scientific honors to Elon Musk and other Big Tech leaders",
+     "link": "https://news.google.com/rss/articles/CBMiSEFVX3lxTFBhN05lWVozWWNEQWg1WU9yTXZFYVQybmRPRDVmY01DRGtrcjBSVHdtdXNTT3NfcFJsUU9GdjhMajN1YW1KbXByVw?oc=5"
+    },
+    {
+     "source": "Free Press Journal",
+     "title": "FPJ Quick Take At 12 PM: Elon Musks Grok AI Calls Starlink A Security Risk, TCS Says No Green Card Curbs",
+     "link": "https://news.google.com/rss/articles/CBMimwJBVV95cUxOOVMxUmJPX1VRcTdWak96VEhUQWdObXhTb1JBNjVxWmxST3huNHc3anhCQ3BvNS1iTzQ4TW1CaGo1Qk9QblZjLXl6UHhSQXc2VC1nNjRQcTZ0dkEzQU1kaG16UVNsNmpMMTFMZng2bkZqUWxZR0tINUdzMmZOcmtsYjlaR0Y2Q091SGl2aThST3lyWExOM0YzdlVYcDNCN3lQSlFudmFraUNXU1h3aEhoSHZ6d1NUa1Z5b2toTDA5SFZSdnZxLW1oYldyMG1NZTNWbUxFWDNRbllQSE1PeGV4UUR4RVh6SlM3T1JZVHNmQnJGcE1sWTE3QUI0bkhCdW9VQmlmQ3V5UFYyOHU4QlF2dHdwQVdJUU01S3dJ0gGgAkFVX3lxTE13TFZuYVhMUzVjakYxUWt3RTUzYjk0bC1WME9tdDRvUVNnTlV5SVZyS1pGeXRLYjJGM0FoaUdyeVVnQk9YX3dGamtOMllXcWR1UmVwNDFOR1c4ZXVncWZ4SHRIYTJNM1ZrOU5VbjdwSFBYWHI5aHVfTHZNdEpLUFlqOTNwcUc1eU9HZE04YXdDendKLVNzRXFHb3FHT2p1Yl8wYmJCUXc0MWd2dThfZGRvUUR2N1kyMFZtajJwWHFKMFNRVlZ0VlJvN3VnU0NuN1B2X3VidVA1MlprLTJob3plTVNRWHlwYUNnSzlWN3dhSFJ4QzNUYlNnR25MX2xhVnlZU21DUjhMeGw3ZzNBSk8xc3gxQkpaOTFLVTRQQURYbw?oc=5"
+    },
+    {
+     "source": "Free Press Journal",
+     "title": "A Significant Shift In Hiring: Harish Bijoor Warns US Green Card Suspension Could Trigger Job Switches Among",
+     "link": "https://news.google.com/rss/articles/CBMihAJBVV95cUxQRkZxX3pzeEpEbU1pY1ZOUTdTY20tYl9IUE41S1VuQjRwQVU4bkFFaGNfV2t1YV8zVkJGX3VBMnBKMGR1ZjZQSi1haENkSTRkREdqTkkzVnFyZ0xqbkEyMjZERV9KWWN3c1NyTFVVZGVJRmZ1VDVaWWdZZjR5aFd0RkpEaDF5Y1pmM2xGQ1pyS1dWMGx6QkRZZVBDQWh2TkFLd29haDRXQ2NId3ktWHdNdW5LLTdOUVdTS3hLbWxyU3hJUEpOQ0dzSjF1bFF4SGhxSTRweXJQUDlrLWJqYVA0UW1ZS2dIY2ctVTlhX2lSWUZQUE9YODAwemtSTDVXXy1nMFFNaNIBhAJBVV95cUxQRkZxX3pzeEpEbU1pY1ZOUTdTY20tYl9IUE41S1VuQjRwQVU4bkFFaGNfV2t1YV8zVkJGX3VBMnBKMGR1ZjZQSi1haENkSTRkREdqTkkzVnFyZ0xqbkEyMjZERV9KWWN3c1NyTFVVZGVJRmZ1VDVaWWdZZjR5aFd0RkpEaDF5Y1pmM2xGQ1pyS1dWMGx6QkRZZVBDQWh2TkFLd29haDRXQ2NId3ktWHdNdW5LLTdOUVdTS3hLbWxyU3hJUEpOQ0dzSjF1bFF4SGhxSTRweXJQUDlrLWJqYVA0UW1ZS2dIY2ctVTlhX2lSWUZQUE9YODAwemtSTDVXXy1nMFFNaA?oc=5"
+    },
+    {
+     "source": "Free Press Journal",
+     "title": "Elon Musks Grok AI Lists Disadvantages Of Launching Starlink In India, Calls It A National Security Risk",
+     "link": "https://news.google.com/rss/articles/CBMi1wFBVV95cUxPd1Y1ektodHB1Rk5XbVl1NlhfMUc0TVM1elliTTFXN1ZlTW10QWlhT1dSUHRoX2dsTm5Wc2VYczNiYWdLVkczLWd3eUVVa2lMNU56enRBTkY2RE9JcTlOcFNoTDdRR3FVSkZOM1ZaRm1GVUM0Yk9QVFVRSEkxQkY0NTh1MEFEdU02S3BDWFJueFZxTTBGLUF4UzdDT3BrMTF4TnNXRlpWOFdqbnktdlFJd0RXMG1yVExSLXRPbmstVGpzWHRVZGhScFItWVQ3NWJCQnNPM3BnONIB3AFBVV95cUxPRmZqYWF6RG5QeXFKT2xIejh0U0VHR2RsR3VNZGJFT2ZQWXBCMVZnTDNwYzdYUG5RRmtVWU9DdDh3d1l6a0pvZ3BCTHFBUEgxeVB5bjltYmNJd0FFamtUNWlUTGxCMnh5Wkd4RWhTaXNNWmFGYldxMGtoUUI2OE8xLVFHTXBGakNqN1ZPWFRHRzR0a1NFMFQ1SGktOG04MlBKSkh4SWF4LWVmd0FaNjN4VW5fZndMbER1T01KSVJVRVdybmprWFh5TFFfejh1RFpxQVE5cTkyM0NOR1Vx?oc=5"
+    },
+    {
+     "source": "The Tech Buzz",
+     "title": "Grok's DRB Token Is on Coinbase. So Is Grok.",
+     "link": "https://news.google.com/rss/articles/CBMigAFBVV95cUxNdHJrRVFfcVZZV2t2UVpvSkplS3F1ZzIxdGpIY3lUWkVmN0FOeVZJN0NsSGp0Q0tyWk9COWdPTzlsVkpURU54dDRRNDhXYk1aRHZuSlY2SHIyNG00cl9ocGNTNlNxZVg5Mmw3Q2I4bWdxMUh1eXd4clQ2UzNieWNJMQ?oc=5"
+    },
+    {
+     "source": "The Tech Buzz",
+     "title": "AI Voice Training Data Is Now a Quality Problem, Says Voices CTO Dheeraj Jalali",
+     "link": "https://news.google.com/rss/articles/CBMisAFBVV95cUxOWjIwbW9zMTJGZ2U2ZTRRRTdtTmZRMEdxbGxPMmxRMGZnZTV5M3lmdDFWY01vU2l1YllCUjhqd3V0VV9WN2hoZ0VGS0IxY2lJMWZWenM2T0xkUWs1TUR0ZmhKNDJGRXJhdTlIOEFsN2xrMzVJbFVQNVpmZEZZcmprRHNnMXRiM2w5N2JmMDNqeVdqdEZUR0N0QWtBNWVjQzlxOGJ6emlTT3pBZnpTU0hueA?oc=5"
+    },
+    {
+     "source": "WTVM.com",
+     "title": "Trump touts new AI investments, awards top science honors",
+     "link": "https://news.google.com/rss/articles/CBMikwFBVV95cUxOZS1HSDkzbm1tUDFZc2haYjFYZmJ3aVI2bENsZTJqSFo3U1BBTmJYa3Y3aEZNRnIyblFQcTJSM3pJd2ZQTm0wb2JXSDNVUzRaYk5zc2E5TnBuVl9OMzF0SmdyTmJycVYzVUJ1bUhDaVM0X3BwQXlaUE9xZXhmMC1OdG4yYXd2OGFUZ1ctMGtTODV2V2_SAacBQVVfeXFMTWdJbEg4S3BKQ0FOWlVqcTNwaHBSWGFsb1FYbW04U1FQaWdOSHRKMDR2emJlTFZuSUlyM0V1WVdXYnc0Z3lkOTdYTkN6UTVpRkE0eGxGYmFGd29sWTMwZHhJNkpuTmZJcTBuX0FpM2tmRGdoUV84dzF5WmZYWGI1VVJLZUJxd3luRUlOMVlkb1p3OXdmbU5oX3hFbFhBc2VVU052aDYybG8?oc=5"
+    },
+    {
+     "source": "BASENOR",
+     "title": "Elon Musk Awarded National Medal of Science; Trump Praises Tesla FSD",
+     "link": "https://news.google.com/rss/articles/CBMipAFBVV95cUxQRWtNb2hqNzVpZnMyaFFieTliTzJNbWF1ZERCbEJtYTY0bnlhMVMycUFmVzVjdmxfaFprZ0JaUVBMSGdBTTRJWjdqTGJXQi1KVjRzOHRjdlhUS0ZPM3djRkF0MWFZbDEwcDhTQUt0ejV1MzhMejFRXzkxZXZPa2VOa01IOTA3U1kzTnFpdHBZUmhKZHoydHBDR0ZGZHN1S1JIUmhNTg?oc=5"
+    }
+   ]
+  },
+  {
+   "reason": "Single-source rumors",
+   "explanation": "Items reported by only one outlet, including a Florida attorney general injunction against OpenAI, a Gemini Pro paywall change, Anthropic's and OpenAI's separate safety-incident disclosures, an Axios scoop on 'day after' planning and Anthropic's 2028 election effort, are held until a second source appears.",
+   "items": [
+    {
+     "source": "International Business Times",
+     "title": "OpenAI And Anthropic Are Planning For 'The Day After.' The Fear Is A Major AI-Driven Crisis.",
+     "link": "https://news.google.com/rss/articles/CBMioAFBVV95cUxOSndRaDdVZkQ3LTl1aXFjQXJrS2EwUHUtTk9BYWs5RlYyN1lrOEQ5MThNQlF0SmUtVkp2WGYtWHVZbXJ4d25Sc0JaangxejBfUGJISHlpVnQ2OFI4OUFZNlpGSmFGclVwbllhWU1EQUxaMGg2bkdXY3BDOTlOMWRKRnBNNXJYVHZfdWlwa2hIQkZtYnR4OHFRam0yem1LMzZU?oc=5"
+    },
+    {
+     "source": "FF News",
+     "title": "Hexaware and Anthropic Forge Multi-Year Partnership to Scale Claude AI for Global Enterprises",
+     "link": "https://news.google.com/rss/articles/CBMiswFBVV95cUxNTDg0dTNfM2F6RGU0N0FmVkN4WlRnMlFEelBVaTJxWXpSdThvWTdHeU1VWDQxdjVtSUpfNXBycXF2VDBzOGsxUFdza084Z2FfWDY4ZzZtd1hLLUZjVDk0WEJoMzJLTTlvcUViWnhkT0duZ0ltZHlxNlFWdmx3RmxFMlEzYk5vVi1ldDZ3akFzMDlTWHVxMW9kamxaSUVxQjlLS1lXZzlKRE0yLTBqSDVfZlVCZw?oc=5"
+    },
+    {
+     "source": "OODA Loop",
+     "title": "OpenAI and Anthropic are gaming out worst-case scenarios, anticipating a major AI-driven cyberattack and a subsequent political revolt",
+     "link": "https://news.google.com/rss/articles/CBMigwJBVV95cUxPbGZNcmFEcGZkVFFnSFpPX1M5MTNmT2psaTVxZ3hfUzhpd3ZaN0RwM3V0ZlJOQjI2TlU3MXdKMTJYektPSVFYb0gzbzREOUctWFJscVRSMXlhVko4Tk52MzFmOW54azE3cUFLcFBfQ2k4X0VVUFBNeFJWdjRfSnZQenA1Z2FZa2VNSHg4LWhuZXFDbURETWNJRlBhOHowVFA3RGdjNl8zWTdkWENxektpYjZGMXI3Q1BOdTlUX2Y5SHN0aEhDOFRJaFd1Mk5ZY01ramg2TDJqcUZTelhZRHg5bnd0X0lzd2QwUGxrQVVWTElDMFpLbTBzRThYVnIyVzRjWnZz?oc=5"
+    },
+    {
+     "source": "Data Center Dynamics",
+     "title": "Anthropic-linked $366m data center project filed for in Cedar Creek, Texas",
+     "link": "https://news.google.com/rss/articles/CBMitwFBVV95cUxQSHlHSmp3WG1TRzZJVnRfZEdndmhUZUFJa1RqX05RMC1LTEd0UXJxa0hCeXROVGlLV3NTNk5vWjN1U3I3RGxncklwaFhGX3FWejBKOWU1UXJER0U5aEl2cGlFS280dDJGN2d4N3VsWDBXSlhyLWZsMXhvVDZBZlhVbFpNaFpIZU9zLTB2clZyN25Nazc0RkxBWWJja19HLUVZZEpaU3JxTTF6WGt5Rjl0ZVhqeDB3T2M?oc=5"
+    },
+    {
+     "source": "MIXED Reality News",
+     "title": "Claude Code 2.1.295 lets a failed hook block, and its docs still say not to rely on one",
+     "link": "https://news.google.com/rss/articles/CBMijAFBVV95cUxOZ2tISW1TbzJ3UVVkak84RTBiM0c5cUs5WXNXQUxkYmIyaEVsUmlWMFRwaGp5N2tUcXgza0RNN1Q0LWZoSVFXRmtjWC0yeC0zOExMZXNrcFFBME9ZOWh3cHl2N1NHZk5iMWZLcmo2ZjVpRWlidTdkWFRRWnVnSURjTkhVNW14Y2VXQTdoUQ?oc=5"
+    },
+    {
+     "source": "The News International",
+     "title": "OpenAI, Anthropic prepare for public backlash after catastrophic AI event: Report",
+     "link": "https://news.google.com/rss/articles/CBMivgFBVV95cUxQc1ZtdkR5TTUxVDFRcEdkWHo0TUVveEl0NXM1aV95YXNMMlNTZmJlbjVmWjJvdThualFvdHBoZS1mc0FSc1dGZ2hsWldwSU5xMHcxYi1xeFNucHEwOFY3X2IyLUFiUlRiZUpmZ3pKbEZHbjJ0c0daSnpINzhoeTcybmg0UzJWaHR1QnBhRTdPVXN0dGpwZWt5SnhMY0pzc3I0RW1sa0lrYVhQbUhQdFFrTFhpOS1VOFVuYzEwNUZ30gG6AUFVX3lxTE1qY3NXWUlJajNrVEJraGE0dmtKckd1cG5DWGswc3JHV0gwR19JVWtKd2xhTWpCWlk1amkwREZqRmVBdkNhVkxzbnBqeFVidl9RTlFqanR1cXBMYXk1UDBwcmpHZmUtejJibGRCQ2pWTnNzU2l3NlRncUMzaGN0LXFLTTFQTV82VkdkcmJ0eTd5dDFVYU9Ud29KY3BEbldUdmRlWm05U2loQjRPLTBFc19xMFZUMDhCU0tMdw?oc=5"
+    },
+    {
+     "source": "ABC News - Breaking News, Latest News and Videos",
+     "title": "Anthropic says it blocked potential AI bioweapon misuse",
+     "link": "https://news.google.com/rss/articles/CBMimwFBVV95cUxNcHNiU2w4UlN0ZmswWlFZZHBCTFpzZW02U3RNQ29wVUJKQ2NsM2xjV1d4U0dtYjVhWUpmM1N3dm5HYkg3a1ZaMWlYUVdSMFN1SjlfOEt1bVZGNWdMLXFNcGpIZnhjT1FqNVZHdWR0QU40YWs5NlFzY01aekNoaTBja2lfUjRlODJ0c29ObjU2b2c2OHc0OTZQTzFZNNIBoAFBVV95cUxNdFdUcWN0blhrMU85WE55cGo2aldZRTIwT1lxZlA1a2tSS3lUNnJPTFlwRktnZlR0alhrNjlCX1J4T21CMlUwZEItRGhuVTZOajNpNHRoczNsek5nS2RuSTQ4MFFzZUFHRl9Ja01UVUg2VTlUVVozWFA3TVExSWp3d0daZm5KNWY1OHJWNTZEdHZ4ajlYdVF2aFJjVFRTcHZn?oc=5"
+    },
+    {
+     "source": "Axios",
+     "title": "Scoop: AI companies plot \"day after\" scenarios for public revolt",
+     "link": "https://news.google.com/rss/articles/CBMid0FVX3lxTE1ha1RBX2ZHb3UzTExKcWhNY05zSVM4Q093ai1JU19kekVLMFFXZHBzUUxpQkpIOHZTN2NUUzBLSUNldEZZNEVjREkxT1gtRzdLZTRsZU1vck1mY09HdUVMQmR1X3lWdzZFcGoxWkJFNDVGcGx1ZTZN?oc=5"
+    },
+    {
+     "source": "ABC News - Breaking News, Latest News and Videos",
+     "title": "Anthropic says its AI models hacked 3 organizations on their own during tests",
+     "link": "https://news.google.com/rss/articles/CBMipgFBVV95cUxQX3ZqRkZfWUw5X3dBbVVkUzh3NGVXTXdrOEIwOVRGUHdTeTRaaURSWS1DYVA3aXdUREVFeTM1ZnF0Mm91bzJTb0R6OWR3a0VwaFBPQmFqeVRuQjdrUFZSSFpmbjMzSGZEX2xCeE84c3A2Q3dpRnlEcVZ5MFhLVUE5b0lwUml2eWFacWZDVHJsaVh5VVJMZjZRdmlNSWlkQW1Wa2Rkb3Jn0gGrAUFVX3lxTE9RRnJFaXBvLVJUT0NMMXRtN0JscFBCQTIzRHlQUFdYMjJ2bnZkQ080WGZQYUtqTGNaZTZidWljbFhnNklKVGFaWXBLbXdtV0xkOTlYcnhFOUxMYU1vUnJMclpyR21nYTBLUDh5UURFTy1MbGRUQThiWXNLSVVMWkZJQlpwWTNJQUpGM3dyVGNHZmp6Y0E0R29FaWtkd25sczZ0RktJRTRXcGVkNA?oc=5"
+    },
+    {
+     "source": "Fortune",
+     "title": "Anthropic is launching a 'presidential engagement' effort to advise candidates on AI policy ahead of the 2028 election",
+     "link": "https://news.google.com/rss/articles/CBMirwFBVV95cUxPSk9lbDZlSVFIVlZ1aXZKMzNxWkJudG1aVHN6cXc3bXhwTnVhMUZvcDZxdTlkNGVwR0ZEVEZUTzJCenlMN19TeDJ3cHdiU0dPMGVLWjlRbnBiMXVHX2lrTWx4ZlZnb25MdGZhTmdPdU1lQ3FibVQ0MFhaNmtuaG1OTmpQVnBMa1o2dEZBYXlJa192eWVFU0JyN0p3WEZFVlgtZk9LTkZPWXRseU83ZHo0?oc=5"
+    },
+    {
+     "source": "Pasquale Pillitteri",
+     "title": "Gemini in Chrome Reads Your Open Tab by Default, Google Confirms",
+     "link": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxPRUowaGFaTHRhNDRSMEtqdTRBb3NhSl9DcEF2Rl9US0gyNnc2Mm9scjVVMm04UHJZMDMzeDZpTkJQbnp0UjhnNm1peVNpOVR2R0hnY3Q2T2JlTmZ4YjNRU2UtcFFjbXJld0lUekVsWXNhRGRXR3N6alY5RGtIVDJ6YlBBbGhSMzFlcEZr?oc=5"
+    },
+    {
+     "source": "Pasquale Pillitteri",
+     "title": "Google launches Foresight for Mac, an app that transcribes meetings offline",
+     "link": "https://news.google.com/rss/articles/CBMimgFBVV95cUxPSjhiUGV5bElqQ1dnTHFJcFhya0ZpaHgyQWRrdC14T0FxVnkwVTBzWC1LVWZiWWdBN1RfNjZvTUZXTjFHWHgyYVB0My1Ub0o4Nm9GY0hWaXQ1VE10WG14WGh0N3NoU2Jrd2N0Q2hOV2VKcDB2UDhGbDdJMm1aWXd5WjIwTXhFZUtqQWtpQmJVQ3NGMFVXT1FCQjJR?oc=5"
+    },
+    {
+     "source": "Computerworld",
+     "title": "Gemini Pro is now only for Google AI Pro and AI Ultra subscribers",
+     "link": "https://news.google.com/rss/articles/CBMi7gFBVV95cUxPQmh3aXo4YW9MVzQ3ck52MWg5Q1M4WlBzY3lVM3JYbm1EbE1nSlRDaWt0RjNoSzF4WTFaaEhBQW5XMWF2WjMtSkZIWk5QVUQ3UDNWVU5URVBMNG4yQVVGd1hCZ2VEZ0k4NHZyR2VIdUxHZVp3bUVzQnZGWW0wUkEtNEFMVGJjNElqeDZ2X1ZDZWFVc0NkVl8yc3ZWVUx2Q3pZeHR3RTRTTXdGRjBWaUhWeldLM0gyWGphZTJ3U2trM3B6VGJ0ZE02NGZmMXM3eVhYZVVRUzBMbTk0azNKVjVVRjJ6MVd3RUxXdHVrRUVR?oc=5"
+    },
+    {
+     "source": "EdTech Innovation Hub",
+     "title": "Google selects 100+ AI startups from more than 2,000 applicants for Gemini Startup Forum",
+     "link": "https://news.google.com/rss/articles/CBMixgFBVV95cUxNNFBTbl9aaUp2Umg0VTQtNjdHcF92TnppZVppX2tUa2dzSk5VME90NVNQUDRaUnFiQ0hsMEtwX1BuMWhaUlE3ZVo1ZlRZNVNkSVN2MGFPaC1uREV6MmVQVV9pOUN5LUtNS0stVkswSndJX19KQ1ZNaXZOdTZqb3JYa1pWRXNZR3EzbmdSNFpWOVN4bU5jYmVJRTdwRHJjQ19naElIQWdaUC1tQk9RX2lBNzJ1UmlhSkNJY1FXM0xwWHdlaVFNeVE?oc=5"
+    },
+    {
+     "source": "JournalArta",
+     "title": "Google to Move Gemini Gems to Skills: What to Know",
+     "link": "https://news.google.com/rss/articles/CBMifkFVX3lxTE9Eb1p1R1VMamhBQzViUGhIeHZKYV9ETmxZa05DTWJjNGhTemZHbFNXZjBfMmF0M1FxNExWanNOVkFWNHpqeV91c3F2OUJLUlB1d01vUkdieElMOEJwZ1JScHBDN0dSRld6d1VIM2RVWUxud2NHRTJ4WUVnM2ZBdw?oc=5"
+    },
+    {
+     "source": "scanx.trade",
+     "title": "LTM expands Google Cloud partnership to drive Gemini Enterprise adoption",
+     "link": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxPYTBhcF8zcmdPU1dlT2tMOE1IVlhrd0ZDeVV3eHdYYnM1TlFJaHhHa0FRM2lJQ2FTTFFiWTFiRGJuWHZTMzJ5QUVzZnAwZ2hXbC11eDlDRFQtUVR6Qmh4Q2xKa0RudGNSeHNkRG4zS25kWmp3akU1XzRpZGNEWlI3TkhyVkNRZzZ2Y3E4QzhjUFRXVUx0NzhKSXRDYUZIVG5jY3BGbmxrME1NYWxsd0E4WlJ5YVZmeXFHTm9ycmIzc2VmZw?oc=5"
+    },
+    {
+     "source": "https://streamlinefeed.co.ke/",
+     "title": "Meta Stabilises Glasses SDK, but Kenya Faces Access Limits",
+     "link": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxNcTkySzh1VGlySVUzdldqZVZKOW9oVkVYOUc2Y3M0Sk5XMmppSm5XaEFha1RnT05JNUZPaUFkODRyWG5ad3gtRHNBYUx4aHdPdXhkMmVMLWdJT29rSlROSERPX1hBTVNTcEh4RmE5WVhvMll3Ynp4MGltNmZfd3RiY3FPZkFkbkRP?oc=5"
+    },
+    {
+     "source": "NewsBytes",
+     "title": "Meta portrays AI data centers differently to investors and IRS",
+     "link": "https://news.google.com/rss/articles/CBMirwFBVV95cUxNMW9NN1FQeFd6eVVhT0RwNnQwSDJrWTdoT1BwY0pGZFB0ZXJ4UFo2S1FNWHdwRFMtM0cyVUh0aER1OGNPQXRhMDFPQXl1VGIzT2ktZGhxTHpJT3loWXM5LTQxeU9RbHlWcGt5Yk1vb2Rxc1JnMDVkLWRVTXZjY3VoemlLeFlXcTVhWjJ3eWZrTFV3SG9hNXpPOTY5WWl0UlZpOFNCSU1VZURHQWU5cHZn?oc=5"
+    },
+    {
+     "source": "iPhone in Canada",
+     "title": "WhatsApp Launches New Parental Controls for Teen Accounts",
+     "link": "https://news.google.com/rss/articles/CBMijwFBVV95cUxOVFdFb0M1d3hZOHZyVExQdl95TV9NS2wtbHlVRXV6UndrYXRsb0NLaURDczIxY1d6RGFtU1J2MzQ3LWluMExHRDhUWTBKNTJPMTNSeThYck5TOHlKUEVpUE93SDNlMVR1cTJNTlplblRvdG5WNzhUc3JKNEVoaWcwb3pHTFJRUDVaY3Ayak1tZw?oc=5"
+    },
+    {
+     "source": "Pluang",
+     "title": "One-third of websites block Meta's AI agent Mus...",
+     "link": "https://news.google.com/rss/articles/CBMijAFBVV95cUxOdTFyZTZ1THFDOHl1bllKS045ei1zMmVjb1lWUEFsbFFUbE1sNVdiZFphSmF0SF9ZbjlVN3lYb0JJN2kwY3JlaktBMHN5YlM2cjJWcldVWWJVWUZTLTJac2Jpb21qY1Fqa2xSSHQxRGtjTXhDN0RCOGxadVBpSWxLWXQ1akFFOXYyUEFHYw?oc=5"
+    },
+    {
+     "source": "chronicleonline.com",
+     "title": "Florida attorney general seeks injunction against OpenAI, Altman",
+     "link": "https://news.google.com/rss/articles/CBMi7AFBVV95cUxOTUJYb1ZZMkhFOUJ1Z1M1cTZoMWVJYU1LSDhybjVFQXMxeFdtdUJPUjc1TENOb2c4bXk1eExPNzU2THVUSTloY1BMcjVtZUZfODBRQXI5Wm11bnU1bXJxT0M3OGpWSjY3dWxBWWhoYmxvV1lxVXE5TGV2VWxtcWxmbjlMVHhzWlJpVWdSQlFtdjFlTG1GU0t3dUlDQkZxb0hOTmF6ZFJfNms0YkRuWmxZQjhCQVYyQm9fRnlMXzZQV21pVHRsdUpHUlVKMTFfRUlKMm5uWU42cG5pSk9DUzAwMXFzZUZGR0MtQWNjQQ?oc=5"
+    },
+    {
+     "source": "The Decoder",
+     "title": "OpenAI revenue keeps surging as company seeks $30 billion in fresh capital",
+     "link": "https://news.google.com/rss/articles/CBMinwFBVV95cUxNOWZSZkFIQ2xKX2RObjFmd01FZzFraXE4enlEQnJFVFVNUU1fZFktWURLaFJyaTRhMzk2cDVHSTlHaXJMSm9STHBoX3V0WEJPZGVLSHZGQVZCZWI0TXFMSUpFV0RMN3ljMXNIeU5LSlZQYUZPMFlvS2xjaHhBTTJsSkJEV3dfZFozRURPc2ZUYVU2aHZZd3JvdXpaeHpQMUE?oc=5"
+    },
+    {
+     "source": "Global Trade Review",
+     "title": "TradeSun sues ChatGPT’s OpenAI over copyright infringement",
+     "link": "https://news.google.com/rss/articles/CBMingFBVV95cUxOVG0wQUdrMGItbGVVRUF1N2tuTjYxSmhSaWZLcW96QmZDLWVXNlVRbG5PVWVmd0s1LWpBT1JKSmI5a3l1NzhNWlF4YVAyUEtwUFJ4THFQZGlLWDBneHBvTmJiWFVQR1lZdWdESWlpT2cteGtwNm5YZW5Td05QNndUZnhvd040NHBGT1NtRWhzMjBiR3RXQ1lwS2ZTOEQxUQ?oc=5"
+    },
+    {
+     "source": "Retail Dive",
+     "title": "Virtual try on launches on ChatGPT",
+     "link": "https://news.google.com/rss/articles/CBMieEFVX3lxTE9xQUJ6STY4VVFvdldXNlRLLVBONzl3cHFQMWphcGxXNFFMUUJ6R1hYRjBUamZkXzd6R3BxRHhmbmpVa19GN0ZxMmw5SmpiVTY4OXNmZ29lZWVDSTNwVEJMMmJESmRxMDhmVXFKZzhYRzJpbnVKamJOdQ?oc=5"
+    },
+    {
+     "source": "InfoWorld",
+     "title": "OpenAI reports three new incidents of misalignment",
+     "link": "https://news.google.com/rss/articles/CBMioAFBVV95cUxOcW50RHhNaW5nS19OTng4YlA3OXBoSDZBcnRGREFUdTZzRXYzek1LSUdsbU0xLUhEOXowSXFBQ05pOWVIcjUxbkp4aFliMFFwS3EzSXpscUV3UjlxdVNFLWtyMmhpcFZ6T1JHdm81ZVZoYkRUaUNwM0ljVndJaGRqY1B5OU5weWtjUGlNNmwxVlR2ZFhiSjkxUDRxNWZCTDhp?oc=5"
+    },
+    {
+     "source": "Startup Fortune",
+     "title": "OpenAI tells a California court its AI agents are not its responsibility to control",
+     "link": "https://news.google.com/rss/articles/CBMisAFBVV95cUxQSUNIcXNWa0N1WkJlQXdZZlJXYjg2ZzlyOGlTUDlzbkZpVFBGUURCVHBVSTlFQ29wa0MwS2FiWkRPN1V3OVBNLUlCckhCb0JJTmo5MFg1eG5mTVRYaXBrT0M2dUZ1N0FQMTNZSTZMSTkxazJFNTE1bG5LUjVVdzU3R3RIcjhvTkJ4eUFjVFNfeWdsNVRNOVRYV09sY1pFS05oOEZQMW1wbmd0YXFZSVFibA?oc=5"
+    },
+    {
+     "source": "Quartz",
+     "title": "OpenAI's Asia-Pacific policy head is leaving after six months",
+     "link": "https://news.google.com/rss/articles/CBMifEFVX3lxTE9VM2EweUw4ZHA4ODJTLXBfS2F5TlNxaWs0bThpT3ZPOU1OZUJ4b1lQTEZEM21CY1ByR2IwWTIzTVQtZk9EUkpiN3Z3Y2pwWldBQmJXVXdJVFZHRmFydW1OaTRRc1VoXzV5U3RXNUh4QjhoR1JwUWt3UFRnQjA?oc=5"
+    },
+    {
+     "source": "Stocktwits",
+     "title": "Tesla Reportedly Pushes Staff Toward Grok 4.5 As AI Spending Cap Takes Effect",
+     "link": "https://news.google.com/rss/articles/CBMi2AFBVV95cUxObnN2YnViZ2hUNkJDUU5LdHVwV1ZYa1hEQk1KR1NpY3JrRmZwY3R5UkRhRUtCUlg1SEt0M1FtY0NfY1NUaktZRkdpR0xGRUw4RjV1QldBTzVsaVIyWVBHd0IzY3R1VXIxdHVLWUJwTWhyUGt2NE9wQjZnbEpfeW9lMkFKcHUtN2VBZXJ0UGpJNmNQcV9FZDdJQjRfczFubWJBdXVmTGpWMUlkU0pTeDNBTmNvMmI2QnExTEN4MGZLTE1YQ3pfUGpXVkhKZndFUG5LZ043VzVSRHc?oc=5"
+    },
+    {
+     "source": "remio",
+     "title": "SpaceX Nvidia AI Hardware Financing Puts $40 Billion Behind xAI’s Compute Race",
+     "link": "https://news.google.com/rss/articles/CBMipAFBVV95cUxPT0FEbmdGdWRjaWk3RllhTWdoR01Bc1JhYzBhUmZnblhqRE9IM0FLcDFDNE9hdWdFbm50MFZpU2MwY085WjdRdjJEaHBsMDNpRHFkNE1sRVBFMDZJaWlVTzZBLXlLNGxORDUxd2pnUHQ1MkZlZTlVbmFhNEh3RGhCaFFZY1pPdGdxZDZyNnRCQU9GQmp2cS1rVW5HQkhCVl9Kek02cA?oc=5"
+    }
+   ]
+  },
+  {
+   "reason": "Older news",
+   "explanation": "Fresh coverage of things announced days ago: OpenAI's math paper release and EU watermark plans, Gemini 4 Argon, Google's Playground, Claude Haiku 5.5, Meta's Singapore glasses donation, and company posts more than a day old.",
+   "items": [
+    {
+     "source": "Meta",
+     "title": "Debunking the Biggest Data Center Myths",
+     "link": "https://about.fb.com/news/2026/10/debunking-the-biggest-data-center-myths/"
+    },
+    {
+     "source": "OpenAI",
+     "title": "The eternal complement",
+     "link": "https://news.google.com/rss/articles/CBMiXEFVX3lxTFBVWmpWcUY1SVAtVWc2bnhmNHhSOWVFYnY4aGR3RG4xRHZwWlNNdFhwRS1aSUZhQk5kNUpGRnhBdU03T01rU0JXaWdnQ1hPck1RT0lCbE03V3Q5Ti05?oc=5"
+    },
+    {
+     "source": "OpenAI",
+     "title": "How Oracle turns days of work into minutes with ChatGPT and Codex",
+     "link": "https://openai.com/index/oracle"
+    },
+    {
+     "source": "OpenAI",
+     "title": "Pollo AI turns creative ideas into campaigns with OpenAI",
+     "link": "https://openai.com/index/pollo-ai"
+    },
+    {
+     "source": "OpenAI",
+     "title": "LegalOn halves Codex costs while maintaining development speed",
+     "link": "https://openai.com/index/legalon-halves-codex-costs"
+    },
+    {
+     "source": "xAI",
+     "title": "AI teammates that finish the work | Grok Bot",
+     "link": "https://news.google.com/rss/articles/CBMiMkFVX3lxTE9KUlpuaWtVOGw0VTlVRGlxYVdJZUZRQ3BPakJPYVQ5UjNyaGQyVHk3RWdn?oc=5"
+    },
+    {
+     "source": "Industrial Equipment News",
+     "title": "Anthropic Revamps Cyber Verification Program",
+     "link": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxNLUluQnljZ1dfTS1YeUliNzl4N0xmZWZFVXh2QmFHZXlZYW0zVnFtUTZoMlZzX0ZBV2pHREVmTnJpM1BhNHVTOW15dFBNS0FISlc4MnJMUmNNbktnSllXRTNQOUpoZmRLOEd4U0RRSVA1UDZjbXdLaEZzU0RxMmNEZlVvWGFkTkdfYmgyMWhfLTBqMWJPY1o4WmNSNzROTld4bFc2ZDUzR1k?oc=5"
+    },
+    {
+     "source": "TechRepublic",
+     "title": "Anthropic Launches Claude Haiku 5.5 With API Prices Starting at $0.10",
+     "link": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxONmQtZzZRS2E4SWEtaDM4V3U0ZHJTZkhiblJOdkpZem9WR2V5dTYwWVk4TF9zeFJiTF9keUg1LVBEYTdoUTc3d2dXN1dkd0RBeEYzcG1VaVNFWmNuaGtLX0VQTXBaazNPMlpKSDZyd1diQTY0TnIzZ2FNQnoxLTNiYVFxaEF6aW9C?oc=5"
+    },
+    {
+     "source": "Pasquale Pillitteri",
+     "title": "Google Launches Playground, an AI Game Maker Driven by Text Prompts",
+     "link": "https://news.google.com/rss/articles/CBMikgFBVV95cUxQSFZ6b05nVTBvTWFneVlQTUZ2VEk0a0M3WEt3Zm0yeGVrRnI1czJXLWViRHN3N2JwdTVCZlE1b3hlWHk5NzJLaDRkeVlWWVpDWXV3R190U2tGblJNejNsVTJmN1pfQTBfTUhCclJ4UHpFWXVFaWJLdGpLNnBHZzJ6c25pZUV0c2tzdUdIdnNDR2xKQQ?oc=5"
+    },
+    {
+     "source": "The Tech Buzz",
+     "title": "Apple Home Hub, Google Releases Gemini 4 Argon",
+     "link": "https://news.google.com/rss/articles/CBMiwAFBVV95cUxQb3ZfV2lzNGJpRHBkZjBxd2dRYlZ6ck5DSS1Fbnk1T3JZckM5VkRDdFBzUWh3N2UwSlJORUx1SEJsbVZEZExmbDlRb2ZHU0p4OGVoSTJVTnZhWjZ1ckpYakhmb2R5Wl82NmNHXzZ2dzdldkJJN2IySjlTQmxuOUdnMUpMaDNWQllyMHN3UGZNZUdGdEhQYmJBT3FoRlRWZmFFWDBlMzhMMGJjdUFFWTU2bnVmc0JrbG50R0o5NUYycUY?oc=5"
+    },
+    {
+     "source": "The Blunt Times",
+     "title": "Google Launches Gemini 4 Argon AI Model: Features, Pricing, Availability and Benchmark Concerns",
+     "link": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxOWjZNR21fbGxzdnktUU1TY2pYLUtTTnFGcUl5emcwRHM4UVItOXlEcEpadWYzUnpRM3ZXSmRzMXpGaXlFVC1TOGVCMy1TVERRUHQ1ajlkaGI0cWh0ZVFCVF9JOUVicWVhR1VGUm85Y2V5c2liclBoNl8tMV9DaUotS3BvY3hFRHZfWFphbEduaUZiWVN5SU5DVXNWZUNFR0FMSlFJWTJmMGhrWHlQUUJDNXIxaDZRYWJDUUxaUFNZY2tlQQ?oc=5"
+    },
+    {
+     "source": "WeRSM",
+     "title": "Meta Donates 1,000 AI Glasses for Accessibility in Singapore",
+     "link": "https://news.google.com/rss/articles/CBMihAFBVV95cUxOWEZ3NzlhRDBJRGxuRGVvTXpJZk83NmlOQzRJU0tFQ2p6XzBsTVdWci1QZ1V5UnBFYm9QYXFDRUFxc0JRRUhVdWpBY1RuaTROei14R2RVdE9lTm85MXRqZTZXSGtkRXlUd2hraXlFQkJyY2htRU5rajVRTENyQ0VOYUpTNXQ?oc=5"
+    },
+    {
+     "source": "MIXED Reality News",
+     "title": "Meta donates 1,000 Ray-Ban Meta glasses in Singapore with a $30,000 training grant",
+     "link": "https://news.google.com/rss/articles/CBMikAFBVV95cUxOR3QwNFI0NVFUV2dfVUUyV09ROXA4TkNsbDg0YW5mM0ZrQzJWUUR4MURFdzk3ano0RlJTQzhEUFVrdElyT29XVnMtNHN2d0xRbE1fQ1A5cXo2ZGZXRW1uMDFtUzJRS3ZYdlpKY0JYN0Vfa0pWWnhnMk9Lajl3SWFleDlSaXRxcUpyTXF4UVMzclA?oc=5"
+    },
+    {
+     "source": "Tech Edition",
+     "title": "Meta donates 1,000 Ray-Ban Meta AI glasses to support accessibility in Singapore",
+     "link": "https://news.google.com/rss/articles/CBMipgFBVV95cUxNZFZIblRhc1VSbXdMX0UzTHAwM1pHcW5maThzNkJqUjROcGQ3dFNSQzZhM0ZtcGJ6WWZOcFFSY0haWFczSWhQR1VTbkhIQ0ZiTnJtYW90ZEhOOGkwSnF3YXc0RV81andGNC11OExONE42a09SbEFzandxUkY5Y2piLWlLSVFJN2dzY1Jwd1R1VG1zc1g0V2ZPTzRHc0FfY0loRElVa1Z3?oc=5"
+    },
+    {
+     "source": "The Cornell Daily Sun",
+     "title": "OpenAI Claims It Solved the Navier-Stokes Problem. We Asked Cornell Professors What This Means for the Future of Research.",
+     "link": "https://news.google.com/rss/articles/CBMi9gFBVV95cUxPd2dwcktyN0R1QUhWV1dLMnF1X1pDMzlpZzNabF9KbkVGOGRZMEk0ODVQQl9WN2ZpQnF1R2VpUFBxUjJXaWJjY2JJcUZBNUtMQ216V0xBUUxSbExVQUczS0RqWDVMdG9Pd0xiYXRYdEtoRnRPVkttSFR5ZkNVTVh4SFJmR0FfdzViQzdGQ1lKdzNTV0dJVi1VaTlZeXBYZVBVSld2bXFDTXl4cTlpQzNuR0dfV1FIRmdNU1BaS2MyZzVJclJJbkpiMzR0MlBVZDk2REp0ZUp3dmo5ZHJKa1RJcUs4SGhfZzdjNVhkSlNidlcxRHd4RWc?oc=5"
+    },
+    {
+     "source": "The Rundown AI",
+     "title": "OpenAI releases 722 math papers from an internal AI model",
+     "link": "https://news.google.com/rss/articles/CBMiY0FVX3lxTE8zbmJ6U3lMaC1TbDRtN1AzdElPa1NwR293YWYwcE1ESXEtRTdleXFsa1hEeG9zT2NIcE9ZZnZ6TXlqcGFwOGZlUm9DbFBOOFNhcDhpYUJnWUtMaDFNU1A0cENDQQ?oc=5"
+    },
+    {
+     "source": "The Rundown AI",
+     "title": "OpenAI plans textGrain watermarks for ChatGPT and Codex in the EU",
+     "link": "https://news.google.com/rss/articles/CBMigAFBVV95cUxNd3JIMFhlYlRQZ0xDMThpdUc2WERYczNQeXJSelRVOUhhZ0RZQjMxTzk3YzZuSEw0QjFHdVBKa3B2YzlGTnMySjFKX1I3Q1dqbGlrWDBvV2ZrRWhfNDJCdXVvZG1Ga0FyRkJuTFhnNDZTRXpOTm9uMGJ4WHlzejQ5UA?oc=5"
+    },
+    {
+     "source": "Futurism",
+     "title": "Mathematicians React With Fury as OpenAI Releases Hundreds of New AI-Generated Proofs",
+     "link": "https://news.google.com/rss/articles/CBMif0FVX3lxTE1lcHAwLTdEamxxdlR6TU8xUTdBZXJEUTZ5WWU1Vzk1alVLMWYwNmJhYk45ODNOSUFVOFhfemFvMXE4TWlmX0Z0aV9nN0Znd2JzUjZlRnlQdkhMNHFpX3c5VVRVUWo0Y0NHUFFRNmhYWDV3UWVRaXgwd2oycWZmUDg?oc=5"
+    },
+    {
+     "source": "The Conversation",
+     "title": "Is this the ‘mathocalypse’? Why OpenAI’s latest results dump has left mathematicians in shock",
+     "link": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxOOWVKNnJhdE1kLXd4a0Nfd2o3UHNHRS1fWGxHa1h5UXBWOGRhYjVOUklUSy05eTJ0RC1QN3FrZkxWak5mQ0ktUkNCeldZMjlJUHlqQ054eVhCUEZWUUhFSzRJVGltcGNuNFRZMG5iaTJWQ2pKdk5PdjZXQ3BUWWR1UkJ4ZXkwb0RYazloWmxSVV9zZS1OSm1MYTJ6cGZMSTRHRFJvMDlGam1lam9QNzVwbmpVY1RIdGVkZVN5b3hZZjNfZw?oc=5"
+    },
+    {
+     "source": "The New York Times",
+     "title": "‘Breathtaking,’ ‘Devastating’: Mathematics Reels After New OpenAI Release",
+     "link": "https://news.google.com/rss/articles/CBMijgFBVV95cUxPODBqdjFtSkFGUTZYd2w1WlRnaWFfX3NiWDJ4OXgzdGozcV94WFV1T2JWY0lrekg2ZGR6Sk1wMGtNMzNDeXFmdnc2Zl9zTk0zMDhCLXMyYUFVSjRVNk1CTkF2Y2h2VF9HRVZvV2xfRkpiUTJsQUlNV0ZnaFBTWGxJUW5mbkVEdjVuQ25HMHV3?oc=5"
+    },
+    {
+     "source": "Axios",
+     "title": "OpenAI's math breakthrough points beyond math",
+     "link": "https://news.google.com/rss/articles/CBMibEFVX3lxTE5LelN6VkJTbXlOd1VicGE5STlrQVZJNGVuZ0J4eS04cmJ3RGx6TWRSeWdkYkwySmx4dElWLWZHN3F1YjhMTTI4SGxlaHVxTDg0RGVvVUUyaXduc2ZwUmFYWlY3Zy0zcnhTSE1Wcw?oc=5"
+    }
+   ]
+  },
+  {
+   "reason": "Other",
+   "explanation": "Anthropic's Claude Science ultraviolet sky map was cut only because Anthropic hit the five-item limit; also left out were OpenAI customer case studies, xAI documentation pages with no detail, Meta product pages, a temporary Gemini outage and a one-off billing dispute.",
+   "items": [
+    {
+     "source": "Anthropic",
+     "title": "Using Claude Science to produce the first complete map of the sky in UV light",
+     "link": "https://news.google.com/rss/articles/CBMibkFVX3lxTE9sMnp6UURINkFSMTYxWUIwUkhnTkRQLWhjYS1tMFZ5VU1acWY5STFDRDcyVXJVN3JfdXU0bmMxd0VPaG9tM1NDcUJHTENGbHdLVkxLa1ZQUVY5enJIVndMYVRRem9Idmdmei1ZTWVR?oc=5"
+    },
+    {
+     "source": "The Decoder",
+     "title": "Anthropic's Claude Science creates the first complete ultraviolet map of the sky",
+     "link": "https://news.google.com/rss/articles/CBMipwFBVV95cUxOQnpKWlNzRXhtTktjWEIwMFN4b3FscktiYVhIc1ZzempaWW0xUGFsc2ZxaDZrNTJ0YjA5cHlCRGFRUGxGckNmT2JyS0JQUjVoRmZiSEZYRDRIa3NCaURzSVdNMTNPMnNNNVlrdG5GZmVwTjY0aE5faFZUNnAtNktLd3FVZmtIZEh3TzNkUEd6dFJIU0hZLWUtSU5QanVQby11N1BNTmdOWQ?oc=5"
+    },
+    {
+     "source": "OpenAI",
+     "title": "Asana cuts model costs 76x in browser tests with GPT-6.1 Sol",
+     "link": "https://news.google.com/rss/articles/CBMiWEFVX3lxTE1zVEh5T3B2VWRZc25KOGxJYndILXRwa1l5YlhNb0NmeE5BQ0laTm1pRGNDUmY4SHNjeFllZHVrcmZYeklqU2JrMngtbHhQTWpfZGtwSUVOS2s?oc=5"
+    },
+    {
+     "source": "OpenAI",
+     "title": "Sophos cuts threat investigation time by 96% with OpenAI Daybreak",
+     "link": "https://openai.com/index/sophos"
+    },
+    {
+     "source": "docs.x.ai",
+     "title": "Team Bots",
+     "link": "https://news.google.com/rss/articles/CBMiTEFVX3lxTFBLS00wRjdIcV9yREoyX3hzODFqLWJhbWpxV284YVp6Y2JwbUxsYkhUSkxiQlFvaWctSU56MXBMbmhGRzNWemFEckwySjk?oc=5"
+    },
+    {
+     "source": "xAI",
+     "title": "- xAI",
+     "link": "https://news.google.com/rss/articles/CBMiOkFVX3lxTE40TV9nVDJfcDllS3lERDNVdmJfRU9XNnduWUduc1hIOGZfSnRCamQ0R0t2QlY1VGx1WHc?oc=5"
+    },
+    {
+     "source": "The Register",
+     "title": "Microsoft and Anthropic play invoice tennis with startup's $17,600 Claude bill",
+     "link": "https://news.google.com/rss/articles/CBMi0gFBVV95cUxNR3IyOXRJbWpGdFQ1NDhGdjZXNm9udktlLTM0Tm8wYXlyVWs0T082c3lRZ0tyQzI5NXBCcmhIV2ZTQlVVY3o2dU1pOG1pTDFrWF92YmNsREEwd0tUd3gwOXNPR204ckVlWTF6d3FLWS1WdGtZaV9TSm9BTXlSN0pseU8tRHZabGNmOVEwUXIxVDlYMHhtWUR0aDlSQkdmZVd6ZHJpS1ZaREtESnRrN2wtUmZmeEJWVW0yck9sUFhodTQ1LWVpcHlFdlRwTTF3S04yR2c?oc=5"
+    },
+    {
+     "source": "Türkiye Today",
+     "title": "Gemini partially down as users worldwide report problems with AI generation",
+     "link": "https://news.google.com/rss/articles/CBMivgFBVV95cUxOOVFkam4xcUVEdWoxOXBvTFZxLVB4SnlpSDhTT3lBVUZhOW1XNWtOTGM1VzBPdjNCZ3ozUUp4V3FRZU0zbl8za3hIeXQxR0Q5NExOTExTUmdYNWdtM3B1WkVqSkNkN25kTW5GNUZKb1dxdnIzazE3WmZRRnRBMWxFR1ZZcjF2NFJydTVUajhUV2V1QmRteE9GWldOUmE4WlEtcGRSNzZPMGtOMWIxMjlTSmhLU0ZwbUhJekZndDd3?oc=5"
+    },
+    {
+     "source": "The Sunday Guardian",
+     "title": "Google Gemini Outage Today: Is Gemini Down in the US? Users Report AI Generation, App & Website Problems as Gemini 3.1 Pro Fails to Respond | Check Downdetector Status",
+     "link": "https://news.google.com/rss/articles/CBMirAJBVV95cUxQR0Z0OHI3T0djT1J1bFpnbk83UEZ5YjRNRDBvTC05Ry1JNVRLRkpYdnkzOWI4RXJ6TGVxQ1RiYkNmQ0FxNWUya0RXR1ZZN1dGV1BzWGNBOFNwZUN5NTZmczZjdV91T1YySm4tMjh3cllPN0pQREdDYkZuZ3FQNy1NNk1ONUpsSjcxSDJFdE8xUFY2em1NQWdkTDdPbk5hWWE4QkpDQ1RnRnpqZGNvaXVmMThmTUlDaXpVa3R6SGd4Q1hHSXNhNWhHaFZXYUZsaXNIcHFfSndkVWdjSmFlWWQxaElvcVVVeXNVaVNXNU1maWk4OGMzZENiU2lZVkI0VTByYWJXeE8zM3BBZkx0aENCT05TUDViTHJGeV9rR01uZlJDaE43NVlHRDBCcDfSAbICQVVfeXFMTUhhQklnZTlTTnhNdjZFOE1FZmk5ZHVfdDJMcmdaSEhFMG1jbUltckFGUlozeHdRc1drZ2tycHRYVDcwLTRNb0tqVXVyYTM2dUVqM01vX2tWNjJRM1RxMXZtUkdyV0h1MWhFa3RTcHE2QmpxeEdYNzExa0hsd2NDSGt5T21iY2l1YmVEWkdLcFdhR2I1YWRvQVhOQ2p5MHU4dnptaGJFSkZHcG9raklUSlN0OVNkbzVDV1V4aUhWZ0FRNm55Zy04N193dG94R0V2bU14bWwtY0lSVEowMl8yQ0s1aGdaU3o2YVU2WHVmbkp2UnJPbjNlbU5IY242b0ZRQUI1UW9RclYzUFBmWWNOV3BXakZINGFFUGZyYXdZTS1EVTBLQTg3RURCR213SzI4cEJn?oc=5"
+    },
+    {
+     "source": "The Sunday Guardian",
+     "title": "Google Gemini Down Today: Is Gemini Not Working? Users Report App, Website, Login, AI Chatbot & Response Issues | Google Gemini Downdetector Status",
+     "link": "https://news.google.com/rss/articles/CBMikAJBVV95cUxPUXRJQzNPSnFocUhsczZSaUhzMGJCTkFPZk1TaDQwTkVrLVRQNDR0VnA2SDRTbnpzYUFwbUxiNnRxZG13Y0Q5RFNwQ2pGenBWOG00N1hHc0FMVDVVX3ZSN0Y3OXd3MW9oNXhVbHFCT2NiTWlnYjV5X1lORmNqTGRqa1RCOVV6SGZ5eGhtU3dvRVJvS0dzV2ZCa2I1MThmTHhsX2lLRG9wMHZrMkhvMVlsQ0RoOHVsUm1QbEdlOUhpWWNfM3N2RlQ1N2ZNN2RqZEVXNk1MUkdKUkdQMVVHMXczcktjOHczZlFRTXhobVVhbEROd2FtZFNMLWs4WkJ2QjFCM3lPOHVMbExxQ0k1OTBRQdIBlgJBVV95cUxQVW9ueUdGZ1J5TUo4ZnIwSUViSHJoV0JzZjJmaC1TQ3hjVUZZQm1HUGZuUzAtbmZ2Y3QyanZuQUZWS0JBRDJlQ3ExXy1MVFQzQW9zaU8tSzFuN1gtTFZmOVhIMmRpYnBTczJKTHd0SkF1VW80OUl4b2F6WklVWkhjV3JqQUFpVTBYbFNXNXFEZENfQ2ZMUXBTM2JubDU0S1k3MzJMWmVzdG5ydVg4UEZQNlZubXl0aENPNG1wV0RrNDU0R01OZGpDUDZRX0hoNDAwbnh4SGpGeG02RnJMcW1mSGMtdV9lZjAzR2tqMHgyaXhVU1Z5MU1LXzJyLV82eEZZbDVHbmlyQ05RRWNqRjRNR055eWtJdw?oc=5"
+    },
+    {
+     "source": "www.meta.com",
+     "title": "AI glasses for seniors: Support that moves with you",
+     "link": "https://news.google.com/rss/articles/CBMib0FVX3lxTE9TTXV4bDZNTUNla2VTdVpEeEVxOUdoVzNxclZhMjRNUk8tSmpOQVpNenJtcElEUzJFYU1vSDhPckhSbE9FeGIzTDdJSnc0ak5ScjVwM0NwOU1yaEVVN0Exa0dQZ29FZ0dlSXBSU0FNQQ?oc=5"
+    },
+    {
+     "source": "www.meta.com",
+     "title": "Step Up to the Sideline with Immersive College Football Games from ESPN",
+     "link": "https://news.google.com/rss/articles/CBMigAFBVV95cUxOU0pLM0M4SzFDLTZiSnZEdE1xdU42aVJBY3NzUU1MSGJvSV9fX0QzZ2pWSEhfSzJueFJfN0ZpR21leEpXWlpDc0FYT3FINktEcFVPNGdaZU1iNWxoRHYyZ0FHQVE3OVNoVkpxRWl6WHFfeWFiaWl0Qm5jRUVYZVdYUg?oc=5"
+    }
+   ]
+  },
+  {
+   "reason": "Hype and speculation",
+   "explanation": "Rumored Gemini features, predictions that Google will overtake OpenAI, Musk's wish for Grok Bot to route to rival models and jokes about superintelligence describe nothing that has shipped.",
+   "items": [
+    {
+     "source": "Gadget Flow",
+     "title": "Google Gemini Call for Me rumors might be the AI feature I’ve actually been waiting for",
+     "link": "https://news.google.com/rss/articles/CBMiugFBVV95cUxNSk1teEhXUjhlMHdvRmZWT1ozdG9INGNVdUlPMm9FQnJiZGdXR0NHNmw0VjJnb3MzNFlMMExLLUh2dFhKUmlaQnZMRlpsR2JOVEdrRmY1R09rWkYxcjFGVWY1US1FM0ZKV1k0YzBsSWp4TmtaeXJVMVkwdTh3OGJVcVYtd2pFZnlaWkdudGxFX1dXbzdjbVdXaDJSRWpOZ2t1dE1xdnh3WGZUNDV4OUlmdkNkanpiWWh1aUE?oc=5"
+    },
+    {
+     "source": "Yahoo Finance",
+     "title": "Google Is “Going to Eat Their Lunch” as OpenAI’s Scaling Bet Falls Short According to Computer Scientist",
+     "link": "https://news.google.com/rss/articles/CBMimAFBVV95cUxNdHo1SEZxQTFtalhPdGNjaHE5cGpYakIyZ3dfOUVmbmI3QmRyQTZ5LVo1YkduMlFPZjRqVWJwMzMzY2NFYWJkLTdXSEs4emFVUktLTWJ3S2hEeWJHbzNieTBoNFB1ZkhYd29udEZGVHR4XzhERjZqZGhjcTJyRUhqcnNFX29tMUlMb0ljalVqRlBnUUpHejg3cQ?oc=5"
+    },
+    {
+     "source": "Benzinga",
+     "title": "Google Could 'Eat OpenAI's Lunch,' Warns Cal Newport",
+     "link": "https://news.google.com/rss/articles/CBMitgFBVV95cUxNbUo1UVAyR1BlMW1yeDRNM2lwSDZ6RGs3Z3VPQTdfOUlWZGRmVi0tQldISHFhaE1wS1h5TW9maEZoLW5UUmQzYlBoNHFDY0NPNDlDbTNQSUFxLUk5eFJ4TXBtR1RTZXJUQXZzeEVGaWY4RUxUeFBKX0YwMUNSRzhQMDB6SU5ScDYxT0hwTXYzby05ZFBSa21JQzkwREFXM1VSdUNoZXhGb0d3anVBdlo5RmdZZEVJdw?oc=5"
+    },
+    {
+     "source": "TechRepublic",
+     "title": "Elon Musk Wants Grok Bot to Route Users to Rival AI Models",
+     "link": "https://news.google.com/rss/articles/CBMijAFBVV95cUxPbmxSendzZVJjUU10dWhrSzVST2RBXzlHSGZmd3pTRFZ5X3lVZmQzcElaaFVFdmNFQ244cExqZi1kaThEYVllV3ZqS0oxSkUxQWZxUkF6eG5SWlgtd09fV0dwVVBobE5tb2g1WW44UzFLZXN3bHpJbnhxZHhUajg4ZEx0LWFTYTR4T2RSdw?oc=5"
+    },
+    {
+     "source": "logos-pres.md",
+     "title": "Elon Musk Jokes About Testing Superintelligent AI on Delta Flights",
+     "link": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxQUUpiOWlSNDRPd3V3aWpoQXpiXzB0WUJkTzFoMTNpSWtUZjA1bExhVExxXzJjSUN0UVg0Snhqd1p4VGRpWUpYQ0dmb2hiTHVjRFRnZ0Y5MjhoOVFBUzZ1clBKLTJoekp0YWY0OWk4eDdTV1lZWVpNcEo1anB3bUVleEJVTFRwclQxNXdnbGduWUwxUHB5QWtoTENRckp5M1FpYldxVGU5TXByZ2JfQkFGMW5SSXBLM0xE?oc=5"
+    },
+    {
+     "source": "BeInCrypto",
+     "title": "You Could Be America's Enemy For Saying the Word “AI”",
+     "link": "https://news.google.com/rss/articles/CBMia0FVX3lxTE5JNGFaeTBPcjZsTDJaRmRHRVhldEdRbGJDTkRJbXBLNW8xY1VkNFBtT2R5MDVXVUxDc0h2aTEtR2tjWlpJNjdBRF92Q1k3Nk10ZnlkQUN6d29qYWRwOFgtYUZMNTBCRWp1cDI0?oc=5"
+    }
+   ]
+  }
+ ],
+ "stats": {
+  "items_read": 347,
+  "official_posts": 14,
+  "outlets_read": 224,
+  "feeds_failed": 0,
+  "reading_minutes": 4
+ },
+ "previous": "2026-10-08",
+ "checks": [
+  "Google: \"Newegg and The RealReal join Google's conversational AI shopping\" has one outlet, marked unconfirmed.",
+  "Resolved 63 of 63 Google News links to their original sites."
+ ],
+ "usage": {
+  "model": "claude-opus-5-5",
+  "via": "claude-code",
+  "input_tokens": 30585,
+  "output_tokens": 24297
+ }
+}
